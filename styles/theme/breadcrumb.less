@@ -1,0 +1,58 @@
+//
+// Component: Breadcrumb
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@breadcrumb-item-font-size:                         @global-small-font-size;
+@breadcrumb-item-color:                             @global-link-color;
+@breadcrumb-item-hover-color:                       @global-link-hover-color;
+@breadcrumb-item-hover-text-decoration:             none;
+@breadcrumb-item-active-color:                      @global-link-hover-color;
+
+@breadcrumb-divider:                                "\F105";
+@breadcrumb-divider-margin-horizontal:              10px;
+@breadcrumb-divider-color:                          @global-link-color;
+
+// Component
+// ========================================================================
+
+.hook-breadcrumb() {}
+
+
+// Items
+// ========================================================================
+
+.hook-breadcrumb-item() {
+  text-transform: uppercase;
+}
+
+.hook-breadcrumb-item-hover() {}
+
+.hook-breadcrumb-item-disabled() {}
+
+.hook-breadcrumb-item-active() {}
+
+.hook-breadcrumb-divider() {
+  font-family: FontAwesome;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-breadcrumb-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-inverse-breadcrumb-item() {}
+.hook-inverse-breadcrumb-item-hover() {}
+.hook-inverse-breadcrumb-item-disabled() {}
+.hook-inverse-breadcrumb-item-active() {}
+
+.hook-inverse-breadcrumb-divider() {}
