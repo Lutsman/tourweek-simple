@@ -7,11 +7,11 @@
 // ========================================================================
 
 @button-line-height: @global-control-height - (@button-border-width * 2);
-@button-small-line-height: @global-control-small-height - (@button-border-width * 2);
+@button-small-line-height: 32px - (@button-border-width * 2);
 @button-large-line-height: @global-control-large-height - (@button-border-width * 2);
 
-@button-font-size: @global-small-font-size;
-@button-small-font-size: @global-font-size;
+@button-font-size: @global-font-size;
+@button-small-font-size: @global-small-font-size;
 @button-large-font-size: @global-large-font-size;
 
 @button-padding-horizontal: @global-gutter;
@@ -64,8 +64,8 @@
 // New
 //
 
-@button-small-text-transform: none;
-@button-text-transform: uppercase;
+@button-small-text-transform: uppercase;
+@button-text-transform: none;
 @button-large-text-transform: none;
 
 @button-border-width: @global-border-width;
@@ -167,6 +167,7 @@
 
 .hook-button-small() {
   text-transform: @button-small-text-transform;
+  padding-top: 2px;
 }
 
 .hook-button-large() {
@@ -337,5 +338,24 @@
   &:hover {
     background-color: darken(@global-blue, 10%);
     color: @global-inverse-color;
+  }
+}
+
+.uk-button-simple-blue {
+  color: @global-blue;
+  border: solid 1px @global-blue;
+
+  &:hover {
+    background-color: darken(@global-blue, 10%);
+    color: @global-inverse-color;
+  }
+}
+
+.uk-button-white {
+  box-shadow: 0 0 5px 0 rgba(43, 2, 2, 0.13);
+  background-color: #fff;
+
+  &:hover {
+    background-color: darken(#fff, 10%);
   }
 }

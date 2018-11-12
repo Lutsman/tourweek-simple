@@ -7,7 +7,7 @@
 // Variables
 // ========================================================================
 
-@pagination-margin-horizontal:                  20px;
+@pagination-margin-horizontal:                  10px;
 
 @pagination-item-color:                         @global-muted-color;
 @pagination-item-hover-color:                   @global-color;
@@ -18,17 +18,30 @@
 // Component
 // ========================================================================
 
-.hook-pagination() {}
+.hook-pagination() {
+  li:first-child, li:last-child {
+    a {
+      padding: 4px 12px 8px;
+    }
+  }
+}
 
 
 // Items
 // ========================================================================
 
-.hook-pagination-item() { transition: color 0.1s ease-in-out; }
+.hook-pagination-item() {
+  transition: color 0.1s ease-in-out;
+  padding: 6px 12px;
+  border: 1px solid @global-muted-color;
+  font-family: @font-lato-bold;
+}
 
 .hook-pagination-item-hover() {}
 
-.hook-pagination-item-active() {}
+.hook-pagination-item-active() {
+  border-color: @global-orange;
+}
 
 .hook-pagination-item-disabled() {}
 
@@ -36,7 +49,9 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-pagination-misc() {}
+.hook-pagination-misc() {
+
+}
 
 
 // Inverse

@@ -8,10 +8,10 @@
 // ========================================================================
 
 @tile-padding-horizontal:                      15px;
-@tile-padding-horizontal-s:                    @global-gutter;
-@tile-padding-horizontal-m:                    @global-medium-gutter;
-@tile-padding-vertical:                        @global-medium-margin;
-@tile-padding-vertical-m:                      @global-large-margin;
+@tile-padding-horizontal-s:                    @global-small-gutter;
+@tile-padding-horizontal-m:                    @global-small-gutter;
+@tile-padding-vertical:                        3px;
+@tile-padding-vertical-m:                      3px;
 
 @tile-xsmall-padding-vertical:                 @global-margin;
 
@@ -36,8 +36,18 @@
 // Component
 // ========================================================================
 
-.hook-tile() {}
+.hook-tile() {
+  padding-bottom: 0;
+}
 
+/* Tablet landscape and bigger */
+@media (min-width: @breakpoint-medium) {
+
+  .uk-tile {
+    padding-bottom: 0;
+  }
+
+}
 
 // Style modifiers
 // ========================================================================

@@ -8,7 +8,7 @@
 // ========================================================================
 
 @nav-item-padding-vertical:                     5px;
-@nav-item-padding-horizontal:                   0;
+@nav-item-padding-horizontal:                   10px;
 
 @nav-sublist-padding-vertical:                  5px;
 @nav-sublist-padding-left:                      15px;
@@ -21,7 +21,7 @@
 
 @nav-header-padding-vertical:                   @nav-item-padding-vertical;
 @nav-header-padding-horizontal:                 @nav-item-padding-horizontal;
-@nav-header-font-size:                          @global-small-font-size;
+@nav-header-font-size:                          @global-large-font-size;
 @nav-header-text-transform:                     uppercase;
 @nav-header-margin-top:                         @global-margin;
 
@@ -73,7 +73,9 @@
 // Header
 // ========================================================================
 
-.hook-nav-header() {}
+.hook-nav-header() {
+  font-family: @font-lato-bold;
+}
 
 
 // Divider

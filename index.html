@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tourweek | Главная</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Condensed&amp;subset=cyrillic" rel="stylesheet">
-    <script src="https://use.fontawesome.com/c1eb52745e.js"></script>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic">
 </head>
 <body>
 
@@ -197,18 +195,85 @@
 
                         <div class="uk-navbar-right">
                             <div class="uk-navbar-item uk-visible@s">
-                                <a href="#" class="uk-button uk-button-small uk-button-orange">Авиабилеты</a>
+                                <a href="#" class="uk-button uk-button-small uk-button-orange uk-text-untransformed">Авиабилеты</a>
                             </div>
                             <ul class="uk-navbar-nav">
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
+                                    <div class="uk-navbar-dropdown uk-padding-remove-horizontal"
+                                         uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                        <div class="uk-container">
+                                            <form action="/" class="tm-search-header uk-width-xxlarge uk-margin-auto">
+                                                <div class="uk-flex">
+                                                    <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                        <span class="uk-form-icon">
+                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                        </span>
+
+                                                        <input class="uk-input" type="search" placeholder="Поиск по сайту">
+                                                    </div>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-blue">Найти</a>
+                                                </div>
+                                            </form>
+
+
+
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                                     </a>
+                                    <div class="tm-authorization uk-background-default uk-dark" uk-drop="mode: click;">
+                                        <button class="uk-drop-close uk-position-small uk-position-top-right" type="button" uk-close></button>
+                                        <div class="tm-login">
+                                            <h3 class="uk-text-black uk-text-center uk-margin-small-bottom">Авторизация на сайте</h3>
+                                            <p class="uk-text-center uk-margin-remove-top">Если вы уже зарегистрированы, пожалуйста,
+                                                введите ваш логин и пароль.
+                                            </p>
+
+                                            <div class="tm-login-social uk-background-secondary uk-margin-bottom">
+                                                <div class="uk-child-width-expand uk-grid-collapse uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <div id="uLogin" data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,facebook,odnoklassniki,google;hidden=;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-little"><i>Войти используя аккаунт соц.сетей</i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <form action="/" class="uk-text-little">
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" placeholder="Введите логин">
+                                                </div>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="password" placeholder="Введите пароль">
+                                                </div>
+                                                <div class="uk-flex uk-flex-between uk-flex-middle uk-margin">
+                                                    <div>
+                                                        <label class="uk-text-muted"><input class="uk-checkbox uk-margin-small-right" type="checkbox" name="radio-gender">Чужой компьютер</label>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#">Забыли пароль?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-form-controls">
+                                                    <a href="" class="uk-button uk-button-large uk-button-blue uk-width-1-1">Войти</a>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="tm-authorization-footer uk-background-secondary uk-text-center">
+                                            <div class="uk-text-medium uk-margin-xsmall-bottom">Впервые на сайте?</div>
+                                            <div>
+                                                <a href="" class="uk-button uk-button-large uk-button-orange uk-width-1-1">Зарегистрироваться</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -221,7 +286,7 @@
                             <span class="uk-text-average">в путешествие</span>
                         </h1>
                         <div class="uk-margin-xlarge-bottom">
-                            <a href="" class="uk-button uk-button-large uk-button-blue">Начать поиск</a>
+                            <a href="#search-section" class="uk-button uk-button-large uk-button-blue js-search-start">Начать поиск</a>
                         </div>
                         <ul class="tm-social uk-iconnav uk-flex-center uk-flex-middle uk-margin-medium-bottom">
                             <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
@@ -257,11 +322,11 @@
                                     </a>
                                 </div>
 
-                                <div class="uk-width-medium uk-visible@m">
+                                <div class="uk-width-medium uk-visible@m uk-flex uk-flex-center">
 
                                     <!-- Banner -->
                                     <a href="#" class="uk-card">
-                                        <img src="images/banner.jpg" alt="" class="uk-width-1-1">
+                                        <img src="images/banner.jpg" alt="">
                                     </a>
 
                                 </div>
@@ -292,11 +357,11 @@
                         <!-- Aside right (main page) -->
                         <aside class="uk-width-medium@m uk-width-large@l">
                             <div class="uk-child-width-1-1  uk-grid-medium" uk-grid>
-                                <div class="uk-width-auto@s uk-width-1-1@m uk-hidden@m">
+                                <div class="uk-width-auto@s uk-width-1-1@m uk-hidden@m uk-flex uk-flex-center">
 
                                     <!-- Banner -->
                                     <a href="#" class="uk-card">
-                                        <img src="images/banner.jpg" alt="" class="uk-width-1-1">
+                                        <img src="images/banner.jpg" alt="">
                                     </a>
 
                                 </div>
@@ -306,7 +371,7 @@
 
                                     <!--News list-->
                                     <div class="tm-news-small">
-                                        <h3>Новости туризма</h3>
+                                        <h3>Последние материалы</h3>
                                         <ul class="tm-news-list uk-list uk-list-large uk-list-divider">
                                             <li class="uk-child-width-expand uk-flex">
                                                 <div class="uk-width-auto uk-margin-small-right">
@@ -433,7 +498,7 @@
             </div>
 
             <!--Search for travel companions-->
-            <div class="uk-section uk-section-muted">
+            <div id="search-section" class="uk-section uk-section-muted">
                 <div class="uk-container">
                     <div>
                         <div class="uk-child-width-expand@m uk-grid-small uk-flex-between uk-flex-bottom uk-margin-bottom" uk-grid>
@@ -441,7 +506,7 @@
                                 <h2>Поиск попутчиков в путешествие</h2>
                             </div>
                             <div class="uk-width-auto@m">
-                                <a href="#" class="uk-button uk-button-small uk-button-blue">Добавить объявление</a>
+                                <a href="#" class="uk-button uk-button uk-button-blue">Добавить объявление</a>
                             </div>
                         </div>
 
@@ -469,7 +534,7 @@
                                                 <div class="uk-margin">
                                                     <label class="uk-form-label" for="form-input-place">Куда</label>
                                                     <div class="uk-form-controls uk-inline uk-width-1-1">
-                                                        <span class="uk-form-icon uk-form-icon-flip">ESP</span>
+                                                        <span class="uk-form-icon uk-form-icon-flip uk-text-muted">ESP</span>
                                                         <input class="uk-input" id="form-input-place" type="text"
                                                                placeholder="Мадрид">
                                                     </div>
@@ -495,9 +560,9 @@
                                                         </div>
                                                         <div>
                                                             <div class="uk-form-controls uk-inline uk-width-1-1">
-                                                    <span class="uk-form-icon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
+                                                                <span class="uk-form-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
                                                                 <input class="uk-input" type="text"
                                                                        placeholder="15.02.2017"
                                                                        datepicker>
@@ -514,10 +579,10 @@
                                             <div class="uk-form-controls" uk-grid>
                                                 <div>
                                                     <input class="uk-hidden" type="checkbox" id="form-checkbox-with-photo" name="form-checkbox-with-photo">
-                                                    <label for="form-checkbox-with-photo" class="uk-button uk-button-small uk-button-simple-orange">С фото</label>
+                                                    <label for="form-checkbox-with-photo" class="uk-button uk-button-small uk-button-simple-orange tm-button-text-default">С фото</label>
                                                 </div>
                                                 <div>
-                                                    <a href="#" class="uk-button uk-button-small uk-button-orange uk-text-untransformed">Найти</a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-orange tm-button-text-default">Найти</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -674,7 +739,7 @@
                         </div>
 
                         <div class="uk-margin-medium-top uk-text-center">
-                            <a href="#" class="uk-button uk-button-simple-orange">Показать еще</a>
+                            <a href="#" class="uk-button uk-button-simple-orange tm-button-text-small">Показать еще</a>
                         </div>
                     </div>
                 </div>
@@ -696,8 +761,8 @@
                                         <i class="fa fa-map-marker uk-margin-small-right" aria-hidden="true"></i>
                                         <span>Пушкин — Россия</span>
                                     </div>
-                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку доспехов</a>
-                                    <p>Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
+                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку <br> доспехов</a>
+                                    <p class="uk-margin-small-bottom">Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
                                 </div>
 
                                 <div>
@@ -730,8 +795,8 @@
                                         <i class="fa fa-map-marker uk-margin-small-right" aria-hidden="true"></i>
                                         <span>Пушкин — Россия</span>
                                     </div>
-                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку доспехов</a>
-                                    <p>Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
+                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку <br> доспехов</a>
+                                    <p class="uk-margin-small-bottom">Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
                                 </div>
 
                                 <div>
@@ -764,8 +829,8 @@
                                         <i class="fa fa-map-marker uk-margin-small-right" aria-hidden="true"></i>
                                         <span>Пушкин — Россия</span>
                                     </div>
-                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку доспехов</a>
-                                    <p>Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
+                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку <br> доспехов</a>
+                                    <p class="uk-margin-small-bottom">Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
                                 </div>
 
                                 <div>
@@ -798,8 +863,8 @@
                                         <i class="fa fa-map-marker uk-margin-small-right" aria-hidden="true"></i>
                                         <span>Пушкин — Россия</span>
                                     </div>
-                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку доспехов</a>
-                                    <p>Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
+                                    <a href="#" class="tm-blog-title uk-link-text">8 марта на выставку <br> доспехов</a>
+                                    <p class="uk-margin-small-bottom">Да, совершенно неожиданно, 8 марта мы оказались в Арсенале, новом музее Пушкина.</p>
                                 </div>
 
                                 <div>
@@ -824,7 +889,7 @@
                     </div>
 
                     <div class="uk-margin-medium-top uk-text-center">
-                        <a href="#" class="uk-button uk-button-simple-orange">Показать еще</a>
+                        <a href="#" class="uk-button uk-button-simple-orange tm-button-text-small">Показать еще</a>
                     </div>
                 </div>
             </div>
@@ -860,7 +925,7 @@
                     </div>
 
                     <div class="uk-margin-medium-top uk-text-center">
-                        <a href="#" class="uk-button uk-button-simple-orange">Перейти в фотогарелею</a>
+                        <a href="#" class="uk-button uk-button-simple-orange tm-button-text-small">Перейти в фотогарелею</a>
                     </div>
                 </div>
             </div>
@@ -899,7 +964,7 @@
                 <div class="uk-container uk-text-center">
                     <div class="uk-width-4-5@l uk-margin-auto">
                         <h2>О проекте</h2>
-                        <p>Tourweek – туристический портал, объединяющий в себе социальную сеть, путеводитель
+                        <p class="tm-line-height-big">Tourweek – туристический портал, объединяющий в себе социальную сеть, путеводитель
                             по 164 странам мира и множество полезных для путешественников сервисов. Мы не разглашаем,
                             не продаем, не передаем персональную информацию о пользователях третьим лицам. Все отчёты,
                             отзывы, рассказы и фотографии, опубликованные на сайте www.tourweek.ru являются
@@ -957,7 +1022,7 @@
                             <img src="images/logo_tourweek_footer.png" alt="">
                         </a>
                     </div>
-                    
+
                     <div>
                         <ul class="tm-social uk-iconnav uk-flex-center uk-flex-middle">
                             <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
@@ -999,8 +1064,20 @@
         </div>
     </div>
 
+    <!-- modal login form -->
+    <div id="tm-login-form" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-position-top-right">
+            <h2 class="uk-modal-title"></h2>
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+        </div>
+    </div>
+
 </div>
 
+<!--Scripts-->
+<script src="//ulogin.ru/js/ulogin.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="scripts/scroller.js"></script>
 <script src="scripts/app.js"></script>
 
 </body>

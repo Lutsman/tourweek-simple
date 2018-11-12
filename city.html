@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tourweek | Город</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-wrap uk-flex-wrap-between">
+        <div>
+
+            <!--Header-->
+            <header class="uk-navbar-container uk-position-relative">
+                <nav class="uk-light" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon
+                           uk-toggle></a>
+
+                        <a class="uk-navbar-item uk-logo" href="/">
+                            <img src="images/logo_tourweek.png" alt="">
+                        </a>
+
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-visible@s uk-hidden@l"
+                           uk-navbar-toggle-icon
+                           uk-toggle></a>
+
+                        <ul class="uk-navbar-nav uk-visible@l">
+                            <li>
+                                <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon></a>
+                                <div class="uk-navbar-dropdown"
+                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                    <div class="uk-container">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
+                                            <li><a href="#">Попутчики</a></li>
+                                            <li><a href="#">Блоги</a></li>
+                                            <li><a href="#">Страны</a></li>
+                                            <li><a href="#">Города</a></li>
+                                            <li><a href="#">Интересные места</a></li>
+                                            <li><a href="#">Визы</a></li>
+                                            <li><a href="#">Фото</a></li>
+                                            <li><a href="#">Статьи</a></li>
+                                            <li><a href="#">Новости</a></li>
+                                            <li><a href="#">Авиакомпании</a></li>
+                                            <li><a href="#">Турфирмы</a></li>
+                                            <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                                            <li><a href="#">Табло аэропортов</a></li>
+                                            <li><a href="#">Справочник туриста</a></li>
+                                            <li><a href="#">Блогосфера</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-center uk-visible@l">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="#">Попутчики</a></li>
+                            <li><a href="#">Блоги</a></li>
+                            <li>
+                                <a href="#">Страны</a>
+                                <div class="uk-navbar-dropdown"
+                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                    <div class="uk-container">
+                                        <div class="" uk-slider>
+                                            <div class="tm-slider-content uk-position-relative">
+                                                <div class="uk-slider-container">
+                                                    <ul class="uk-slider-items uk-child-width-1-1">
+                                                        <li>
+                                                            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-5">
+                                                                <li><a href="#">Абхазия</a></li>
+                                                                <li><a href="#">Австралия</a></li>
+                                                                <li><a href="#">Австрия</a></li>
+                                                                <li><a href="#">Азербайджан</a></li>
+                                                                <li><a href="#">Андорра</a></li>
+                                                                <li><a href="#">Аргентина</a></li>
+                                                                <li><a href="#">Армения</a></li>
+                                                                <li><a href="#">Багамы</a></li>
+                                                                <li><a href="#">Беларусь</a></li>
+                                                                <li><a href="#">Бельгия</a></li>
+                                                                <li><a href="#">Болгария</a></li>
+                                                                <li><a href="#">Бразилия</a></li>
+                                                                <li><a href="#">Великобритания</a></li>
+                                                                <li><a href="#">Венгрия</a></li>
+                                                                <li><a href="#">Венесуэла</a></li>
+                                                                <li><a href="#">Вьетнам</a></li>
+                                                                <li><a href="#">Германия</a></li>
+                                                                <li><a href="#">Греция</a></li>
+                                                                <li><a href="#">Грузия</a></li>
+                                                                <li><a href="#">Дания</a></li>
+                                                                <li><a href="#">Доминикана</a></li>
+                                                                <li><a href="#">Египет</a></li>
+                                                                <li><a href="#">Израиль</a></li>
+                                                                <li><a href="#">Индия</a></li>
+                                                                <li><a href="#">Индонезия</a></li>
+                                                                <li><a href="#">Ирландия</a></li>
+                                                                <li><a href="#">Исландия</a></li>
+                                                                <li><a href="#">Испания</a></li>
+                                                                <li><a href="#">Италия</a></li>
+                                                                <li><a href="#">Казахстан</a></li>
+                                                                <li><a href="#">Камбоджа</a></li>
+                                                                <li><a href="#">Канада</a></li>
+                                                                <li><a href="#">Кения</a></li>
+                                                                <li><a href="#">Кипр</a></li>
+                                                                <li><a href="#">Киргизия</a></li>
+                                                                <li><a href="#">Китай</a></li>
+                                                                <li><a href="#">Коста-Рика</a></li>
+                                                                <li><a href="#">Куба</a></li>
+                                                                <li><a href="#">Лаос</a></li>
+                                                                <li><a href="#">Латвия</a></li>
+                                                                <li><a href="#">Ливан</a></li>
+                                                                <li><a href="#">Литва</a></li>
+                                                                <li><a href="#">Маврикий</a></li>
+                                                                <li><a href="#">Малайзия</a></li>
+                                                                <li><a href="#">Мальдивы</a></li>
+                                                                <li><a href="#">Мальта</a></li>
+                                                                <li><a href="#">Марокко</a></li>
+                                                                <li><a href="#">Мексика</a></li>
+                                                                <li><a href="#">Монако</a></li>
+                                                                <li><a href="#">Мьянма</a></li>
+                                                                <li><a href="#">Непал</a></li>
+                                                                <li><a href="#">Нидерланды</a></li>
+                                                                <li><a href="#">Новая Зеландия</a></li>
+                                                                <li><a href="#">Норвегия</a></li>
+                                                                <li><a href="#">ОАЭ</a></li>
+                                                                <li><a href="#">Перу</a></li>
+                                                                <li><a href="#">Польша</a></li>
+                                                                <li><a href="#">Португалия</a></li>
+                                                                <li><a href="#">Россия</a></li>
+                                                                <li><a href="#">США</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-5">
+                                                                <li><a href="#">Сейшелы</a></li>
+                                                                <li><a href="#">Сербия</a></li>
+                                                                <li><a href="#">Сингапур</a></li>
+                                                                <li><a href="#">Словакия</a></li>
+                                                                <li><a href="#">Словения</a></li>
+                                                                <li><a href="#">Таджикистан</a></li>
+                                                                <li><a href="#">Таиланд</a></li>
+                                                                <li><a href="#">Тунис</a></li>
+                                                                <li><a href="#">Турция</a></li>
+                                                                <li><a href="#">Узбекистан</a></li>
+                                                                <li><a href="#">Филиппины</a></li>
+                                                                <li><a href="#">Финляндия</a></li>
+                                                                <li><a href="#">Франция</a></li>
+                                                                <li><a href="#">Хорватия</a></li>
+                                                                <li><a href="#">Черногория</a></li>
+                                                                <li><a href="#">Чехия</a></li>
+                                                                <li><a href="#">Чили</a></li>
+                                                                <li><a href="#">Швейцария</a></li>
+                                                                <li><a href="#">Швеция</a></li>
+                                                                <li><a href="#">Шотландия</a></li>
+                                                                <li><a href="#">Шри-Ланка</a></li>
+                                                                <li><a href="#">Эквадор</a></li>
+                                                                <li><a href="#">Эстония</a></li>
+                                                                <li><a href="#">ЮАР</a></li>
+                                                                <li><a href="#">Южная Корея</a></li>
+                                                                <li><a href="#">Ямайка</a></li>
+                                                                <li><a href="#">Япония</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <a class="uk-position-center-left uk-slidenav-large"
+                                                   href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                                <a class="uk-position-center-right uk-slidenav-large"
+                                                   href="#" uk-slidenav-next uk-slider-item="next"></a>
+                                            </div>
+
+                                            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Интересные места</a></li>
+                            <li><a href="#">Визы</a></li>
+                            <li><a href="#">Фото</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-item uk-visible@s">
+                            <a href="#" class="uk-button uk-button-small uk-button-orange uk-text-untransformed">Авиабилеты</a>
+                        </div>
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="uk-section uk-section-small">
+                <div class="uk-container">
+
+                    <!-- Breadcrumb -->
+                    <ul class="uk-breadcrumb">
+                        <li><a href="#"><i class="fa fa-bars uk-margin-small-right" aria-hidden="true"></i>Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><span>В мире</span></li>
+                    </ul>
+
+                    <h2 class="uk-text-uppercase uk-margin-small-bottom">Париж <span class="uk-text-muted">(PARIS)</span></h2>
+
+
+                    <div class="uk-child-width-expand@m" uk-grid>
+                        <div>
+
+                            <div>
+
+                                <!-- City slideshow -->
+                                <div uk-slideshow>
+
+                                    <ul class="uk-slideshow-items">
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                        <li>
+                                            <img src="images/slide_city_1.jpg" alt="" uk-cover>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="uk-thumbnav uk-child-width-1-3 uk-child-width-1-6@m uk-padding-small uk-padding-remove-horizontal" uk-margin uk-grid>
+                                        <li class="uk-active" uk-slideshow-item="0"><a href="#"><img src="images/city_1.png" alt=""></a></li>
+                                        <li uk-slideshow-item="1"><a href="#"><img src="images/city_2.png" alt=""></a></li>
+                                        <li uk-slideshow-item="2"><a href="#"><img src="images/city_3.png" alt=""></a></li>
+                                        <li uk-slideshow-item="3"><a href="#"><img src="images/city_4.png" alt=""></a></li>
+                                        <li uk-slideshow-item="4"><a href="#"><img src="images/city_5.png" alt=""></a></li>
+                                        <li uk-slideshow-item="5"><a href="#"><img src="images/city_6.png" alt=""></a></li>
+                                    </ul>
+
+                                    <div class="uk-flex-middle uk-flex-between uk-margin-remove-top" uk-grid>
+                                        <div>
+                                            <a href="#" class="uk-button uk-button-small uk-button-orange">Добавить  фото</a>
+                                        </div>
+                                        <div>
+                                            <div class="uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-little">Всего постов: <span class="uk-text-bold">563</span></div>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-orange">Смотреть все фото</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Article details -->
+                                <article class="uk-article">
+                                    <div class="tm-panel-bordered">
+                                        <div class="uk-flex-center" uk-grid>
+                                            <div class="tm-width-215">
+                                                <div class="uk-margin-small-bottom">
+                                                    <img src="images/logo_aeroflot.jpg" alt="" class="uk-width-1-1">
+                                                </div>
+                                                <div class="tm-grid-small uk-child-width-1-2 uk-text-little" uk-grid>
+                                                    <div class="uk-width-1-1">
+                                                        <img src="images/aeroflot_1.jpg" alt="" class="uk-width-1-1">
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/aeroflot_2.jpg" alt="" class="uk-width-1-1">
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/aeroflot_3.jpg" alt="" class="uk-width-1-1">
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/aeroflot_4.jpg" alt="" class="uk-width-1-1">
+                                                    </div>
+                                                    <div>
+                                                        <img src="images/aeroflot_5.jpg" alt="" class="uk-width-1-1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-width-expand@s">
+                                                <p class="uk-text-medium uk-text-bold">ОАО «Аэрофлот - российский
+                                                    авиалинии» - крупнейшая российская авиакомпания, национальный
+                                                    авиаперевозчик. Штаб-квартира - в Москве.
+                                                </p>
+
+                                                <div uk-margin="margin: uk-margin-medium-top">
+                                                    <div uk-margin>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Cтрана:</div>
+                                                            <div class="uk-text-bold"><a href="#">Россия</a></div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Статус:</div>
+                                                            <div class="uk-text-bold">Работает</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div uk-margin>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Код ИАТА:</div>
+                                                            <div class="uk-text-bold">SU</div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Код ИКАО:</div>
+                                                            <div class="uk-text-bold">AFL</div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Внутренний код:</div>
+                                                            <div class="uk-text-bold">СУ</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div uk-margin>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Адрес:</div>
+                                                            <div class="uk-text-bold">г. Москва, Ленинградский пр-т, д. 37, корп. 9</div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Телефон:</div>
+                                                            <div class="uk-text-bold">8 800 333 55 55</div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">E-Mail:</div>
+                                                            <div class="uk-text-bold"><a href="mailto:callcenter@aeroflot.ru">callcenter@aeroflot.ru</a></div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Официальный сайт:</div>
+                                                            <div class="uk-text-bold"><a href="#">aeroflot.ru</a></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div uk-margin>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Год образования:</div>
+                                                            <div class="uk-text-bold"><a href="#">1923</a></div>
+                                                        </div>
+                                                        <div class="uk-child-width-expand@l" uk-grid uk-margin>
+                                                            <div class="uk-width-1-3@l">Базовые аэропорты:</div>
+                                                            <div class="uk-text-bold">Москва Шереметьево (Moscow Sheremetyevo - SVO)</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="tm-hr">
+
+                                                <h5 class="uk-text-uppercase">Самолетный парк:</h5>
+
+                                                <div uk-margin>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Boeing 777-300ER
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Boeing 737-300
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue  uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Airbus A330-200
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue  uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Airbus A330-300
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue  uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Airbus A321
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue  uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Airbus A320
+                                                    </a>
+                                                    <a href="#" class="uk-button uk-button-small uk-button-simple-blue  uk-text-little uk-text-bold uk-text-untransformed">
+                                                        <i class="fa fa-plane" aria-hidden="true"></i> Sukhoi SuperJet 100
+                                                    </a>
+                                                </div>
+
+                                                <hr class="tm-hr">
+
+                                                <h5 class="uk-text-uppercase">Дополнительная информация:</h5>
+
+                                                <p>Аэрофлот обладает одним из самых молодых парков в мире. Большую часть составляют самолёты семейства Airbus А320, Airbus А330 и Sukhoi SuperJet 100.</p>
+                                                <p>По состоянию на 01.03.2017 в Аэрофлоте эксплуатируется 190 самолётов, средний возраст ВС составляет 4,3 года.</p>
+                                                <p>С конца 2008 года Аэрофлот принял в состав своего флота 22 новых дальнемагистральных лайнера Airbus A330.</p>
+                                                <p>С 2013 года Аэрофлот получил 15 из 16 законтрактованных лайнеров Boeing 777-300ER, которые превосходят другие ВС в парке по дальности и вместимости, а также имеют новый класс обслуживания «Комфорт».</p>
+                                                <p>Начиная с сентября 2013 года, в Аэрофлоте эксплуатируются среднемагистральные пассажирские самолёты Boeing 737-800, парк которых на данный момент насчитывает 20 ВС.</p>
+                                                <p>В январе 2015 года Аэрофлот и Гражданские самолёты Сухого (ГСС) пришли к соглашению о поставке крупной партии новейших российских самолётов Sukhoi SuperJet100. Аэрофлоту будет поставлено 20 воздушных судов этого типа в дополнение к уже выполненному заказу на 30 самолётов.</p>
+                                                <p>Начиная с сентября 2013 года, в Аэрофлоте эксплуатируются среднемагистральные пассажирские самолёты Boeing 737-800, парк которых на данный момент насчитывает 20 ВС.</p>
+                                                <p>В январе 2015 года Аэрофлот и Гражданские самолёты Сухого (ГСС) пришли к соглашению о поставке крупной партии новейших российских самолётов Sukhoi Super</p>
+
+                                                <hr class="tm-hr">
+
+                                                <div class="social-likes-wrapper"
+                                                     data-url="http://shared-url-example.com/">
+                                                    <div data-service="facebook" title="Share link on Facebook"></div>
+                                                    <div data-service="vkontakte" title="Share link on Vkontakte"></div>
+                                                    <div data-service="odnoklassniki"
+                                                         title="Share link on Odnoklassniki"></div>
+                                                    <div data-service="twitter" title="Share link on Twitter"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </article>
+
+                                <!-- Layout items -->
+                                <ul class="tm-articles-list uk-list" uk-margin="margin: uk-margin-top">
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_8.jpg" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h4>
+                                                        <a href="#">Пишет про LATAM Airlines Brasil (ЛАТАМ Эйрлайнс Бразил) :</a>
+                                                    </h4>
+
+                                                    <div class="uk-padding-small uk-background-muted uk-text-little uk-margin-bottom">
+
+                                                        <div class="tm-toggle-text-1 uk-margin-small-bottom">
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б...
+                                                        </div>
+
+                                                        <div id="tm-toggle-text-1" class="tm-toggle-text-1 uk-margin-small-bottom" hidden>
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б... Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б
+
+                                                        </div>
+
+                                                        <div>
+                                                            <a href="#tm-toggle-text-1" class="uk-text-bold" uk-toggle="target: .tm-toggle-text-1">
+                                                                <span opened-toggle>Свернуть <i class="fa fa-angle-double-up" aria-hidden="true"></i></span><span closed-toggle>Читать полностью <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-flex-between uk-text-muted" uk-grid>
+                                                        <div>
+                                                            <div class="uk-flex-middle" uk-grid>
+                                                                <div class="uk-text-orange">
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                                    <span>21</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div>21.03.2017 11:01</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_9.jpg" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h4>
+                                                        <a href="#">Пишет про LATAM Airlines Brasil (ЛАТАМ Эйрлайнс Бразил) :</a>
+                                                    </h4>
+
+                                                    <div class="uk-padding-small uk-background-muted uk-text-little uk-margin-bottom">
+
+                                                        <div class="tm-toggle-text-2 uk-margin-small-bottom">
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б...
+                                                        </div>
+
+                                                        <div id="tm-toggle-text-2" class="tm-toggle-text-2 uk-margin-small-bottom" hidden>
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б... Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б
+
+                                                        </div>
+
+                                                        <div>
+                                                            <a href="#tm-toggle-text-2" class="uk-text-bold" uk-toggle="target: .tm-toggle-text-2">
+                                                                <span opened-toggle>Свернуть <i class="fa fa-angle-double-up" aria-hidden="true"></i></span><span closed-toggle>Читать полностью <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-flex-between uk-text-muted" uk-grid>
+                                                        <div>
+                                                            <div class="uk-flex-middle" uk-grid>
+                                                                <div class="uk-text-orange">
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                                    <span>21</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div>21.03.2017 11:01</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_10.jpg" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h4>
+                                                        <a href="#">Пишет про LATAM Airlines Brasil (ЛАТАМ Эйрлайнс Бразил) :</a>
+                                                    </h4>
+
+                                                    <div class="uk-padding-small uk-background-muted uk-text-little uk-margin-bottom">
+
+                                                        <div class="tm-toggle-text-3 uk-margin-small-bottom">
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б...
+                                                        </div>
+
+                                                        <div id="tm-toggle-text-3" class="tm-toggle-text-3 uk-margin-small-bottom" hidden>
+                                                            Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б... Живодеры»Люди, никогда не летайте с животными с этой авиакомпанией.
+                                                            Они животных не признают, они для них как чемоданы, в салон
+                                                            самолёта не пускают. У нас собака после полета неделю
+                                                            приходила в себя, на всех б
+
+                                                        </div>
+
+                                                        <div>
+                                                            <a href="#tm-toggle-text-3" class="uk-text-bold" uk-toggle="target: .tm-toggle-text-3">
+                                                                <span opened-toggle>Свернуть <i class="fa fa-angle-double-up" aria-hidden="true"></i></span><span closed-toggle>Читать полностью <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-flex-between uk-text-muted" uk-grid>
+                                                        <div>
+                                                            <div class="uk-flex-middle" uk-grid>
+                                                                <div class="uk-text-orange">
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                                    <span>21</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div>21.03.2017 11:01</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+
+                                <div class="uk-flex-between" uk-grid>
+                                    <div>
+                                        <a href="#" class="uk-button uk-button-small uk-button-orange">Добавить отзыв</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="uk-button uk-button-small uk-button-simple-orange">Смотреть все отзывы</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Aside right -->
+                        <aside class="uk-width-medium@m">
+                            <div class="uk-child-width-1-1 uk-grid-medium" uk-grid>
+
+                                <div>
+
+                                    <!-- Description list -->
+                                    <dl class="tm-city-description-list uk-description-list uk-description-list-divider uk-padding uk-text-little">
+                                        <dt>Страна:</dt>
+                                        <dd>Франция</dd>
+                                        <dt>Население:</dt>
+                                        <dd>21 262 641 чел.</dd>
+                                        <dt>Язык:</dt>
+                                        <dd>Английский, Немецкий, Французский, Валонский</dd>
+                                        <dt>Валюта:</dt>
+                                        <dd>Марка</dd>
+                                        <dt>Сезон</dt>
+                                        <dd>начало декабря - начало апреля</dd>
+                                        <dt>Время работы:</dt>
+                                        <dd>08:45 - 15:45</dd>
+                                        <dt>Текущее время:</dt>
+                                        <dd><i class="fa fa-clock-o uk-text-muted" aria-hidden="true"></i> 15:20 (GMT+2)</dd>
+                                        <dt>Высотность:</dt>
+                                        <dd>
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li>Нижняя точка 940 м</li>
+                                                <li>Верхняя точка 2320 м</li>
+                                                <li>Перепад высот 1380 м</li>
+                                            </ul>
+                                        </dd>
+                                        <dt>Склоны/Трассы:</dt>
+                                        <dd>Франция</dd>
+                                        <dt>Подъемники:</dt>
+                                        <dd>
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li>3 бугеля</li>
+                                                <li>12 кресельных</li>
+                                                <li>10 гондол</li>
+                                            </ul>
+                                        </dd>
+                                        <dt>Все для катания:</dt>
+                                        <dd>
+                                            <ul class="uk-list uk-list-bullet">
+                                                <li>Учебный склон</li>
+                                                <li>Искусственное оснежение</li>
+                                                <li>Инструкторы</li>
+                                                <li>Спасатели</li>
+                                                <li>Прокат снаряжения</li>
+                                                <li>ski-сервис</li>
+                                                <li>Магазин снаряжения</li>
+                                                <li>Ратраки</li>
+                                                <li>Гостиница / Коттеджи</li>
+                                                <li>Доставка вертолетом</li>
+                                                <li>Комната для переодевания</li>
+                                                <li>Камера хранения</li>
+                                            </ul>
+                                        </dd>
+                                        <dt>Сайт:</dt>
+                                        <dd>
+                                            <a href="#" class=""><i class="fa fa-globe" aria-hidden="true"></i> thefrance.eu</a>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+
+                                <div>
+
+                                    <!-- Content list -->
+                                    <div class="uk-padding uk-padding-remove-bottom uk-background-secondary">
+                                        <h3 class="uk-margin-remove-bottom">Содержание</h3>
+
+                                        <ul class="tm-contents-nav uk-nav uk-list-divider uk-margin-remove-bottom uk-text-bold uk-text-little">
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Общая информация</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Красная Поляна зимой</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Роза Хутор</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Горная Карусель</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Газпром</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Альпика-Сервис</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Красная Поляна летом</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Где остановиться</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="uk-link-heading">Как добраться до Красной Поляны</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="uk-width-auto@s uk-width-1-1@m uk-flex uk-flex-center">
+
+                                    <!--map-->
+                                    <div class="uk-text-center">
+                                        <img src="images/map-small.jpg" alt="">
+                                        <a href="#" class="tm-button-relative-top uk-button uk-button-small uk-border-pill uk-button-white">
+                                            <i class="fa fa-expand uk-text-orange uk-margin-small-right" aria-hidden="true"></i>
+                                            Развернуть карту
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="uk-width-auto@s uk-width-1-1@m uk-flex uk-flex-center">
+
+                                    <!--Banner-->
+                                    <a href="#" class="uk-card">
+                                        <img src="images/banner.jpg" alt="">
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </aside>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interesting in blogs -->
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h2 class="uk-text-center">Интресное в блогах</h2>
+
+                    <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid uk-height-match="target: > div > .uk-card">
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_1.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Рыжий голый… идейный</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_2.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Ростуризм призвал туроператоров оповещать туристов о
+                                    вспышке кори в Румынии
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_3.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Самый красочный индийский праздник – Холи</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_4.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Церемония очищения трупов в Индонезии</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_5.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Уникальные фото с орбиты земли</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_6.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Самый красочный индийский праздник – Холи</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_7.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Ростуризм призвал туроператоров оповещать туристов о
+                                    вспышке кори в Румынии
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"
+                               class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
+                                <img src="images/interesting_blog_8.jpg" alt="" uk-cover>
+                                <div class="uk-position-relative">Рыжий голый… идейный</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin-medium-top uk-text-center">
+                        <a href="#" class="uk-button uk-button-simple-orange">Перейти в архив</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search for travel companions -->
+            <div class="uk-section uk-background-secondary uk-text-little">
+                <div class="uk-container uk-text-center">
+                    <div class="uk-width-4-5@l uk-margin-auto">
+                        <h2>Поиск попутчиков в путешествие</h2>
+                        <p class="tm-line-height-big">Мало кто целенаправленно стремится провести отпуск в одиночестве, чаще всего такая не
+                            радужная перспектива возникает непредвиденно – если, например, друзей, с которыми вы
+                            планировали совершить поездку, не отпускают с работы, или они не хотят ехать в страну,
+                            куда мечтаете отправиться вы. И как же быть в такой непростой ситуации, когда отпуск на
+                            носу, а ехать не с кем?
+                        </p>
+                        <div class="uk-margin-medium-top uk-text-bold">
+                            <a href="#">
+                                Читать далее
+                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <footer class="uk-section">
+            <div class="uk-container">
+                <div class="uk-child-width-auto@s uk-grid-large uk-flex-between" uk-grid>
+                    <div class="uk-width-1-1 uk-width-expand@l uk-visible@s">
+                        <div class="uk-flex-between" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">О проекте</a></li>
+                                    <li><a href="#">Реклама</a></li>
+                                    <li><a href="#">Напишите нам</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Попутчики</a></li>
+                                    <li><a href="#">Блоги</a></li>
+                                    <li><a href="#">Страны</a></li>
+                                    <li><a href="#">Города</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Интересные места</a></li>
+                                    <li><a href="#">Фото</a></li>
+                                    <li><a href="#">Статьи</a></li>
+                                    <li><a href="#">Новости</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Справочник туриста</a></li>
+                                    <li><a href="#">Табло аэропортов</a></li>
+                                    <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                                    <li><a href="#">Архив блогов</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-flex-first@l uk-text-center">
+                        <a href="/" class="uk-logo">
+                            <img src="images/logo_tourweek_footer.png" alt="">
+                        </a>
+                    </div>
+
+                    <div>
+                        <ul class="tm-social uk-iconnav uk-flex-center uk-flex-middle">
+                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-flex uk-flex-center">
+                <ul class="uk-nav">
+                    <li><a href="#">Попутчики</a></li>
+                    <li><a href="#">Блоги</a></li>
+                    <li><a href="#">Страны</a></li>
+                    <li><a href="#">Города</a></li>
+                    <li><a href="#">Интересные места</a></li>
+                    <li><a href="#">Визы</a></li>
+                    <li><a href="#">Фото</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Авиакомпании</a></li>
+                    <li><a href="#">Турфирмы</a></li>
+                    <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                    <li><a href="#">Табло аэропортов</a></li>
+                    <li><a href="#">Справочник туриста</a></li>
+                    <li><a href="#">Блогосфера</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Scripts-->
+<script src="//ulogin.ru/js/ulogin.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="scripts/scroller.js"></script>
+<script src="scripts/app.js"></script>
+
+
+</body>
+</html>

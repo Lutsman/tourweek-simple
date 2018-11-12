@@ -45,7 +45,7 @@
 @form-select-option-color: #444;
 @form-select-disabled-icon-color: @global-muted-color;
 
-@form-radio-size: 16px;
+@form-radio-size: 14px;
 @form-radio-margin-top: -4px;
 @form-radio-background: transparent;
 
@@ -69,7 +69,7 @@
 
 @form-icon-width: @form-height;
 @form-icon-font-size: @global-font-size;
-@form-icon-color: @global-muted-color;
+@form-icon-color: #000;
 @form-icon-hover-color: @global-color;
 
 @internal-form-select-image: "../../images/backgrounds/form-select.svg";
@@ -95,7 +95,7 @@
 @form-blank-focus-border-style: dashed;
 
 @form-radio-border-width: @global-border-width;
-@form-radio-border: darken(@global-border, 10%);
+@form-radio-border: #707070;
 
 @form-radio-focus-border: @global-primary-background;
 
@@ -104,7 +104,7 @@
 @form-radio-disabled-border: @global-border;
 
 @form-label-color: @global-emphasis-color;
-@form-label-font-size: @global-small-font-size;
+@form-label-font-size: 14px;
 
 // Component
 // ========================================================================
@@ -184,6 +184,7 @@
 
 .hook-form-label() {
   color: @form-label-color;
+  font-family: @font-lato-bold;
   font-size: @form-label-font-size;
   text-transform: uppercase;
 }
