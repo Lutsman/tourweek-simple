@@ -48,7 +48,7 @@ $(function () {
         });
     })();
 
-    //
+    // toggler
     (function () {
         var $togglers = $('[uk-toggle]');
 
