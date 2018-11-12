@@ -20,7 +20,7 @@
 @text-large-font-size: @global-large-font-size;
 @text-large-line-height: 1.5;
 
-@text-bold-font-weight: 700;
+@text-bold-font-weight: normal;
 
 @text-muted-color: @global-muted-color;
 @text-primary-color: @global-primary-background;
@@ -73,6 +73,18 @@
   font-size: 14px;
 }
 
+/* Weight modifier
+ ========================================================================== */
+
+.uk-text-bold {
+  font-family: @font-lato-bold;
+}
+
+.uk-text-black {
+  font-family: @font-lato-black;
+}
+
+
 // Background modifier
 // ========================================================================
 
@@ -100,9 +112,17 @@
  ========================================================================== */
 
 .uk-text-average {
-  font-weight: 500;
+  font-family: @font-lato-medium;
 }
 
 .uk-text-untransformed {
   text-transform: none;
+}
+
+.uk-text-default {
+  font-size: 16px;
+}
+
+.uk-text-orange {
+  color: @global-orange;
 }

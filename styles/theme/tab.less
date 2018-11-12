@@ -9,10 +9,10 @@
 
 @tab-margin-horizontal:                  20px;
 
-@tab-item-padding-horizontal:            10px;
-@tab-item-padding-vertical:              5px;
-@tab-item-color:                         @global-muted-color;
-@tab-item-hover-color:                   @global-color;
+@tab-item-padding-horizontal:            0;
+@tab-item-padding-vertical:              15px;
+@tab-item-color:                         @global-emphasis-color;
+@tab-item-hover-color:                   @global-emphasis-color;
 @tab-item-hover-text-decoration:         none;
 @tab-item-active-color:                  @global-emphasis-color;
 @tab-item-disabled-color:                @global-muted-color;
@@ -22,13 +22,13 @@
 //
 
 @tab-border-width:                              @global-border-width;
-@tab-border:                                    @global-border;
+@tab-border:                                    transparent;
 
-@tab-item-border-width:                         @global-border-width;
-@tab-item-font-size:                            @global-small-font-size;
-@tab-item-text-transform:                       uppercase;
+@tab-item-border-width:                         2px;
+@tab-item-font-size:                            14px;
+@tab-item-text-transform:                       none;
 
-@tab-item-active-border:                        @global-primary-background;
+@tab-item-active-border:                        @global-orange;
 
 
 // Component
@@ -55,6 +55,8 @@
 
 .hook-tab-item() {
     border-bottom: @tab-item-border-width solid transparent;
+    line-height: @global-control-small-height - 2px;
+    font-family: @font-lato-medium;
     font-size: @tab-item-font-size;
     text-transform: @tab-item-text-transform;
     transition: color 0.1s ease-in-out;

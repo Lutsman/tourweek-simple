@@ -57,8 +57,8 @@
 @card-small-footer-padding-horizontal:         @global-small-gutter;
 @card-small-footer-padding-vertical:           round(@global-small-margin / 1.5);
 
-@card-large-body-padding-horizontal-l:         @global-large-gutter;
-@card-large-body-padding-vertical-l:           @global-large-gutter;
+@card-large-body-padding-horizontal-l:         @global-medium-gutter;
+@card-large-body-padding-vertical-l:           @global-gutter;
 @card-large-header-padding-horizontal-l:       @global-large-gutter;
 @card-large-header-padding-vertical-l:         round(@global-large-gutter / 2);
 @card-large-footer-padding-horizontal-l:       @global-large-gutter;
@@ -92,7 +92,7 @@
 .hook-card() {
     display: block;
     min-height: 224px;
-    font-weight: 500;
+    font-family: @font-lato-medium;
     transition: box-shadow 0.1s ease-in-out;
 }
 

@@ -7,20 +7,22 @@
 // Variables
 // ========================================================================
 
-@badge-size:                                    22px;
+@badge-size:                                    36px;
 @badge-padding-vertical:                        0;
-@badge-padding-horizontal:                      5px;
-@badge-border-radius:                           500px;
+@badge-padding-horizontal:                      20px;
+@badge-border-radius:                           0;
 @badge-background:                              @global-primary-background;
-@badge-color:                                   @global-inverse-color;
-@badge-font-size:                               @global-small-font-size;
+@badge-color:                                   #fefeff;
+@badge-font-size:                               @global-font-size;
 
-@badge-hover-color:                             @global-inverse-color;
+@badge-hover-color:                             @badge-color;
 
 // Component
 // ========================================================================
 
-.hook-badge() {}
+.hook-badge() {
+  text-transform: uppercase;
+}
 
 .hook-badge-hover() {}
 

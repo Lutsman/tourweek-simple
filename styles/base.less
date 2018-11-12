@@ -18,11 +18,11 @@
 @base-link-hover-color: @global-link-hover-color;
 @base-link-hover-text-decoration: underline;
 
-@base-strong-font-weight: bolder;
+@base-strong-font-weight: normal;
 @base-code-font-size: @global-small-font-size;
 @base-code-font-family: Consolas, monaco, monospace;
 @base-code-color: @global-danger-background;
-@base-em-color: @global-danger-background;
+@base-em-color: inherit;
 @base-ins-background: #ffd;
 @base-ins-color: @global-color;
 @base-mark-background: #ffd;
@@ -32,8 +32,8 @@
 
 @base-margin-vertical: @global-margin;
 
-@base-heading-font-family: @global-font-family;
-@base-heading-font-weight: 700;
+@base-heading-font-family: @font-lato-bold;
+@base-heading-font-weight: normal;
 @base-heading-color: @global-color;
 @base-heading-text-transform: none;
 @base-heading-margin-top: @global-medium-margin;
@@ -42,9 +42,9 @@
 @base-h1-line-height: 0.9;
 @base-h2-font-size-m: @global-xlarge-font-size;
 @base-h2-font-size: @base-h2-font-size-m * 0.85;
-@base-h2-line-height: 1;
+@base-h2-line-height: 34px;
 @base-h3-font-size: @global-large-font-size;
-@base-h3-line-height: 30px;
+@base-h3-line-height: 34px;
 @base-h4-font-size: @global-medium-font-size;
 @base-h4-line-height: 1.4;
 @base-h5-font-size: @global-font-size;
@@ -55,7 +55,7 @@
 @base-list-padding-left: 30px;
 
 @base-hr-margin-vertical: @global-margin;
-@base-hr-border-width: @global-border-width;
+@base-hr-border-width: 3px;
 @base-hr-border: @global-border;
 
 @base-blockquote-font-size: @global-medium-font-size;
@@ -107,6 +107,12 @@
 .hook-base-link-hover() {
 }
 
+b,
+strong {
+  font-family: @font-lato-bold;
+}
+
+
 // Text-level semantics
 // ========================================================================
 
@@ -122,16 +128,16 @@
 }
 
 .hook-base-h1() {
-  font-weight: 300;
+  font-family: @font-lato-light;
   margin-bottom: 40px;
 }
 
 .hook-base-h2() {
-  font-weight: 900;
+  font-family: @font-lato-black;
 }
 
 .hook-base-h3() {
-  font-weight: 300;
+  font-family: @font-lato-light;
 }
 
 .hook-base-h4() {

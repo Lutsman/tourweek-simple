@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tourweek | Попутчики</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Condensed&amp;subset=cyrillic" rel="stylesheet">
-    <script src="https://use.fontawesome.com/c1eb52745e.js"></script>
-    <link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
@@ -197,7 +196,7 @@
 
                         <div class="uk-navbar-right">
                             <div class="uk-navbar-item uk-visible@s">
-                                <a href="#" class="uk-button uk-button-small uk-button-orange">Авиабилеты</a>
+                                <a href="#" class="uk-button uk-button-small uk-button-orange uk-text-untransformed">Авиабилеты</a>
                             </div>
                             <ul class="uk-navbar-nav">
                                 <li>
@@ -221,8 +220,8 @@
 
                         <!-- Search for travel companions (Pageheader) -->
                         <div class="uk-margin-xlarge-bottom">
-                            <form action="/">
-                                <div class="uk-child-width-expand@s uk-grid-collapse" uk-grid>
+                            <form action="/" class="tm-form-pageheader">
+                                <div class="tm-grid-divider uk-child-width-expand@s uk-grid-collapse" uk-grid>
                                     <div class="uk-width-1-4@s uk-width-expand@m">
                                         <div class="uk-form-controls uk-inline uk-width-1-1">
                                             <span class="uk-form-icon uk-form-icon-flip">
@@ -248,7 +247,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2@s uk-width-1-5@m uk-width-auto@l">
+                                    <div class="uk-width-1-2@s uk-width-1-4@m">
                                         <div class="uk-child-width-1-2 uk-grid-collapse" uk-grid>
                                             <div>
                                                 <div class="uk-form-controls uk-inline uk-width-1-1">
@@ -272,21 +271,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="uk-form-controls uk-inline uk-width-1-1">
-                                            <span class="uk-form-icon">
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="uk-form-icon uk-form-icon-flip">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                            <select class="uk-select">
-                                                <option>Откуда</option>
-                                                <option>Город</option>
-                                                <option>Город</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <!--<div>-->
+                                        <!--<div class="uk-form-controls uk-inline uk-width-1-1">-->
+                                            <!--<span class="uk-form-icon">-->
+                                                <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
+                                            <!--</span>-->
+                                            <!--<span class="uk-form-icon uk-form-icon-flip">-->
+                                                <!--<i class="fa fa-angle-down" aria-hidden="true"></i>-->
+                                            <!--</span>-->
+                                            <!--<select class="uk-select">-->
+                                                <!--<option>Откуда</option>-->
+                                                <!--<option>Город</option>-->
+                                                <!--<option>Город</option>-->
+                                            <!--</select>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
                                     <div>
                                         <div class="uk-form-controls uk-inline uk-width-1-1">
                                             <span class="uk-form-icon">
@@ -302,7 +301,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="uk-width-expand uk-width-auto@l">
+                                    <div class="uk-width-1-4@l">
                                         <div class="uk-form-controls uk-inline uk-width-1-1">
                                             <span class="uk-form-icon">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -312,7 +311,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="uk-form-controls uk-flex-center" uk-grid>
+                                <div class="uk-form-controls uk-flex-center uk-margin-medium-top" uk-grid>
                                     <div>
                                         <a href="" class="uk-button uk-button-large uk-button-orange">Добавить объявление</a>
                                     </div>
@@ -450,8 +449,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_1.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -529,7 +528,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-1" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -542,8 +541,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_2.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -622,7 +621,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-2" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -635,8 +634,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_3.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -715,7 +714,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-3" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -728,8 +727,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_4.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -808,7 +807,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-4" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -821,8 +820,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_5.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -902,7 +901,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-5" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -915,8 +914,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_6.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -997,7 +996,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-6" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -1010,8 +1009,8 @@
                                     <li>
                                         <article class="uk-article">
                                             <div class="uk-child-width-expand@s" uk-grid>
-                                                <div class="uk-width-1-4@s">
-                                                    <div class="uk-padding uk-padding-remove-top uk-text-center">
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
                                                         <img src="images/avatar_137x137_7.png" alt=""
                                                              class="uk-border-circle">
                                                         <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
@@ -1092,7 +1091,7 @@
 
                                                         <div class="uk-flex uk-flex-middle uk-flex-between">
                                                             <a href="#tm-toggle-text-7" class="uk-text-bold" uk-toggle>
-                                                                <span opened-toggle>Развернуть</span><span closed-toggle hidden>Свернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
                                                             </a>
                                                             <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
                                                         </div>
@@ -1120,11 +1119,11 @@
                         <!-- Aside right -->
                         <aside class="uk-width-medium@m">
                             <div class="uk-child-width-1-1 uk-grid-medium" uk-grid>
-                                <div class="uk-width-auto@s uk-width-1-1@m">
+                                <div class="uk-width-auto@s uk-width-1-1@m uk-flex uk-flex-center">
 
                                     <!--Banner-->
                                     <a href="#" class="uk-card">
-                                        <img src="images/banner.jpg" alt="" class="uk-width-1-1">
+                                        <img src="images/banner.jpg" alt="">
                                     </a>
 
                                 </div>
@@ -1133,7 +1132,7 @@
 
                                     <!--News list-->
                                     <div class="tm-news-small">
-                                        <h3>Новости туризма</h3>
+                                        <h3>Последние материалы</h3>
                                         <ul class="tm-news-list uk-list uk-list-large uk-list-divider">
                                             <li class="uk-child-width-expand uk-flex">
                                                 <div class="uk-width-auto uk-margin-small-right">
@@ -1372,7 +1371,7 @@
                 <div class="uk-container uk-text-center">
                     <div class="uk-width-4-5@l uk-margin-auto">
                         <h2>Поиск попутчиков в путешествие</h2>
-                        <p>Мало кто целенаправленно стремится провести отпуск в одиночестве, чаще всего такая не
+                        <p class="tm-line-height-big">Мало кто целенаправленно стремится провести отпуск в одиночестве, чаще всего такая не
                             радужная перспектива возникает непредвиденно – если, например, друзей, с которыми вы
                             планировали совершить поездку, не отпускают с работы, или они не хотят ехать в страну,
                             куда мечтаете отправиться вы. И как же быть в такой непростой ситуации, когда отпуск на
@@ -1479,7 +1478,12 @@
 
 </div>
 
+<!--Scripts-->
+<script src="//ulogin.ru/js/ulogin.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="scripts/scroller.js"></script>
 <script src="scripts/app.js"></script>
+
 
 </body>
 </html>
