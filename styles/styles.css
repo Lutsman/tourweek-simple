@@ -12746,6 +12746,70 @@ form .uk-hr {
 .tm-country-top-overlay {
   background-color: rgba(0, 0, 0, 0.5);
 }
+.tm-search-wrap {
+  padding: 20px 25px 10px;
+  font-size: 20px;
+}
+.tm-search-wrap .uk-input,
+.tm-search-wrap .uk-select:not([multiple]):not([size]) {
+  height: 45px;
+}
+.tm-search-wrap .fa-map-marker,
+.tm-search-wrap .fa-search {
+  font-size: 22px;
+}
+.tm-search-links {
+  font-size: 17px;
+}
+.tm-search-links a {
+  color: #666;
+}
+.tm-search-links a:hover {
+  color: #999;
+}
+.tm-regions-table {
+  border-bottom: 1px solid #e5e5e5;
+}
+.tm-regions-table .tm-title {
+  font-family: 'LatoWebBold';
+  font-size: 20px;
+  line-height: normal;
+  color: #48729e;
+}
+.tm-regions-table .tm-title i {
+  font-size: 22px;
+}
+.tm-regions-table .uk-list ul {
+  padding-left: 50px;
+}
+.tm-regions-table .uk-list > li > ul {
+  margin-top: 5px;
+}
+.tm-regions-table .uk-list-divider {
+  border-top: none;
+}
+.tm-regions-table .uk-list-divider > li:nth-child(n+2) {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #e5e5e5;
+}
+.tm-regions-table .uk-list-divider > li:first-child {
+  padding-top: 0;
+}
+.tm-regions-table .uk-list-divider > li:last-child {
+  padding-bottom: 0;
+}
+.tm-regions-table .uk-list-divider .uk-list-divider {
+  border-top: 1px solid #e5e5e5;
+}
+.tm-regions-table .uk-list-divider .uk-list-divider > li:first-child {
+  padding-top: 5px;
+}
+.tm-member {
+  padding: 1px;
+  border: 1px solid #ff983a;
+  border-radius: 50%;
+}
 header {
   z-index: 100;
 }

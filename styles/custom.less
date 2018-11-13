@@ -668,6 +668,89 @@ form {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.tm-search-wrap {
+  padding: 20px 25px 10px;
+  font-size: 20px;
+
+  .uk-input, .uk-select:not([multiple]):not([size]) {
+    height: 45px;
+  }
+
+  .fa-map-marker, .fa-search {
+    font-size: 22px;
+  }
+}
+
+.tm-search-links {
+  font-size: 17px;
+
+  a {
+    color: #666;
+
+    &:hover {
+      color: #999;
+    }
+  }
+}
+
+.tm-regions-table {
+  border-bottom: 1px solid @global-border;
+
+  .tm-title {
+    font-family: @font-lato-bold;
+    font-size: 20px;
+    line-height: normal;
+    color: @global-primary-background;
+
+    i {
+      font-size: 22px;
+    }
+  }
+
+  .uk-list {
+
+    ul {
+      padding-left: 50px;
+    }
+
+    > li > ul {
+      margin-top: 5px;
+    }
+  }
+
+  .uk-list-divider {
+    border-top: none;
+
+    > li:nth-child(n+2) {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    > li:first-child {
+      padding-top: 0;
+    }
+
+    > li:last-child {
+      padding-bottom: 0;
+    }
+
+    .uk-list-divider {
+      border-top: 1px solid @global-border;
+
+      > li:first-child {
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+.tm-member {
+  padding: 1px;
+  border: 1px solid @global-orange;
+  border-radius: 50%;
+}
+
 //navbar
 
 header {
