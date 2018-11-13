@@ -12732,6 +12732,20 @@ form .uk-hr {
   padding-bottom: 10px;
   border-bottom: 1px solid #e5e5e5;
 }
+.tm-country-top {
+  min-height: 484px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.tm-country-top .uk-nav > li > a {
+  padding: 3px 0;
+}
+.tm-country-top hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tm-country-top-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 header {
   z-index: 100;
 }
@@ -12818,6 +12832,17 @@ header {
 }
 .tm-city-description-list .tm-list-bullet > li:nth-child(n+2) {
   margin-top: 0;
+}
+.tm-country-description-list > dt {
+  color: #fff;
+}
+.tm-country-description-list > dt:nth-child(n+2) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+.tm-country-description-list dd {
+  font-family: 'LatoWebBold';
 }
 .tm-indicator {
   display: flex;
