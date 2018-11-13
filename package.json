@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "less": "^3.8.1",
+    "uikit": "^3.0.0-rc.22"
+  }
+}
