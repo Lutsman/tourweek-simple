@@ -12291,8 +12291,11 @@ a.uk-offcanvas-bar:hover {
   padding: 0;
   margin-left: -10px;
 }
-[class*='uk-column'] label {
-  display: block;
+[class*='uk-column'] > label,
+[class*='uk-column'] > li {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
 }
 .fa {
   line-height: inherit;
@@ -12438,6 +12441,196 @@ form .uk-hr {
 }
 .tm-search-header .uk-button-small {
   font-size: 12px;
+}
+header {
+  z-index: 100;
+}
+.tm-pageheader {
+  min-height: 500px;
+}
+.tm-pageheader .uk-navbar-container {
+  background: transparent;
+}
+.tm-pageheader .tm-navbar-active {
+  background-color: #48729e;
+}
+.tm-pageheader-main {
+  background: url("../images/bg_pageheader_main.jpg") no-repeat center;
+  background-size: cover;
+}
+.tm-pageheader-visas {
+  background: url("../images/visa_header_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+.tm-pageheader-companions {
+  background: url("../images/companions_header_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+.tm-pageheader-airlines {
+  background: url("../images/header_bg_airlines.jpg") no-repeat center;
+  background-size: cover;
+}
+.tm-navbar-active {
+  background-color: #48729e;
+}
+.tm-navbar-item-active {
+  background-color: #2e547b;
+}
+.tm-navbar-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.tm-nav-divider > li:nth-child(n+2) {
+  border-top: 1px dashed #e5e5e5;
+}
+.tm-contents-nav {
+  border-top: none;
+}
+.tm-contents-nav > li:nth-child(n+2) {
+  border-top-color: #c6c6c6;
+}
+.tm-contents-nav > li > a {
+  padding: 0;
+}
+.tm-subnav-orange > * > :first-child {
+  padding: 0 30px;
+  background: transparent;
+  color: #333;
+  line-height: 28px;
+  font-family: 'LatoWebMedium';
+  border: 1px solid #ff983a;
+}
+.tm-subnav-orange > * > a:hover,
+.tm-subnav-orange > * .uk-subnav-pill > * > a:focus {
+  background-color: #ff983a;
+  color: #fff;
+  border-color: #ff983a;
+}
+.tm-subnav-orange > .uk-active > a {
+  background-color: #ff983a;
+  color: #fff;
+  border-color: #ff983a;
+}
+.tm-news-list .uk-link-text {
+  font-family: 'LatoWebBold';
+}
+.tm-city-description-list {
+  background-color: #e9eef3;
+}
+.tm-city-description-list > dt:nth-child(n+2) {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top-color: #c6c6c6;
+}
+.tm-city-description-list dd {
+  font-family: 'LatoWebBold';
+}
+.tm-city-description-list .tm-list-bullet > li {
+  position: relative;
+  padding-left: 12px;
+}
+.tm-city-description-list .tm-list-bullet > li::before {
+  content: '\f111';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 18px;
+  font-family: FontAwesome;
+  font-size: 8px;
+  color: #a2a2a2;
+}
+.tm-city-description-list .tm-list-bullet > li:nth-child(n+2) {
+  margin-top: 0;
+}
+.tm-country-description-list > dt {
+  color: #fff;
+}
+.tm-country-description-list > dt:nth-child(n+2) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+.tm-country-description-list dd {
+  font-family: 'LatoWebBold';
+}
+.tm-indicator {
+  display: flex;
+  margin-bottom: 4px;
+  line-height: 21px;
+  font-family: 'LatoWeb';
+  font-size: 12px;
+  color: #fff;
+}
+.tm-indicator > div:first-of-type {
+  width: 21px;
+  margin-right: 5px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tm-indicator-green {
+  width: 95px;
+  background-color: #67c751;
+}
+.tm-indicator-red {
+  width: 149px;
+  background-color: #fd5959;
+}
+.tm-indicator-blue {
+  width: 127px;
+  background-color: #4797e0;
+}
+.tm-indicator-black {
+  width: 108px;
+  background-color: #444;
+}
+.tm-button-text-small {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.tm-button-text-default {
+  font-size: 16px;
+  text-transform: none;
+}
+.tm-social > * {
+  padding-left: 5px;
+}
+.tm-social i {
+  width: 34px;
+  height: 34px;
+  font-size: 19px;
+  line-height: 34px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.tm-line-height-big {
+  line-height: 2;
+}
+.tm-image-shadow {
+  box-shadow: inset 0 -80px 80px -40px #fff;
+}
+.tm-image-shadow img {
+  position: relative;
+  z-index: -1;
+}
+.tm-article-footer {
+  font-size: 14px;
+  border-top: 2px solid #1884bc;
+}
+.tm-article-footer .tm-button-more {
+  position: relative;
+  top: -20px;
+}
+.tm-article-title {
+  font-size: 20px;
+  font-family: 'LatoWebBold';
 }
 .tm-hr {
   border-top: 1px solid #d8d8d8;
@@ -12806,180 +12999,12 @@ form .uk-hr {
   padding-top: 5px;
 }
 .tm-member {
+  width: 26px;
   padding: 1px;
   border: 1px solid #ff983a;
-  border-radius: 50%;
-}
-header {
-  z-index: 100;
-}
-.tm-pageheader {
-  min-height: 500px;
-}
-.tm-pageheader .uk-navbar-container {
-  background: transparent;
-}
-.tm-pageheader .tm-navbar-active {
-  background-color: #48729e;
-}
-.tm-pageheader-main {
-  background: url("../images/bg_pageheader_main.jpg") no-repeat center;
-  background-size: cover;
-}
-.tm-pageheader-visas {
-  background: url("../images/visa_header_bg.jpg") no-repeat center;
-  background-size: cover;
-}
-.tm-pageheader-companions {
-  background: url("../images/companions_header_bg.jpg") no-repeat center;
-  background-size: cover;
-}
-.tm-pageheader-airlines {
-  background: url("../images/header_bg_airlines.jpg") no-repeat center;
-  background-size: cover;
-}
-.tm-navbar-active {
-  background-color: #48729e;
-}
-.tm-navbar-item-active {
-  background-color: #2e547b;
-}
-.tm-navbar-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-.tm-nav-divider > li:nth-child(n+2) {
-  border-top: 1px dashed #e5e5e5;
-}
-.tm-contents-nav {
-  border-top: none;
-}
-.tm-contents-nav > li:nth-child(n+2) {
-  border-top-color: #c6c6c6;
-}
-.tm-contents-nav > li > a {
-  padding: 0;
-}
-.tm-news-list .uk-link-text {
-  font-family: 'LatoWebBold';
-}
-.tm-city-description-list {
-  background-color: #e9eef3;
-}
-.tm-city-description-list > dt:nth-child(n+2) {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top-color: #c6c6c6;
-}
-.tm-city-description-list dd {
-  font-family: 'LatoWebBold';
-}
-.tm-city-description-list .tm-list-bullet > li {
-  position: relative;
-  padding-left: 12px;
-}
-.tm-city-description-list .tm-list-bullet > li::before {
-  content: '\f111';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 18px;
-  font-family: FontAwesome;
-  font-size: 8px;
-  color: #a2a2a2;
-}
-.tm-city-description-list .tm-list-bullet > li:nth-child(n+2) {
-  margin-top: 0;
-}
-.tm-country-description-list > dt {
-  color: #fff;
-}
-.tm-country-description-list > dt:nth-child(n+2) {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top-color: rgba(255, 255, 255, 0.2);
-}
-.tm-country-description-list dd {
-  font-family: 'LatoWebBold';
-}
-.tm-indicator {
-  display: flex;
-  margin-bottom: 4px;
-  line-height: 21px;
-  font-family: 'LatoWeb';
-  font-size: 12px;
-  color: #fff;
-}
-.tm-indicator > div:first-of-type {
-  width: 21px;
-  margin-right: 5px;
   text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-.tm-indicator-green {
-  width: 95px;
-  background-color: #67c751;
-}
-.tm-indicator-red {
-  width: 149px;
-  background-color: #fd5959;
-}
-.tm-indicator-blue {
-  width: 127px;
-  background-color: #4797e0;
-}
-.tm-indicator-black {
-  width: 108px;
-  background-color: #444;
-}
-.tm-button-text-small {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.tm-button-text-default {
-  font-size: 16px;
-  text-transform: none;
-}
-.tm-social > * {
-  padding-left: 5px;
-}
-.tm-social i {
-  width: 34px;
-  height: 34px;
-  font-size: 19px;
-  line-height: 34px;
-  text-align: center;
-  border: 1px solid;
   border-radius: 50%;
   box-sizing: border-box;
-}
-.tm-line-height-big {
-  line-height: 2;
-}
-.tm-image-shadow {
-  box-shadow: inset 0 -80px 80px -40px #fff;
-}
-.tm-image-shadow img {
-  position: relative;
-  z-index: -1;
-}
-.tm-article-footer {
-  font-size: 14px;
-  border-top: 2px solid #1884bc;
-}
-.tm-article-footer .tm-button-more {
-  position: relative;
-  top: -20px;
-}
-.tm-article-title {
-  font-size: 20px;
-  font-family: 'LatoWebBold';
 }
 .tm-photo {
   background-color: #e9eef3;
