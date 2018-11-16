@@ -1,12 +1,13 @@
 $(function () {
    // datepicker
     (function () {
-        // var $datepicker = $('[datepicker]');
-        // var options = {
-        //     placeholder: '',
-        // };
-        //
-        // $datepicker.datepicker(options);
+        var $datepicker = $('[datepicker]');
+        var options = {
+            placeholder: '',
+            lang: 'ru-RU',
+        };
+
+        $datepicker.datepicker(options);
     })();
 
     // navbar
@@ -71,11 +72,11 @@ $(function () {
 
     //social likes
     (function () {
-        // var wrappers = document.querySelectorAll('.social-likes-wrapper');
-        // var options = {};
-        //
-        // for (var i = 0; i < wrappers.length;  i++) {
-        //     socialLikes(wrappers[i], options);
-        // }
+        var $wrappers = $('.social-likes-wrapper');
+        var options = {
+            zeroes: 'yes',
+        };
+
+        $wrappers.socialLikes(options);
     })();
 });
