@@ -4360,7 +4360,7 @@ ul.uk-nav-sub {
   /* 1 */
   flex-wrap: wrap;
   /* 2 */
-  margin-left: -20px;
+  margin-left: -6px;
   /* 3 */
   padding: 0;
   list-style: none;
@@ -4374,7 +4374,7 @@ ul.uk-nav-sub {
   /* 1 */
   flex: none;
   /* 2 */
-  padding-left: 20px;
+  padding-left: 6px;
   /* 3 */
   position: relative;
 }
@@ -4425,7 +4425,7 @@ ul.uk-nav-sub {
   content: "";
   height: 1.5em;
   margin-left: 0px;
-  margin-right: 20px;
+  margin-right: 6px;
   border-left: 1px solid #e5e5e5;
 }
 /* Pill modifier
@@ -4434,7 +4434,7 @@ ul.uk-nav-sub {
   padding: 0 10px;
   background: transparent;
   color: #396fa4;
-  line-height: 32px;
+  line-height: 28px;
   font-family: 'LatoWebMedium';
   border: 1px solid #396fa4;
 }
