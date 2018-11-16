@@ -13044,6 +13044,12 @@ header {
   background-color: #e9eef3;
   background-image: url("../images/pattern_bg.png");
 }
+.tm-foto-add-step-1 {
+  padding: 50px 40px;
+}
+.tm-foto-add-step-2 {
+  padding: 20px 40px 30px 20px;
+}
 [uk-toggle]:not(.uk-toggle-active) [opened-toggle] {
   display: none;
 }

@@ -225,579 +225,425 @@
 
                     <h2>Добавление фото</h2>
 
-                    <div class="uk-child-width-expand@m" uk-grid>
+                    <!-- Add foto form -->
+                    <form action="/" class="tm-form-companions uk-padding">
 
-                        <!-- Add a search for a fellow traveler -->
-                        <div>
-                            <form action="/" class="tm-form-companions uk-padding uk-background-muted">
-                                <div class="uk-child-width-1-3@s uk-grid-small" uk-grid>
-                                    <div>
-                                        <div class="uk-margin">
-                                            <label class="uk-form-label" for="form-select-myself">Я</label>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                        <!-- Add foto step 1 -->
+                        <div class="tm-foto-add-step-1 uk-background-muted">
+                            <div class="uk-child-width-expand@s" uk-grid>
+                                <div class="uk-width-auto@s">
+                                    <img src="images/icon-picture-add.png" alt="">
+                                </div>
+
+                                <div>
+                                    <h3 class="uk-text-bold uk-text-primary">Уважаемые пользователи!</h3>
+                                    <p class="uk-text-little">
+                                        Вы можете загрузить одновременно до 10 фото (размер каждого не более 10 Мб,
+                                        форматы – GIF, JPEG, PNG.). Минимальный размер – 640х250 px по ширине или
+                                        высоте.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add foto step 2 -->
+                        <div class="tm-foto-add-step-2 uk-background-muted"></div>
+
+
+
+                        <div class="uk-child-width-1-3@s uk-grid-small" uk-grid>
+                            <div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-select-myself">Я</label>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon uk-form-icon-flip">
                                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                 </span>
-                                                <select class="uk-select" id="form-select-myself">
-                                                    <option>Мужчина</option>
-                                                    <option>Женщина</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <select class="uk-select" id="form-select-myself">
+                                            <option>Мужчина</option>
+                                            <option>Женщина</option>
+                                        </select>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div>
-                                        <div class="uk-margin">
-                                            <label class="uk-form-label" for="form-select-search">Ищу</label>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                            <div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-select-search">Ищу</label>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon uk-form-icon-flip">
                                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                 </span>
-                                                <select class="uk-select" id="form-select-search">
-                                                    <option>Девушку</option>
-                                                    <option>Парня</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="uk-margin">
-                                            <label class="uk-form-label" for="form-input-age">В возрасте от</label>
-                                            <div class="uk-flex uk-flex-middle">
-                                                <div>
-                                                    <input class="uk-input uk-form-width-xsmall" id="form-input-age" type="text">
-                                                </div>
-                                                <div class="uk-margin-small-left uk-margin-small-right">до</div>
-                                                <div>
-                                                    <input class="uk-input uk-form-width-xsmall" type="text">
-                                                </div>
-                                                <div class="uk-margin-small-left">лет</div>
-                                            </div>
-                                        </div>
+                                        <select class="uk-select" id="form-select-search">
+                                            <option>Девушку</option>
+                                            <option>Парня</option>
+                                        </select>
                                     </div>
                                 </div>
+                            </div>
 
-                                <hr>
-
+                            <div>
                                 <div class="uk-margin">
-                                    <label class="uk-form-label">Цель поездки  (Выберите до 3-х целей)</label>
-
-                                    <div class="tm-checkbox-set uk-child-width-1-3@s uk-child-width-1-6@l uk-flex uk-flex-wrap">
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-1"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-1" class="tm-checkbox">Всё равно</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-2"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-2" class="tm-checkbox">Море и пляж</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-3"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-3" class="tm-checkbox">Горы</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-4"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-4" class="tm-checkbox">Горные лыжи</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-5"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-5" class="tm-checkbox">Сноуборд</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-6"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-6" class="tm-checkbox">Яхтинг</label>
-                                        </div>
-
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-7"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-7" class="tm-checkbox">Зимовка</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-8"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-8" class="tm-checkbox">Здоровье</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-9"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-9" class="tm-checkbox">Автопутешествия</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-10"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-10" class="tm-checkbox">Круизы</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-11"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-11" class="tm-checkbox">Обучение</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-12"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-12" class="tm-checkbox">Сплавы</label>
-                                        </div>
-
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-13"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-13" class="tm-checkbox">Развлечения</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-14"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-14" class="tm-checkbox">Шопинг</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-15"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-15" class="tm-checkbox">Культура</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-16"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-16" class="tm-checkbox">Велосипеды</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-17"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-17" class="tm-checkbox">Походы</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-18"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-18" class="tm-checkbox">Мотоциклы</label>
-                                        </div>
-
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-19"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-19" class="tm-checkbox">На природу</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-20"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-20" class="tm-checkbox">Дайвинг</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-21"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-21" class="tm-checkbox">Автобусные туры</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-22"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-22" class="tm-checkbox">Нудизм</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-23"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-23" class="tm-checkbox">Отдых с детьми</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-24"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-24" class="tm-checkbox">Охота и рыбалка</label>
-                                        </div>
-
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-25"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-25" class="tm-checkbox">Паломничество</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-26"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-26" class="tm-checkbox">Серфинг</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-27"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-27" class="tm-checkbox">Романтика</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-28"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-28" class="tm-checkbox">Экстрим</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-29"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-29" class="tm-checkbox">Сноуборд</label>
-                                        </div>
-                                        <div class="uk-form-controls">
-                                            <input class="uk-hidden" type="checkbox" id="form-checkbox-target-30"
-                                                   name="form-checkbox-target">
-                                            <label for="form-checkbox-target-30" class="tm-checkbox">Яхтинг</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <div class="uk-width-1-2@l uk-margin">
-                                    <div class="uk-form-horizontal">
-                                        <label class="uk-form-label" for="form-input-drive-from">Едем из</label>
-                                        <div class="uk-form-controls">
-                                            <div class="uk-child-width-expand uk-flex-middle uk-grid-small" uk-grid>
-                                                <div>
-                                                    <input class="uk-input" id="form-input-drive-from" type="text"
-                                                           placeholder="например Москва">
-                                                </div>
-                                                <div class="uk-width-auto">
-                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
-                                                       uk-tooltip="title: Tooltip text"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <div class="uk-form-horizontal uk-margin">
-                                    <label class="uk-form-label">Едем в страну</label>
-                                    <div class="uk-form-controls uk-panel uk-panel-scrollable uk-text-little uk-background-default">
-                                        <div class="uk-column-1-3@s uk-column-1-5@l">
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Все равно куда</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Азербайджан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Армения</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Афганистан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бангладеш</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бахрейн</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бруней</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бутан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Восточный Тимор</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Вьетнам</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Грузия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Израиль</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Индия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Индонезия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Иордания</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Ирак</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Иран</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Йемен</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Казахстан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Узбекистан</label>
-
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Камбоджа</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Катар</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Кипр</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Киргизия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">КНДР</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Китай</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Кувейт</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Лаос</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Ливан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Макао (Аомынь)</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Малайзия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Мальдивы</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Монголия</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Мьянма (Бирма)</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Непал</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">ОАЭ</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Оман</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Пакистан</label>
-                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Палестина</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <div class="uk-child-width-1-2@l" uk-grid>
-                                    <div>
-                                        <div class="uk-form-horizontal">
-                                            <label class="uk-form-label" for="form-input-date">В период с</label>
-                                            <div class="uk-form-controls">
-                                                <div class="uk-flex uk-flex-wrap uk-flex-middle" uk-margin>
-                                                    <div>
-                                                        <input class="uk-input uk-form-width-small" id="form-input-date"
-                                                               type="text" placeholder="24.07.2017"
-                                                               datepicker>
-                                                    </div>
-                                                    <div class="uk-width-1-1 uk-width-auto@s uk-margin-small-left uk-margin-small-right">по</div>
-                                                    <div>
-                                                        <input class="uk-input uk-form-width-small" type="text"
-                                                               placeholder="24.07.2017"
-                                                               datepicker>
-                                                    </div>
-                                                </div>
-                                                <div class="uk-margin-small-top">
-                                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">дата не важна</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
-                                            <label class="uk-form-label uk-width-1-1 uk-width-auto@m uk-margin-small-right"
-                                                   for="form-input-duration">Продолжительность поездки</label>
-                                            <div class="uk-form-controls">
-                                                <div class="uk-flex uk-flex-middle">
-                                                    <div>
-                                                        <input class="uk-input uk-form-width-xsmall"
-                                                               id="form-input-duration"
-                                                               type="text" placeholder="10">
-                                                    </div>
-                                                    <div class="uk-margin-small-left uk-margin-small-right">-</div>
-                                                    <div>
-                                                        <input class="uk-input uk-form-width-xsmall" type="text"
-                                                               placeholder="20">
-                                                    </div>
-                                                    <div class="uk-margin-small-left">дней</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <div class="uk-margin">
-                                    <label class="uk-form-label" for="form-textarea">Текст объявления (максимум 600 знаков)</label>
-                                    <div class="uk-form-controls">
-                                        <textarea name="form-textarea" id="form-textarea" rows="10" class="uk-textarea" maxlength="600"></textarea>
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <div class="tm-form-social uk-margin">
-                                    <label class="uk-form-label">Мои страницы в соцсетях:</label>
-                                    <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                                    <label class="uk-form-label" for="form-input-age">В возрасте от</label>
+                                    <div class="uk-flex uk-flex-middle">
                                         <div>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                                            <input class="uk-input uk-form-width-xsmall" id="form-input-age" type="text">
+                                        </div>
+                                        <div class="uk-margin-small-left uk-margin-small-right">до</div>
+                                        <div>
+                                            <input class="uk-input uk-form-width-xsmall" type="text">
+                                        </div>
+                                        <div class="uk-margin-small-left">лет</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Цель поездки  (Выберите до 3-х целей)</label>
+
+                            <div class="tm-checkbox-set uk-child-width-1-3@s uk-child-width-1-6@l uk-flex uk-flex-wrap">
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-1"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-1" class="tm-checkbox">Всё равно</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-2"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-2" class="tm-checkbox">Море и пляж</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-3"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-3" class="tm-checkbox">Горы</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-4"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-4" class="tm-checkbox">Горные лыжи</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-5"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-5" class="tm-checkbox">Сноуборд</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-6"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-6" class="tm-checkbox">Яхтинг</label>
+                                </div>
+
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-7"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-7" class="tm-checkbox">Зимовка</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-8"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-8" class="tm-checkbox">Здоровье</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-9"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-9" class="tm-checkbox">Автопутешествия</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-10"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-10" class="tm-checkbox">Круизы</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-11"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-11" class="tm-checkbox">Обучение</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-12"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-12" class="tm-checkbox">Сплавы</label>
+                                </div>
+
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-13"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-13" class="tm-checkbox">Развлечения</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-14"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-14" class="tm-checkbox">Шопинг</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-15"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-15" class="tm-checkbox">Культура</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-16"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-16" class="tm-checkbox">Велосипеды</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-17"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-17" class="tm-checkbox">Походы</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-18"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-18" class="tm-checkbox">Мотоциклы</label>
+                                </div>
+
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-19"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-19" class="tm-checkbox">На природу</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-20"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-20" class="tm-checkbox">Дайвинг</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-21"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-21" class="tm-checkbox">Автобусные туры</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-22"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-22" class="tm-checkbox">Нудизм</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-23"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-23" class="tm-checkbox">Отдых с детьми</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-24"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-24" class="tm-checkbox">Охота и рыбалка</label>
+                                </div>
+
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-25"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-25" class="tm-checkbox">Паломничество</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-26"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-26" class="tm-checkbox">Серфинг</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-27"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-27" class="tm-checkbox">Романтика</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-28"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-28" class="tm-checkbox">Экстрим</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-29"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-29" class="tm-checkbox">Сноуборд</label>
+                                </div>
+                                <div class="uk-form-controls">
+                                    <input class="uk-hidden" type="checkbox" id="form-checkbox-target-30"
+                                           name="form-checkbox-target">
+                                    <label for="form-checkbox-target-30" class="tm-checkbox">Яхтинг</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="uk-width-1-2@l uk-margin">
+                            <div class="uk-form-horizontal">
+                                <label class="uk-form-label" for="form-input-drive-from">Едем из</label>
+                                <div class="uk-form-controls">
+                                    <div class="uk-child-width-expand uk-flex-middle uk-grid-small" uk-grid>
+                                        <div>
+                                            <input class="uk-input" id="form-input-drive-from" type="text"
+                                                   placeholder="например Москва">
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                               uk-tooltip="title: Tooltip text"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="uk-form-horizontal uk-margin">
+                            <label class="uk-form-label">Едем в страну</label>
+                            <div class="uk-form-controls uk-panel uk-panel-scrollable uk-text-little uk-background-default">
+                                <div class="uk-column-1-3@s uk-column-1-5@l">
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Все равно куда</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Азербайджан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Армения</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Афганистан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бангладеш</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бахрейн</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бруней</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Бутан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Восточный Тимор</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Вьетнам</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Грузия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Израиль</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Индия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Индонезия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Иордания</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Ирак</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Иран</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Йемен</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Казахстан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Узбекистан</label>
+
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Камбоджа</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Катар</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Кипр</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Киргизия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">КНДР</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Китай</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Кувейт</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Лаос</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Ливан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Макао (Аомынь)</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Малайзия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Мальдивы</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Монголия</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Мьянма (Бирма)</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Непал</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">ОАЭ</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Оман</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Пакистан</label>
+                                    <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Палестина</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="uk-child-width-1-2@l" uk-grid>
+                            <div>
+                                <div class="uk-form-horizontal">
+                                    <label class="uk-form-label" for="form-input-date">В период с</label>
+                                    <div class="uk-form-controls">
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle" uk-margin>
+                                            <div>
+                                                <input class="uk-input uk-form-width-small" id="form-input-date"
+                                                       type="text" placeholder="24.07.2017"
+                                                       datepicker>
+                                            </div>
+                                            <div class="uk-width-1-1 uk-width-auto@s uk-margin-small-left uk-margin-small-right">по</div>
+                                            <div>
+                                                <input class="uk-input uk-form-width-small" type="text"
+                                                       placeholder="24.07.2017"
+                                                       datepicker>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-small-top">
+                                            <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">дата не важна</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                    <label class="uk-form-label uk-width-1-1 uk-width-auto@m uk-margin-small-right"
+                                           for="form-input-duration">Продолжительность поездки</label>
+                                    <div class="uk-form-controls">
+                                        <div class="uk-flex uk-flex-middle">
+                                            <div>
+                                                <input class="uk-input uk-form-width-xsmall"
+                                                       id="form-input-duration"
+                                                       type="text" placeholder="10">
+                                            </div>
+                                            <div class="uk-margin-small-left uk-margin-small-right">-</div>
+                                            <div>
+                                                <input class="uk-input uk-form-width-xsmall" type="text"
+                                                       placeholder="20">
+                                            </div>
+                                            <div class="uk-margin-small-left">дней</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-textarea">Текст объявления (максимум 600 знаков)</label>
+                            <div class="uk-form-controls">
+                                <textarea name="form-textarea" id="form-textarea" rows="10" class="uk-textarea" maxlength="600"></textarea>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="tm-form-social uk-margin">
+                            <label class="uk-form-label">Мои страницы в соцсетях:</label>
+                            <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                                <div>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon">
                                                     <i class="fa fa-vk" aria-hidden="true"></i>
                                                 </span>
 
-                                                <input class="uk-input" type="text">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                                        <input class="uk-input" type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon">
                                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                                 </span>
 
-                                                <input class="uk-input" type="text">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                                        <input class="uk-input" type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon">
                                                     <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
                                                 </span>
 
-                                                <input class="uk-input" type="text">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
+                                        <input class="uk-input" type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-form-controls uk-inline uk-width-1-1">
                                                 <span class="uk-form-icon">
                                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                                 </span>
 
-                                                <input class="uk-input" type="text">
-                                            </div>
-                                        </div>
+                                        <input class="uk-input" type="text">
                                     </div>
-
-                                </div>
-
-                                <div class="uk-form-controls uk-text-right">
-                                    <button class="uk-button uk-button-blue" type="submit">Добавить</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Aside right -->
-                        <aside class="uk-width-medium@m">
-                            <div class="uk-child-width-1-1 uk-grid-medium" uk-grid>
-                                <div class="uk-width-auto@s uk-width-1-1@m uk-flex uk-flex-center">
-
-                                    <!--Banner-->
-                                    <a href="#" class="uk-card">
-                                        <img src="images/banner.jpg" alt="">
-                                    </a>
-
-                                </div>
-
-                                <div class="uk-width-expand@s  uk-width-1-1@m">
-
-                                    <!--News list-->
-                                    <div class="tm-news-small">
-                                        <h3>Последние материалы</h3>
-                                        <ul class="tm-news-list uk-list uk-list-large uk-list-divider">
-                                            <li class="uk-child-width-expand uk-flex">
-                                                <div class="uk-width-auto uk-margin-small-right">
-                                                    <img src="images/avatar_small_1.png" alt=""
-                                                         class="uk-border-circle">
-                                                </div>
-
-                                                <div>
-                                                    <div class="uk-margin-small-bottom">
-                                                        <a href="" class="uk-link-text">Кафедральный собор Валетты</a>
-                                                    </div>
-                                                    <div class="uk-flex uk-flex-between uk-text-muted uk-text-small uk-grid-small"
-                                                         uk-grid>
-                                                        <div>21.03.2017 11:01</div>
-                                                        <div>
-                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span>21</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="uk-child-width-expand uk-flex">
-                                                <div class="uk-width-auto uk-margin-small-right">
-                                                    <img src="images/avatar_small_2.png" alt=""
-                                                         class="uk-border-circle">
-                                                </div>
-
-                                                <div>
-                                                    <div class="uk-margin-small-bottom">
-                                                        <a href="" class="uk-link-text">Секретная пещера тамплиеров в
-                                                            графстве
-                                                            Шропшир в Англии</a>
-                                                    </div>
-                                                    <div class="uk-flex uk-flex-between uk-text-muted uk-text-small uk-grid-small"
-                                                         uk-grid>
-                                                        <div>21.03.2017 11:01</div>
-                                                        <div>
-                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span>21</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="uk-child-width-expand uk-flex">
-                                                <div class="uk-width-auto uk-margin-small-right">
-                                                    <img src="images/avatar_small_3.png" alt=""
-                                                         class="uk-border-circle">
-                                                </div>
-
-                                                <div>
-                                                    <div class="uk-margin-small-bottom">
-                                                        <a href="" class="uk-link-text">Кафедральный собор Валетты</a>
-                                                    </div>
-                                                    <div class="uk-flex uk-flex-between uk-text-muted uk-text-small uk-grid-small"
-                                                         uk-grid>
-                                                        <div>21.03.2017 11:01</div>
-                                                        <div>
-                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span>21</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="uk-child-width-expand uk-flex">
-                                                <div class="uk-width-auto uk-margin-small-right">
-                                                    <img src="images/avatar_small_4.png" alt=""
-                                                         class="uk-border-circle">
-                                                </div>
-
-                                                <div>
-                                                    <div class="uk-margin-small-bottom">
-                                                        <a href="" class="uk-link-text">Россиянин более четырёх лет
-                                                            проживал в
-                                                            Таиланде без визы</a>
-                                                    </div>
-                                                    <div class="uk-flex uk-flex-between uk-text-muted uk-text-small uk-grid-small"
-                                                         uk-grid>
-                                                        <div>21.03.2017 11:01</div>
-                                                        <div>
-                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span>21</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="uk-child-width-expand uk-flex">
-                                                <div class="uk-width-auto uk-margin-small-right">
-                                                    <img src="images/avatar_small_5.png" alt=""
-                                                         class="uk-border-circle">
-                                                </div>
-
-                                                <div>
-                                                    <div class="uk-margin-small-bottom">
-                                                        <a href="" class="uk-link-text">Россиянин более четырёх лет
-                                                            проживал в
-                                                            Таиланде без визы</a>
-                                                    </div>
-                                                    <div class="uk-flex uk-flex-between uk-text-muted uk-text-small uk-grid-small"
-                                                         uk-grid>
-                                                        <div>21.03.2017 11:01</div>
-                                                        <div>
-                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span>21</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="uk-text-right">
-                                            <a href="#" class="uk-button uk-button-small uk-button-simple-orange">Смотреть все
-                                                новости</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div>
-
-                                    <!--Interesting in the world-->
-                                    <div>
-                                        <h3>Интересное в мире</h3>
-                                        <div class="uk-child-width-1-3@s uk-child-width-1-1@m uk-grid-small" uk-grid uk-height-match="target: > div > .uk-card">
-                                            <div>
-                                                <a href="#"
-                                                   class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
-                                                    <img src="images/interesting_world_1.jpg" alt="" uk-cover>
-                                                    <div class="uk-position-relative">Ростуризм призвал туроператоров
-                                                        оповещать
-                                                        туристов о вспышке кори в Румынии
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
-                                                    <img src="images/interesting_world_2.jpg" alt="" uk-cover>
-                                                    <div class="uk-position-relative">Ростуризм призвал туроператоров
-                                                        оповещать
-                                                        туристов о вспышке кори в Румынии
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="uk-card uk-card-small uk-card-body uk-cover-container uk-flex uk-flex-bottom uk-light">
-                                                    <img src="images/interesting_world_3.jpg" alt="" uk-cover>
-                                                    <div class="uk-position-relative">Ростуризм призвал туроператоров
-                                                        оповещать
-                                                        туристов о вспышке кори в Румынии
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
-                        </aside>
 
-                    </div>
+                        </div>
+
+                        <div class="uk-form-controls uk-text-right">
+                            <button class="uk-button uk-button-blue" type="submit">Добавить</button>
+                        </div>
+                    </form>
+
+
+
+
                 </div>
             </div>
 
