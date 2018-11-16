@@ -72,11 +72,11 @@ $(function () {
 
     //social likes
     (function () {
-        var wrappers = document.querySelectorAll('.social-likes-wrapper');
-        var options = {};
+        var $wrappers = $('.social-likes-wrapper');
+        var options = {
+            zeroes: 'yes',
+        };
 
-        for (var i = 0; i < wrappers.length;  i++) {
-            socialLikes(wrappers[i], options);
-        }
+        $wrappers.socialLikes(options);
     })();
 });

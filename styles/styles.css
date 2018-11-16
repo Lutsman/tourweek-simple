@@ -12204,7 +12204,7 @@ strong {
 .social-likes__widget {
   margin: 0 5px 0;
   padding: 0 10px;
-  border-radius: 500px;
+  border-radius: 3px;
 }
 .uk-list-divider {
   border-top: 1px solid #e5e5e5;
