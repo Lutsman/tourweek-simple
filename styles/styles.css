@@ -12193,6 +12193,12 @@ strong {
 .uk-text-orange {
   color: #ff983a;
 }
+.uk-text-red {
+  color: #f72a0f;
+}
+.uk-text-light-blue {
+  color: #83a6ca;
+}
 .social-likes {
   min-height: auto;
   margin: 0;
@@ -12601,6 +12607,7 @@ header {
   width: 51px;
   height: 51px;
   line-height: 51px;
+  padding: 0;
   font-size: 32px;
   border: none;
 }
@@ -12644,6 +12651,9 @@ header {
 }
 .tm-overlay-light {
   background-color: rgba(255, 255, 255, 0.5);
+}
+.tm-font-size-30 {
+  font-size: 30px;
 }
 .tm-hr {
   border-top: 1px solid #d8d8d8;
