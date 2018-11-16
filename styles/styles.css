@@ -12689,6 +12689,9 @@ header {
 .tm-padding-10 {
   padding: 10px;
 }
+.tm-padding-10-20 {
+  padding: 10px 20px;
+}
 .tm-bordered {
   border: 1px solid #e5e5e5;
 }
