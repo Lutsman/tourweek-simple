@@ -1,0 +1,12 @@
+@import "vendors/jquery.datepicker.css";
+.social-likes {
+  min-height: auto;
+  margin: 0;
+  line-height: inherit;
+}
+.social-likes__widget {
+  margin: 0 5px 0;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=vendors.css.map */
