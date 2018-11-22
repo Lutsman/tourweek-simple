@@ -768,7 +768,35 @@ header {
 .tm-questions-list {
 
   > li {
-    border: 1px solid #bfbfbf;
+    border: 1px solid #dfdfdf;
+  }
+}
+
+.tm-reply-list {
+
+  p, ul, ol, dl {
+    margin-bottom: 10px;
+  }
+
+  * + p, * + ul, * + ol, * + dl {
+    margin-top: 10px;
+  }
+
+  .uk-comment-body {
+    position: relative;
+    padding: 15px 20px;
+    background-color: #fff;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      border: 7px solid transparent;
+      border-top-color: #fff;
+      border-right-color: #fff;
+    }
   }
 }
 
@@ -906,6 +934,7 @@ header {
     top: 0;
     left: 0;
     font-family: Arial, sans-serif;
+    font-size: 37px;
     color: @global-muted-color;
     text-align: center;
     line-height: 41px;

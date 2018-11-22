@@ -3539,14 +3539,16 @@ select.uk-form-width-xsmall {
 /* Title
  ========================================================================== */
 .uk-comment-title {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.4;
+  font-family: 'LatoWebBold';
+  color: #000;
 }
 /* Meta
  ========================================================================== */
 .uk-comment-meta {
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #999;
 }
 /* Avatar
@@ -3559,26 +3561,26 @@ select.uk-form-width-xsmall {
 }
 /* Adjacent siblings */
 .uk-comment-list > :nth-child(n+2) {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 /*
  * Sublists
  * Note: General sibling selector allows reply block between comment and sublist
  */
 .uk-comment-list .uk-comment ~ ul {
-  margin: 70px 0 0 0;
+  margin: 20px 0 0 0;
   padding-left: 30px;
   list-style: none;
 }
 /* Tablet and bigger */
 @media (min-width: 960px) {
   .uk-comment-list .uk-comment ~ ul {
-    padding-left: 100px;
+    padding-left: 60px;
   }
 }
 /* Adjacent siblings */
 .uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 /* Style modifier
  ========================================================================== */
@@ -12817,7 +12819,34 @@ header {
   border-color: #333;
 }
 .tm-questions-list > li {
-  border: 1px solid #bfbfbf;
+  border: 1px solid #dfdfdf;
+}
+.tm-reply-list p,
+.tm-reply-list ul,
+.tm-reply-list ol,
+.tm-reply-list dl {
+  margin-bottom: 10px;
+}
+.tm-reply-list * + p,
+.tm-reply-list * + ul,
+.tm-reply-list * + ol,
+.tm-reply-list * + dl {
+  margin-top: 10px;
+}
+.tm-reply-list .uk-comment-body {
+  position: relative;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+.tm-reply-list .uk-comment-body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  border: 7px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
 }
 .tm-list-globe > li:nth-child(n+2),
 .tm-list-count > li:nth-child(n+2),
@@ -12934,6 +12963,7 @@ header {
   top: 0;
   left: 0;
   font-family: Arial, sans-serif;
+  font-size: 37px;
   color: #999;
   text-align: center;
   line-height: 41px;
