@@ -232,7 +232,7 @@
                                 </div>
                                 <div class="uk-form-controls uk-flex-center uk-margin-medium-top" uk-grid>
                                     <div>
-                                        <a href="" class="uk-button uk-button-large uk-button-orange">Задать свой вопрос</a>
+                                        <a href="#tm-question-modal" class="uk-button uk-button-large uk-button-orange" uk-toggle>Задать свой вопрос</a>
                                     </div>
                                     <div>
                                         <a href="" class="uk-button uk-button-large uk-button-blue">Найти</a>
@@ -1466,6 +1466,80 @@
                     <li><a href="#">Блогосфера</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <!-- modal question form -->
+    <div id="tm-question-modal" uk-modal>
+        <div class="uk-modal-dialog uk-margin-auto-vertical">
+            <div class="uk-modal-body uk-background-muted uk-text-center">
+                <h2>Добавить вопрос</h2>
+            </div>
+
+            <div class="uk-modal-body uk-text-little">
+                <div class="uk-text-bold uk-text-dark-red">Перед тем как задать вопрос ознакомьтесь с несколькими правилами:</div>
+                <ul class="tm-list-info uk-list uk-margin-remove-top">
+                    <li>Вопрос должен быть лаконичным и понятным. Краткость – сестра таланта и подруга туриста.</li>
+                    <li>Вопрос должен быть четко сформулирован. На не внятный вопрос Вы рискуете получить столь же не внятный ответ.</li>
+                </ul>
+
+                <form action="/" class="tm-form-question">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-input-title">Заголовок</label>
+                        <div>
+                            <input class="uk-input" id="form-input-title" type="text">
+                        </div>
+                    </div>
+
+                    <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                        <div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-select-country">Выберите страну</label>
+                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                    <select class="uk-select" id="form-select-country">
+                                        <option></option>
+                                        <option>Страна</option>
+                                        <option>Страна</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-select-rubric">Выберите рубрику</label>
+                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                    <select class="uk-select" id="form-select-rubric">
+                                        <option></option>
+                                        <option>рубрика</option>
+                                        <option>рубрика</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-input-description">Вопрос</label>
+                        <div>
+                            <textarea id="form-input-description" class="uk-textarea" rows="6"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="uk-form-controls uk-text-center">
+                        <button class="tm-button-submit uk-button uk-button-large uk-button-blue" type="submit">Задать вопрос</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <button class="uk-modal-close-default" type="button" uk-close></button>
         </div>
     </div>
 

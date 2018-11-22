@@ -5185,7 +5185,7 @@ ul.uk-nav-sub {
   /* 2 */
   box-sizing: border-box;
   margin: 0 auto;
-  width: 600px;
+  width: 900px;
   /* 3 */
   max-width: calc(100% - 0.01px) !important;
   /* 4 */
@@ -5232,7 +5232,7 @@ ul.uk-nav-sub {
 /* Sections
  ========================================================================== */
 .uk-modal-body {
-  padding: 20px 20px;
+  padding: 20px 50px;
 }
 .uk-modal-header {
   padding: 10px 20px;
@@ -12207,6 +12207,9 @@ strong {
 .uk-text-light-blue {
   color: #83a6ca;
 }
+.uk-text-dark-red {
+  color: #990000;
+}
 .social-likes {
   min-height: auto;
   margin: 0;
@@ -12368,6 +12371,15 @@ form .uk-hr {
 }
 .tm-form-social .uk-form-icon {
   border-right: 1px solid #e5e5e5;
+}
+.tm-form-question .uk-form-label {
+  text-transform: none;
+}
+.tm-form-question .tm-button-submit {
+  width: 350px;
+  max-width: 100%;
+  font-family: 'LatoWebMedium';
+  font-size: 20px;
 }
 .tm-checkbox-blue .tm-checkbox {
   display: block;
@@ -12930,6 +12942,22 @@ header {
   top: 2px;
   left: -20px;
 }
+.tm-list-info > li {
+  position: relative;
+  padding-left: 20px;
+}
+.tm-list-info > li::before {
+  content: "\f05a";
+  font-family: FontAwesome;
+  color: #990000;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+.tm-list-info > li:nth-child(n+2),
+.tm-list-info > li > ul {
+  margin-top: 0;
+}
 .tm-marker-file {
   color: #000;
   border: 1px solid #e5e5e5;
@@ -13163,6 +13191,9 @@ header {
   }
 }
 @media (max-width: 639px) {
+  .uk-modal-body {
+    padding: 20px;
+  }
   .uk-button-large {
     padding: 0 20px;
   }

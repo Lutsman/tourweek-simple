@@ -159,6 +159,20 @@ form {
   }
 }
 
+.tm-form-question {
+
+  .uk-form-label {
+    text-transform: none;
+  }
+
+  .tm-button-submit {
+    width: 350px;
+    max-width: 100%;
+    font-family: @font-lato-medium;
+    font-size: 20px;
+  }
+}
+
 .tm-checkbox-blue {
 
   .tm-checkbox {
@@ -899,6 +913,27 @@ header {
   }
 }
 
+.tm-list-info {
+
+  > li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "\f05a";
+      font-family: FontAwesome;
+      color: #990000;
+      position: absolute;
+      top: -1px;
+      left: 0;
+    }
+
+    &:nth-child(n+2), > ul {
+      margin-top: 0;
+    }
+  }
+}
+
 .tm-marker-file {
   color: #000;
   border: 1px solid @global-border;
@@ -1194,6 +1229,10 @@ header {
 }
 
 @media (max-width: 639px) {
+
+  .uk-modal-body {
+    padding: 20px;
+  }
 
   .uk-button-large {
     padding: 0 20px;
