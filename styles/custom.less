@@ -1198,6 +1198,18 @@ header {
   }
 }
 
+.tm-grid-best-photo {
+  margin-left: -3px;
+
+  > * {
+    padding-left: 3px;
+  }
+}
+
+.uk-grid + .tm-grid-best-photo, .tm-grid-best-photo > .uk-grid-margin, * + .uk-grid-margin-small {
+  margin-top: 3px;
+}
+
 // uk-toggler
 [uk-toggle]:not(.uk-toggle-active) {
   [opened-toggle] {
