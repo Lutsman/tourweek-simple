@@ -639,6 +639,10 @@ header {
   padding: 10px 20px;
 }
 
+.tm-margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
 .tm-background-grey {
   background-color: #d9d9d9;
 }
@@ -1025,12 +1029,6 @@ header {
   padding-right: 70px;
 }
 
-.tm-sight-title {
-  font-family: @font-lato-bold;
-  font-size: 20px;
-  color: @global-blue;
-}
-
 .tm-bookmark {
   position: relative;
   padding-left: 18px;
@@ -1045,9 +1043,41 @@ header {
   }
 }
 
+.tm-sight-title {
+  font-family: @font-lato-bold;
+  font-size: 20px;
+  color: @global-blue;
+}
+
 .tm-sights .uk-card {
   padding-bottom: 10px;
   border-bottom: 1px solid @global-border;
+}
+
+.tm-sights-medium {
+
+  .tm-sight-title {
+    font-size: 30px;
+  }
+
+  .fa-star, .fa-star-o {
+    font-size: 20px;
+  }
+}
+
+.tm-sight-card-large {
+  min-height: 426px;
+  padding: 15px 20px;
+
+  .tm-sight-title {
+    font-size: 34px;
+    color: inherit;
+    line-height: 1.2;
+  }
+
+  .fa-star, .fa-star-o {
+    font-size: 21px;
+  }
 }
 
 .tm-country-top {
@@ -1065,7 +1095,7 @@ header {
 }
 
 .tm-search-wrap {
-  padding: 20px 25px 10px;
+  padding: 20px 20px 10px;
   font-size: 20px;
 
   .uk-input, .uk-select:not([multiple]):not([size]) {
@@ -1154,6 +1184,7 @@ header {
   padding: 7px 0;
 }
 
+
 // photo
 .tm-photo {
   background-color: #e9eef3;
@@ -1208,6 +1239,18 @@ header {
 
 .uk-grid + .tm-grid-best-photo, .tm-grid-best-photo > .uk-grid-margin, * + .uk-grid-margin-small {
   margin-top: 3px;
+}
+
+.tm-grid-search {
+  margin-left: -8px;
+
+  > * {
+    padding-left: 8px;
+  }
+}
+
+.uk-grid + .tm-grid-best-photo, .tm-grid-best-photo > .uk-grid-margin, * + .uk-grid-margin-small {
+  margin-top: 8px;
 }
 
 // uk-toggler

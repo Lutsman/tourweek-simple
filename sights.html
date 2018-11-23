@@ -223,108 +223,686 @@
                         <li><span>В мире</span></li>
                     </ul>
 
-                    <h2>Города и регионы</h2>
-
                     <div class="uk-child-width-expand@m" uk-grid>
 
                         <div>
 
-                            <div class="tm-search-wrap uk-background-secondary uk-margin-bottom">
+                            <h2>Города и регионы</h2>
+
+                            <div class="tm-search-wrap uk-background-secondary uk-margin-bottom uk-text-average">
 
                                 <!-- Search form -->
                                 <form action="/" class="uk-search uk-width-1-1">
-                                    <div class="uk-grid-small uk-margin-small-bottom" uk-grid>
-                                        <div class="uk-width-1-2@s uk-width-3-5@m">
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
-                                                <span class="uk-form-icon">
-                                                    <i class="fa fa-map-marker uk-text-primary" aria-hidden="true"></i>
-                                                </span>
+                                    <div class="tm-grid-search uk-child-width-auto@l uk-margin-small-bottom" uk-grid>
+                                        <div class="uk-width-expand@l">
+                                            <div class="uk-form-controls">
+                                                <input class="uk-input" type="search" placeholder="Париж">
+                                            </div>
+                                        </div>
 
-                                                <input class="uk-input" type="search" placeholder="Поиск по названию">
-                                            </div>
-                                        </div>
-                                        <div class="uk-width-expand">
-                                            <div class="uk-form-controls uk-inline uk-width-1-1">
-                                            <span class="uk-form-icon uk-form-icon-flip">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                            </span>
-                                                <select class="uk-select">
-                                                    <option>тип отдыха</option>
-                                                    <option>тип отдыха</option>
-                                                    <option>тип отдыха</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                         <div>
+                                            <div class="tm-grid-search uk-child-width-1-2@s uk-child-width-auto@l" uk-grid>
+                                                <div>
+                                                    <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                        <span class="uk-form-icon uk-form-icon-flip">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                        <select class="uk-select">
+                                                            <option>Выберите страну</option>
+                                                            <option>Выберите страну</option>
+                                                            <option>Выберите страну</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                        <span class="uk-form-icon uk-form-icon-flip">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </span>
+                                                        <select class="uk-select">
+                                                            <option>Выберите место</option>
+                                                            <option>Выберите место</option>
+                                                            <option>Выберите место</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-text-right">
                                             <a href="#" class="uk-button uk-button-blue">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
 
-                                    <div class="tm-search-links uk-child-width-expand uk-grid-small uk-text-uppercase" uk-grid>
-                                        <div>
-                                            <a href="#">а</a>
-                                            <a href="#">б</a>
-                                            <a href="#">в</a>
-                                            <a href="#">г</a>
-                                            <a href="#">д</a>
-                                            <a href="#">е</a>
-                                            <a href="#">ж</a>
-                                            <a href="#">з</a>
-                                            <a href="#">и</a>
-                                            <a href="#">к</a>
-                                            <a href="#">л</a>
-                                            <a href="#">м</a>
-                                            <a href="#">н</a>
-                                            <a href="#">о</a>
-                                            <a href="#">п</a>
-                                            <a href="#">р</a>
-                                            <a href="#">с</a>
-                                            <a href="#">т</a>
-                                            <a href="#">у</a>
-                                            <a href="#">ф</a>
-                                            <a href="#">х</a>
-                                            <a href="#">ц</a>
-                                            <a href="#">ч</a>
-                                            <a href="#">ш</a>
-                                            <a href="#">щ</a>
-                                            <a href="#">э</a>
-                                            <a href="#">ю</a>
-                                            <a href="#">я</a>
-                                        </div>
-
-                                        <div class="uk-width-expand@s uk-width-auto@l">
-                                            <a href="#">a</a>
-                                            <a href="#">b</a>
-                                            <a href="#">c</a>
-                                            <a href="#">d</a>
-                                            <a href="#">e</a>
-                                            <a href="#">f</a>
-                                            <a href="#">g</a>
-                                            <a href="#">h</a>
-                                            <a href="#">i</a>
-                                            <a href="#">j</a>
-                                            <a href="#">k</a>
-                                            <a href="#">l</a>
-                                            <a href="#">m</a>
-                                            <a href="#">n</a>
-                                            <a href="#">o</a>
-                                            <a href="#">p</a>
-                                            <a href="#">q</a>
-                                            <a href="#">r</a>
-                                            <a href="#">s</a>
-                                            <a href="#">t</a>
-                                            <a href="#">u</a>
-                                            <a href="#">v</a>
-                                            <a href="#">w</a>
-                                            <a href="#">x</a>
-                                            <a href="#">y</a>
-                                            <a href="#">z</a>
-                                        </div>
-                                    </div>
                                 </form>
 
+                            </div>
+
+                            <h4>Всего достопримечательностей: <span>345</span></h4>
+
+                            <!-- Sights big -->
+                            <div class="tm-sight-card-large uk-card uk-cover-container uk-flex uk-flex-bottom uk-light uk-margin">
+                                <img src="images/sights_big_1.jpg" alt="" uk-cover>
+
+                                <div class="uk-position-relative uk-width-1-1">
+                                    <div class="uk-child-width-1-2@l uk-flex-bottom" uk-grid>
+                                        <div>
+                                            <div>
+                                                <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                            </div>
+                                            <div>Париж / Франция</div>
+                                        </div>
+
+                                        <div>
+                                            <div class="uk-child-width-expand@s uk-flex-bottom" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark uk-text-little">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="tm-margin-bottom-15 uk-flex uk-flex-middle uk-flex-right">
+                                                        <div class="uk-text-orange uk-margin-small-right">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="uk-text-little uk-text-truncate">
+                                                            4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-little uk-text-right">
+                                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                                        <span>21</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sights medium -->
+                            <div class="tm-sights tm-sights-medium uk-margin">
+                                <div class="uk-child-width-1-2@s" uk-grid>
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_medium_1.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_medium_2.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sights small -->
+                            <div class="tm-sights uk-margin">
+                                <div class="uk-child-width-1-3@s" uk-grid>
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_1.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_2.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_3.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sights big -->
+                            <div class="tm-sight-card-large uk-card uk-cover-container uk-flex uk-flex-bottom uk-light uk-margin">
+                                <img src="images/sights_big_2.jpg" alt="" uk-cover>
+
+                                <div class="uk-position-relative uk-width-1-1">
+                                    <div class="uk-child-width-1-2@l uk-flex-bottom" uk-grid>
+                                        <div>
+                                            <div>
+                                                <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                            </div>
+                                            <div>Париж / Франция</div>
+                                        </div>
+
+                                        <div>
+                                            <div class="uk-child-width-expand@s uk-flex-bottom" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark uk-text-little">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="tm-margin-bottom-15 uk-flex uk-flex-middle uk-flex-right">
+                                                        <div class="uk-text-orange uk-margin-small-right">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="uk-text-little uk-text-truncate">
+                                                            4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-little uk-text-right">
+                                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                                        <span>21</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sights medium -->
+                            <div class="tm-sights tm-sights-medium uk-margin">
+                                <div class="uk-child-width-1-2@s" uk-grid>
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_medium_3.png" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_medium_4.png" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sights small -->
+                            <div class="tm-sights uk-margin">
+                                <div class="uk-child-width-1-3@s" uk-grid>
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_4.jpg" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_5.png" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-card" uk-margin>
+                                            <div class="uk-card-media-top uk-margin-bottom">
+                                                <img src="images/sights_small_6.png" alt="" class="uk-width-1-1">
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">
+                                                        <a href="#" class="tm-sight-title">Эйфелевая Башня</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-orange">
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-middle uk-margin-remove-top" uk-grid>
+                                                <div>
+                                                    <div class="uk-text-truncate">Париж / Франция</div>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-text-muted uk-text-little uk-text-truncate">
+                                                        4,0 (<i class="fa fa-user uk-text-small" aria-hidden="true"></i><span>13</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-child-width-expand uk-flex-between uk-flex-bottom uk-text-muted uk-text-little" uk-grid>
+                                                <div>
+                                                    <div class="tm-bookmark">
+                                                        Смотровые площадки и башни <br>
+                                                        Церкви и соборы <br>
+                                                        Замки и дворцы
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-width-auto">
+                                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Pagination -->

@@ -12729,6 +12729,9 @@ header {
 .tm-padding-10-20 {
   padding: 10px 20px;
 }
+.tm-margin-bottom-15 {
+  margin-bottom: 15px;
+}
 .tm-background-grey {
   background-color: #d9d9d9;
 }
@@ -13037,11 +13040,6 @@ header {
 .tm-country-flag {
   padding-right: 70px;
 }
-.tm-sight-title {
-  font-family: 'LatoWebBold';
-  font-size: 20px;
-  color: #1884bc;
-}
 .tm-bookmark {
   position: relative;
   padding-left: 18px;
@@ -13054,9 +13052,34 @@ header {
   left: 0;
   font-family: FontAwesome;
 }
+.tm-sight-title {
+  font-family: 'LatoWebBold';
+  font-size: 20px;
+  color: #1884bc;
+}
 .tm-sights .uk-card {
   padding-bottom: 10px;
   border-bottom: 1px solid #e5e5e5;
+}
+.tm-sights-medium .tm-sight-title {
+  font-size: 30px;
+}
+.tm-sights-medium .fa-star,
+.tm-sights-medium .fa-star-o {
+  font-size: 20px;
+}
+.tm-sight-card-large {
+  min-height: 426px;
+  padding: 15px 20px;
+}
+.tm-sight-card-large .tm-sight-title {
+  font-size: 34px;
+  color: inherit;
+  line-height: 1.2;
+}
+.tm-sight-card-large .fa-star,
+.tm-sight-card-large .fa-star-o {
+  font-size: 21px;
 }
 .tm-country-top {
   min-height: 484px;
@@ -13070,7 +13093,7 @@ header {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .tm-search-wrap {
-  padding: 20px 25px 10px;
+  padding: 20px 20px 10px;
   font-size: 20px;
 }
 .tm-search-wrap .uk-input,
@@ -13182,6 +13205,17 @@ header {
 .tm-grid-best-photo > .uk-grid-margin,
 * + .uk-grid-margin-small {
   margin-top: 3px;
+}
+.tm-grid-search {
+  margin-left: -8px;
+}
+.tm-grid-search > * {
+  padding-left: 8px;
+}
+.uk-grid + .tm-grid-best-photo,
+.tm-grid-best-photo > .uk-grid-margin,
+* + .uk-grid-margin-small {
+  margin-top: 8px;
 }
 [uk-toggle]:not(.uk-toggle-active) [opened-toggle] {
   display: none;
