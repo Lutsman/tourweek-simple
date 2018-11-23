@@ -1010,20 +1010,23 @@ a.uk-link-reset:hover,
   text-transform: none;
 }
 .uk-description-list > dt:nth-child(n+2) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /*
  * Description
  */
+.uk-description-list > dd {
+  font-family: 'LatoWebBold';
+}
 /* Style modifier
  ========================================================================== */
 /*
  * Line
  */
 .uk-description-list-divider > dt:nth-child(n+2) {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #e5e5e5;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #c6c6c6;
 }
 /* ========================================================================
    Component: Table
@@ -12562,14 +12565,6 @@ header {
 .tm-city-description-list {
   background-color: #e9eef3;
 }
-.tm-city-description-list > dt:nth-child(n+2) {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top-color: #c6c6c6;
-}
-.tm-city-description-list dd {
-  font-family: 'LatoWebBold';
-}
 .tm-city-description-list .tm-list-bullet > li {
   position: relative;
   padding-left: 12px;
@@ -12592,12 +12587,7 @@ header {
   color: #fff;
 }
 .tm-country-description-list > dt:nth-child(n+2) {
-  margin-top: 10px;
-  padding-top: 10px;
   border-top-color: rgba(255, 255, 255, 0.2);
-}
-.tm-country-description-list dd {
-  font-family: 'LatoWebBold';
 }
 .tm-indicator {
   display: flex;

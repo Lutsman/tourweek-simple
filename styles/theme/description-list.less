@@ -7,11 +7,11 @@
 // Variables
 // ========================================================================
 @description-list-term-color:                   @global-emphasis-color;
-@description-list-term-margin-top:              @global-margin;
+@description-list-term-margin-top:              @global-small-margin;
 
-@description-list-divider-term-margin-top:      @global-margin;
+@description-list-divider-term-margin-top:      @global-small-margin;
 @description-list-divider-term-border-width:    @global-border-width;
-@description-list-divider-term-border:          @global-border;
+@description-list-divider-term-border:          #c6c6c6;
 
 //
 // New
@@ -30,7 +30,9 @@
     text-transform: @description-list-term-text-transform;
 }
 
-.hook-description-list-description() {}
+.hook-description-list-description() {
+    font-family: @font-lato-bold;
+}
 
 
 // Style modifier
