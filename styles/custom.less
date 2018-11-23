@@ -1168,6 +1168,17 @@ header {
   padding: 7px 0;
 }
 
+.tm-map-wrap {
+  height: 146px;
+}
+
+.tm-button-map .fa-angle-double-down {
+  position: relative;
+  top: 2px;
+  padding-top: 0;
+  font-size: 17px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.27);
+}
 
 // photo
 .tm-photo {
@@ -1223,6 +1234,18 @@ header {
 
 .uk-grid + .tm-grid-best-photo, .tm-grid-best-photo > .uk-grid-margin, * + .uk-grid-margin-small {
   margin-top: 3px;
+}
+
+.tm-grid-photo {
+  margin-left: -6px;
+
+  > * {
+    padding-left: 6px;
+  }
+}
+
+.uk-grid + .tm-grid-photo, .tm-grid-photo > .uk-grid-margin, * + .uk-grid-margin-small {
+  margin-top: 6px;
 }
 
 .tm-grid-search {
