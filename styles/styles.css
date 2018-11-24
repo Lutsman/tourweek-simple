@@ -12154,6 +12154,15 @@ strong {
   background-color: #12648f;
   color: #fff;
 }
+.uk-button-red {
+  background-color: #d42d1e;
+  border-color: #d42d1e;
+  color: #fff;
+}
+.uk-button-red:hover {
+  background-color: #a72418;
+  color: #fff;
+}
 .uk-button-white {
   box-shadow: 0 0 5px 0 rgba(43, 2, 2, 0.13);
   background-color: #fff;
@@ -12358,6 +12367,17 @@ form .uk-hr {
 .tm-grid-small > .uk-grid-margin,
 * + .uk-grid-margin-small {
   margin-top: 6px;
+}
+.tm-grid-smallest {
+  margin-left: -2px;
+}
+.tm-grid-smallest > * {
+  padding-left: 2px;
+}
+.uk-grid + .tm-grid-smallest,
+.tm-grid-smallest > .uk-grid-margin,
+* + .uk-grid-margin-small {
+  margin-top: 2px;
 }
 .tm-input-shadow {
   border-color: #fff;
@@ -12853,6 +12873,13 @@ header {
   border-top-color: #fff;
   border-right-color: #fff;
 }
+.tm-tape-list {
+  border-top: 1px solid #dfdfdf;
+}
+.tm-tape-list .uk-article {
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+}
 .tm-list-globe > li:nth-child(n+2),
 .tm-list-count > li:nth-child(n+2),
 .tm-list-arrow > li:nth-child(n+2),
@@ -13207,10 +13234,61 @@ header {
   color: #333;
   text-transform: uppercase;
 }
+.tm-personal-area-subnav > * > a:hover,
+.tm-personal-area-subnav > * > a:focus {
+  color: #000;
+}
 .tm-personal-area-subnav .tm-notice {
   position: absolute;
   top: 6px;
   right: -6px;
+}
+.tm-personal-area-info {
+  padding: 10px 10px 20px;
+  background-color: #f1f1f1;
+}
+.tm-personal-area-info .uk-iconnav > * > a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.tm-personal-area-info .uk-iconnav > * > a:hover {
+  border-color: #333;
+}
+.tm-personal-area-info .tm-flag {
+  margin-top: -2px;
+}
+.tm-reply-item {
+  position: relative;
+  padding: 20px;
+  max-width: 582px;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+}
+.tm-reply-item::before,
+.tm-reply-item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 100%;
+  transform: skewY(10deg);
+}
+.tm-reply-item::before {
+  top: 14px;
+  border: 7px solid transparent;
+  border-top-color: #bfbfbf;
+  border-right-color: #bfbfbf;
+}
+.tm-reply-item::after {
+  top: 15px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
 }
 .tm-photo {
   background-color: #e9eef3;
