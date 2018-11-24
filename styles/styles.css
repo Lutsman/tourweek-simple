@@ -13164,6 +13164,37 @@ header {
   padding-top: 0;
   font-size: 17px;
 }
+.tm-personal-area-dropdown {
+  width: 240px;
+}
+.tm-personal-area-nav {
+  padding: 5px 0;
+  font-size: 14px;
+}
+.tm-personal-area-nav > li > a {
+  padding: 5px 20px;
+}
+.tm-personal-area-nav .fa {
+  margin-top: -1px;
+  line-height: 19px;
+  font-size: 16px;
+  color: #72a1d2;
+}
+.tm-personal-area-nav .tm-notice {
+  color: #2e547b;
+}
+.tm-notice {
+  min-width: 16px;
+  max-width: 50px;
+  padding: 0 5px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  border-radius: 500px;
+  background-color: #ff983a;
+  box-sizing: border-box;
+}
 .tm-photo {
   background-color: #e9eef3;
   background-image: url("../images/pattern_bg.png");
