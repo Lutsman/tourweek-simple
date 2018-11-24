@@ -1188,6 +1188,19 @@ header {
   width: 240px;
 }
 
+.tm-notice {
+  min-width: 16px;
+  max-width: 50px;
+  padding: 0 5px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  border-radius: 500px;
+  background-color: @global-orange;
+  box-sizing: border-box;
+}
+
 .tm-personal-area-nav {
   padding: 5px 0;
   font-size: 14px;
@@ -1208,17 +1221,25 @@ header {
   }
 }
 
-.tm-notice {
-  min-width: 16px;
-  max-width: 50px;
-  padding: 0 5px;
-  line-height: 16px;
+.tm-personal-area-subnav {
+  margin-left: -8px;
   font-size: 12px;
-  color: #fff;
-  text-align: center;
-  border-radius: 500px;
-  background-color: @global-orange;
-  box-sizing: border-box;
+
+  > * {
+    padding-left: 8px;
+
+    > :first-child {
+      padding: 20px 10px;
+      color: @global-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .tm-notice {
+    position: absolute;
+    top: 6px;
+    right: -6px;
+  }
 }
 
 
