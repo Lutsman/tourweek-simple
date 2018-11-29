@@ -1738,7 +1738,7 @@ select.uk-form-width-xsmall {
   width: 110px;
 }
 .uk-form-width-medium {
-  width: 200px;
+  width: 135px;
 }
 .uk-form-width-large {
   width: 500px;
@@ -12353,6 +12353,9 @@ input:checked + label.uk-button-simple-orange {
   background-color: #ff7d07;
   color: #fff;
 }
+label.uk-button-simple-orange {
+  background-color: #fff;
+}
 form hr,
 form .uk-hr {
   border-top: 1px solid #d8d8d8;
@@ -13354,6 +13357,23 @@ header {
 }
 .tm-feedback-item {
   padding: 20px 25px;
+}
+.tm-radio-success .uk-radio,
+.tm-radio-danger .uk-radio {
+  margin-top: -2px;
+  margin-right: 5px;
+}
+.tm-radio-success {
+  color: #3a953a;
+}
+.tm-radio-success .uk-radio:checked {
+  background-color: #3a953a;
+}
+.tm-radio-danger {
+  color: #cf1616;
+}
+.tm-radio-danger .uk-radio:checked {
+  background-color: #cf1616;
 }
 .tm-photo {
   background-color: #e9eef3;

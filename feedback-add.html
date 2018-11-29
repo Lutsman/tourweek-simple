@@ -229,7 +229,291 @@
 
                         <div>
 
+                            <!-- Add feedback -->
+                            <form action="/" class="tm-form-companions uk-padding uk-background-muted">
+                                <div class="uk-width-1-2@l">
+                                    <div class="uk-margin-small">
+                                        <label class="uk-form-label" for="form-select-choose-airline">Выберите авиакомпанию:</label>
+                                        <div class="uk-form-controls uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon uk-form-icon-flip">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                            <select class="uk-select" id="form-select-choose-airline">
+                                                <option>Поиск по названию или выбрать страну</option>
+                                                <option>Абхазия</option>
+                                                <option>Австралия</option>
+                                                <option>Австрия</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
+                                    <div class="uk-child-width-expand@s" uk-grid>
+                                        <div>
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-select-airline">Авиакомпания</label>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon uk-form-icon-flip">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                                    <select class="uk-select" id="form-select-airline">
+                                                        <option></option>
+                                                        <option>Абхазия</option>
+                                                        <option>Австралия</option>
+                                                        <option>Австрия</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="uk-width-auto">
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-input-date">Дата путешествия</label>
+                                                <div>
+                                                    <input class="uk-input uk-form-width-medium" id="form-input-date"
+                                                           type="text" placeholder="24.07.2017"
+                                                           datepicker>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="uk-width-3-5@l">
+                                    <div class="uk-margin">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label uk-text-uppercase">Рекомендую</label>
+                                            </div>
+
+                                            <div>
+                                                <div class="uk-grid-medium uk-text-little" uk-grid>
+                                                    <div>
+                                                        <label class="tm-radio-success uk-text-bold uk-text-uppercase">
+                                                            <input class="uk-radio" type="radio" name="radio-accept">
+                                                            <span>
+                                                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                Да
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div>
+                                                        <label class="tm-radio-danger uk-text-bold uk-text-uppercase">
+                                                            <input class="uk-radio" type="radio" name="radio-accept">
+                                                            <span>
+                                                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                                Нет
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-margin-xsmall-bottom">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label" for="form-select-airplane">
+                                                    Самолет
+                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                                       uk-tooltip="title: Tooltip text"></i>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                    <span class="uk-form-icon uk-form-icon-flip">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </span>
+                                                    <select class="uk-select" id="form-select-airplane">
+                                                        <option>Поставить оценку</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-margin-xsmall-bottom">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label" for="form-select-service-on-board">
+                                                    Сервис на борту
+                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                                       uk-tooltip="title: Tooltip text"></i>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                    <span class="uk-form-icon uk-form-icon-flip">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </span>
+                                                    <select class="uk-select" id="form-select-service-on-board">
+                                                        <option>Поставить оценку</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-margin-xsmall-bottom">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label" for="form-select-airport-service">
+                                                    Сервис в аэропорту
+                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                                       uk-tooltip="title: Tooltip text"></i>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                    <span class="uk-form-icon uk-form-icon-flip">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </span>
+                                                    <select class="uk-select" id="form-select-airport-service">
+                                                        <option>Поставить оценку</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-margin-xsmall-bottom">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label" for="form-select-food">
+                                                    Питание
+                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                                       uk-tooltip="title: Tooltip text"></i>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                    <span class="uk-form-icon uk-form-icon-flip">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </span>
+                                                    <select class="uk-select" id="form-select-food">
+                                                        <option>Поставить оценку</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-margin-xsmall-bottom">
+                                        <div class="tm-grid-small uk-child-width-expand uk-flex-middle" uk-grid>
+                                            <div class="uk-width-1-3@s">
+                                                <label class="uk-form-label" for="form-select-punctuality">
+                                                    Пунктуальность
+                                                    <i class="fa fa-question-circle uk-text-primary" aria-hidden="true"
+                                                       uk-tooltip="title: Tooltip text"></i>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="uk-form-controls uk-inline uk-width-1-1">
+                                                    <span class="uk-form-icon uk-form-icon-flip">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </span>
+                                                    <select class="uk-select" id="form-select-punctuality">
+                                                        <option>Поставить оценку</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-input-title">Заголовок отзыва</label>
+                                    <div>
+                                        <input class="uk-input" id="form-input-title" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-input-description">Текст отзыва (минимум 50 знаков)</label>
+                                    <div>
+                                        <textarea id="form-input-description" class="uk-textarea" rows="7" minlength="50"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-input-video-link">Ссылка на видео</label>
+                                    <div>
+                                        <input class="uk-input" id="form-input-video-link" type="text">
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="uk-child-width-expand@l uk-flex-bottom" uk-grid>
+                                    <div>
+                                        <label class="uk-form-label">Прикрепить файл</label>
+
+                                        <div class="uk-child-width-auto@s uk-flex-middle" uk-grid>
+                                            <div>
+                                                <label for="form-file-1" class="uk-button uk-button-small uk-button-simple-orange">Выберите файл</label>
+                                            </div>
+
+                                            <div class="uk-width-expand@s">
+                                                <div class="uk-width-1-1" uk-form-custom="target: true">
+                                                    <input type="file" id="form-file-1">
+                                                    <input class="tm-text-italic uk-input uk-form-blank uk-text-muted uk-text-little" type="text" placeholder="Вы можете загрузить фото, размер каждого не более 5мб">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="uk-margin-small-top">
+                                            <a href="#" class="uk-text-little uk-text-bold">
+                                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                еще
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-width-auto@l">
+                                        <div class="uk-form-controls uk-text-right">
+                                            <button class="uk-button uk-button-blue" type="submit">Опубликовать</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
 
                         </div>
 
