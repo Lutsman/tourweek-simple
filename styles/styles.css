@@ -7183,7 +7183,7 @@ ul.uk-nav-sub {
 }
 .uk-text-large {
   font-size: 24px;
-  line-height: 1.5;
+  line-height: 1;
 }
 /* Weight modifier
  ========================================================================== */
@@ -13266,7 +13266,7 @@ header {
   right: -6px;
 }
 .tm-personal-area-info {
-  padding: 35px 10px 20px;
+  padding: 35px 25px 20px;
   background-color: #f1f1f1;
 }
 .tm-personal-area-info .uk-iconnav > * > a {
@@ -13281,7 +13281,7 @@ header {
 .tm-personal-area-info .uk-iconnav > * > a:hover {
   border-color: #333;
 }
-.tm-personal-area-info .uk-button-small {
+.tm-personal-area-info .tm-button-text-default {
   min-width: 190px;
 }
 .tm-personal-area-info .tm-flag {
@@ -13316,7 +13316,8 @@ header {
   border-right-color: #fff;
 }
 .tm-album-item {
-  display: block;
+  display: flex;
+  justify-content: center;
   position: relative;
   padding-top: 10px;
   padding-right: 10px;
