@@ -8845,18 +8845,18 @@ iframe.uk-cover {
  * Small
  */
 .uk-position-small {
-  margin: 15px;
+  margin: 10px;
 }
 .uk-position-small.uk-position-center {
-  transform: translate(-50%, -50%) translate(-15px, -15px);
+  transform: translate(-50%, -50%) translate(-10px, -10px);
 }
 .uk-position-small[class*='uk-position-center-left'],
 .uk-position-small[class*='uk-position-center-right'] {
-  transform: translateY(-50%) translateY(-15px);
+  transform: translateY(-50%) translateY(-10px);
 }
 .uk-position-small.uk-position-top-center,
 .uk-position-small.uk-position-bottom-center {
-  transform: translateX(-50%) translateX(-15px);
+  transform: translateX(-50%) translateX(-10px);
 }
 /*
  * Medium
@@ -12129,7 +12129,7 @@ strong {
   color: #fff;
 }
 .uk-button-simple-orange {
-  background-color: #fff;
+  background-color: transparent;
   border: solid 1px #ff983a;
 }
 .uk-button-simple-orange:hover {
@@ -12147,7 +12147,7 @@ strong {
 }
 .uk-button-simple-blue {
   color: #1884bc;
-  background-color: #fff;
+  background-color: transparent;
   border: solid 1px #1884bc;
 }
 .uk-button-simple-blue:hover {
@@ -13230,13 +13230,35 @@ header {
   padding-left: 8px;
 }
 .tm-personal-area-subnav > * > :first-child {
+  position: relative;
   padding: 20px 10px;
   color: #333;
   text-transform: uppercase;
 }
+.tm-personal-area-subnav > * > :first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+}
 .tm-personal-area-subnav > * > a:hover,
 .tm-personal-area-subnav > * > a:focus {
   color: #000;
+}
+.tm-personal-area-subnav > * > a:hover::before,
+.tm-personal-area-subnav > * > a:focus::before {
+  background-color: #48729e;
+}
+.tm-personal-area-subnav > .uk-active > a {
+  font-family: 'LatoWebBold';
+}
+.tm-personal-area-subnav > .uk-active > a::before {
+  background-color: #48729e;
 }
 .tm-personal-area-subnav .tm-notice {
   position: absolute;
@@ -13244,7 +13266,7 @@ header {
   right: -6px;
 }
 .tm-personal-area-info {
-  padding: 10px 10px 20px;
+  padding: 35px 10px 20px;
   background-color: #f1f1f1;
 }
 .tm-personal-area-info .uk-iconnav > * > a {
@@ -13258,6 +13280,9 @@ header {
 }
 .tm-personal-area-info .uk-iconnav > * > a:hover {
   border-color: #333;
+}
+.tm-personal-area-info .uk-button-small {
+  min-width: 190px;
 }
 .tm-personal-area-info .tm-flag {
   margin-top: -2px;
@@ -13289,6 +13314,39 @@ header {
   border: 6px solid transparent;
   border-top-color: #fff;
   border-right-color: #fff;
+}
+.tm-album-item {
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.tm-album-item > * {
+  box-shadow: 5px -5px rgba(200, 200, 200, 0.5), 10px -10px rgba(200, 200, 200, 0.5);
+}
+.tm-album-item:hover {
+  text-decoration: none;
+}
+.tm-album-counter {
+  position: absolute;
+  top: 3px;
+  right: -6px;
+  padding: 3px 5px 0;
+  line-height: 14px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #48729e;
+}
+.tm-album-counter::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border: 2px solid transparent;
+  border-top-color: #315a89;
+  border-left-color: #315a89;
 }
 .tm-photo {
   background-color: #e9eef3;

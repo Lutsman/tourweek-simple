@@ -1250,15 +1250,40 @@ header {
     padding-left: 8px;
 
     > :first-child {
+      position: relative;
       padding: 20px 10px;
       color: @global-color;
       text-transform: uppercase;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: transparent;
+        transition: background-color 0.1s ease-in-out;
+      }
     }
 
     > a:hover, > a:focus {
       color: #000;
+
+      &::before {
+        background-color: @global-primary-background;
+      }
     }
 
+  }
+
+  > .uk-active > a {
+    font-family: @font-lato-bold;
+
+    &::before {
+      background-color: @global-primary-background;
+    }
   }
 
   .tm-notice {
@@ -1269,7 +1294,7 @@ header {
 }
 
 .tm-personal-area-info {
-  padding: 10px 10px 20px;
+  padding: 35px 10px 20px;
   background-color: #f1f1f1;
 
   .uk-iconnav {
@@ -1287,6 +1312,10 @@ header {
         border-color: @global-color;
       }
     }
+  }
+
+  .uk-button-small {
+    min-width: 190px;
   }
 
   .tm-flag {
@@ -1325,10 +1354,47 @@ header {
   }
 }
 
+.tm-album-item {
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+  > * {
+    box-shadow: 5px -5px rgba(200, 200, 200, 0.5), 10px -10px rgba(200, 200, 200, 0.5);
+  }
+
+  &:hover {
+     text-decoration: none;
+  }
+}
+
+.tm-album-counter {
+  position: absolute;
+  top: 3px;
+  right: -6px;
+  padding: 3px 5px 0;
+  line-height: 14px;
+  font-size: 14px;
+  color: #fff;
+  background-color: @global-primary-background;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border: 2px solid transparent;
+    border-top-color: #315a89;
+    border-left-color: #315a89;
+  }
+}
 
 
 
-// photo
+  // photo
 .tm-photo {
   background-color: #e9eef3;
   background-image: url("../images/pattern_bg.png");
