@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tourweek | ЛК Попутчики</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_flat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-wrap uk-flex-wrap-between">
+        <div>
+
+            <!--Header-->
+            <header class="uk-navbar-container uk-position-relative">
+                <nav class="uk-light" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon
+                           uk-toggle></a>
+
+                        <a class="uk-navbar-item uk-logo" href="/">
+                            <img src="images/logo_tourweek.png" alt="">
+                        </a>
+
+                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-visible@s uk-hidden@l"
+                           uk-navbar-toggle-icon
+                           uk-toggle></a>
+
+                        <ul class="uk-navbar-nav uk-visible@l">
+                            <li>
+                                <a href="#" class="uk-navbar-toggle" uk-navbar-toggle-icon></a>
+                                <div class="uk-navbar-dropdown"
+                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                    <div class="uk-container">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
+                                            <li><a href="#">Попутчики</a></li>
+                                            <li><a href="#">Блоги</a></li>
+                                            <li><a href="#">Страны</a></li>
+                                            <li><a href="#">Города</a></li>
+                                            <li><a href="#">Интересные места</a></li>
+                                            <li><a href="#">Визы</a></li>
+                                            <li><a href="#">Фото</a></li>
+                                            <li><a href="#">Статьи</a></li>
+                                            <li><a href="#">Новости</a></li>
+                                            <li><a href="#">Авиакомпании</a></li>
+                                            <li><a href="#">Турфирмы</a></li>
+                                            <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                                            <li><a href="#">Табло аэропортов</a></li>
+                                            <li><a href="#">Справочник туриста</a></li>
+                                            <li><a href="#">Блогосфера</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-center uk-visible@l">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="#">Попутчики</a></li>
+                            <li><a href="#">Блоги</a></li>
+                            <li>
+                                <a href="#">Страны</a>
+                                <div class="uk-navbar-dropdown"
+                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
+                                    <div class="uk-container">
+                                        <div class="" uk-slider>
+                                            <div class="tm-slider-content uk-position-relative">
+                                                <div class="uk-slider-container">
+                                                    <ul class="uk-slider-items uk-child-width-1-1">
+                                                        <li>
+                                                            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-5">
+                                                                <li><a href="#">Абхазия</a></li>
+                                                                <li><a href="#">Австралия</a></li>
+                                                                <li><a href="#">Австрия</a></li>
+                                                                <li><a href="#">Азербайджан</a></li>
+                                                                <li><a href="#">Андорра</a></li>
+                                                                <li><a href="#">Аргентина</a></li>
+                                                                <li><a href="#">Армения</a></li>
+                                                                <li><a href="#">Багамы</a></li>
+                                                                <li><a href="#">Беларусь</a></li>
+                                                                <li><a href="#">Бельгия</a></li>
+                                                                <li><a href="#">Болгария</a></li>
+                                                                <li><a href="#">Бразилия</a></li>
+                                                                <li><a href="#">Великобритания</a></li>
+                                                                <li><a href="#">Венгрия</a></li>
+                                                                <li><a href="#">Венесуэла</a></li>
+                                                                <li><a href="#">Вьетнам</a></li>
+                                                                <li><a href="#">Германия</a></li>
+                                                                <li><a href="#">Греция</a></li>
+                                                                <li><a href="#">Грузия</a></li>
+                                                                <li><a href="#">Дания</a></li>
+                                                                <li><a href="#">Доминикана</a></li>
+                                                                <li><a href="#">Египет</a></li>
+                                                                <li><a href="#">Израиль</a></li>
+                                                                <li><a href="#">Индия</a></li>
+                                                                <li><a href="#">Индонезия</a></li>
+                                                                <li><a href="#">Ирландия</a></li>
+                                                                <li><a href="#">Исландия</a></li>
+                                                                <li><a href="#">Испания</a></li>
+                                                                <li><a href="#">Италия</a></li>
+                                                                <li><a href="#">Казахстан</a></li>
+                                                                <li><a href="#">Камбоджа</a></li>
+                                                                <li><a href="#">Канада</a></li>
+                                                                <li><a href="#">Кения</a></li>
+                                                                <li><a href="#">Кипр</a></li>
+                                                                <li><a href="#">Киргизия</a></li>
+                                                                <li><a href="#">Китай</a></li>
+                                                                <li><a href="#">Коста-Рика</a></li>
+                                                                <li><a href="#">Куба</a></li>
+                                                                <li><a href="#">Лаос</a></li>
+                                                                <li><a href="#">Латвия</a></li>
+                                                                <li><a href="#">Ливан</a></li>
+                                                                <li><a href="#">Литва</a></li>
+                                                                <li><a href="#">Маврикий</a></li>
+                                                                <li><a href="#">Малайзия</a></li>
+                                                                <li><a href="#">Мальдивы</a></li>
+                                                                <li><a href="#">Мальта</a></li>
+                                                                <li><a href="#">Марокко</a></li>
+                                                                <li><a href="#">Мексика</a></li>
+                                                                <li><a href="#">Монако</a></li>
+                                                                <li><a href="#">Мьянма</a></li>
+                                                                <li><a href="#">Непал</a></li>
+                                                                <li><a href="#">Нидерланды</a></li>
+                                                                <li><a href="#">Новая Зеландия</a></li>
+                                                                <li><a href="#">Норвегия</a></li>
+                                                                <li><a href="#">ОАЭ</a></li>
+                                                                <li><a href="#">Перу</a></li>
+                                                                <li><a href="#">Польша</a></li>
+                                                                <li><a href="#">Португалия</a></li>
+                                                                <li><a href="#">Россия</a></li>
+                                                                <li><a href="#">США</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-5">
+                                                                <li><a href="#">Сейшелы</a></li>
+                                                                <li><a href="#">Сербия</a></li>
+                                                                <li><a href="#">Сингапур</a></li>
+                                                                <li><a href="#">Словакия</a></li>
+                                                                <li><a href="#">Словения</a></li>
+                                                                <li><a href="#">Таджикистан</a></li>
+                                                                <li><a href="#">Таиланд</a></li>
+                                                                <li><a href="#">Тунис</a></li>
+                                                                <li><a href="#">Турция</a></li>
+                                                                <li><a href="#">Узбекистан</a></li>
+                                                                <li><a href="#">Филиппины</a></li>
+                                                                <li><a href="#">Финляндия</a></li>
+                                                                <li><a href="#">Франция</a></li>
+                                                                <li><a href="#">Хорватия</a></li>
+                                                                <li><a href="#">Черногория</a></li>
+                                                                <li><a href="#">Чехия</a></li>
+                                                                <li><a href="#">Чили</a></li>
+                                                                <li><a href="#">Швейцария</a></li>
+                                                                <li><a href="#">Швеция</a></li>
+                                                                <li><a href="#">Шотландия</a></li>
+                                                                <li><a href="#">Шри-Ланка</a></li>
+                                                                <li><a href="#">Эквадор</a></li>
+                                                                <li><a href="#">Эстония</a></li>
+                                                                <li><a href="#">ЮАР</a></li>
+                                                                <li><a href="#">Южная Корея</a></li>
+                                                                <li><a href="#">Ямайка</a></li>
+                                                                <li><a href="#">Япония</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <a class="uk-position-center-left uk-slidenav-large"
+                                                   href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                                <a class="uk-position-center-right uk-slidenav-large"
+                                                   href="#" uk-slidenav-next uk-slider-item="next"></a>
+                                            </div>
+
+                                            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">Интересные места</a></li>
+                            <li><a href="#">Визы</a></li>
+                            <li><a href="#">Фото</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-item uk-visible@s">
+                            <a href="#" class="uk-button uk-button-small uk-button-orange uk-text-untransformed">Авиабилеты</a>
+                        </div>
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/avatar-personal-area.jpg" alt="" class="uk-border-circle">
+                                </a>
+                                <div class="tm-personal-area-dropdown uk-navbar-dropdown uk-padding-remove"
+                                     uk-drop="mode: click;">
+                                    <ul class="tm-personal-area-nav uk-nav uk-navbar-dropdown-nav">
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-id-card-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мой профиль</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-envelope-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tm-notice">
+                                                            <div class="uk-text-truncate">3</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-file-text-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мои объявления</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-file-archive-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мой блог</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-picture-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мои фото</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-users uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мои друзья</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-paw uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Мои гости</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="tm-notice">
+                                                            <div class="uk-text-truncate">45</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex uk-flex-between">
+                                                    <div class="uk-flex">
+                                                        <i class="fa fa-star-o uk-margin-small-right" aria-hidden="true"></i>
+                                                        <span>Моё избранное</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex">
+                                                    <i class="fa fa-cog uk-margin-small-right" aria-hidden="true"></i>
+                                                    <span>Настройки</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="uk-flex">
+                                                    <i class="fa fa-sign-out uk-margin-small-right" aria-hidden="true"></i>
+                                                    <span>Выход</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="uk-section uk-padding uk-padding-remove-horizontal">
+                <div class="uk-container">
+
+                    <hr class="uk-margin-remove">
+
+                    <div>
+                        <div class="uk-child-width-expand@m uk-flex-middle" uk-grid>
+                            <div>
+                                <!--PA menu-->
+                                <ul class="tm-personal-area-subnav uk-subnav uk-margin-remove-vertical" uk-margin>
+                                    <li><a href="#">Объявления о поиске попутчиков</a></li>
+                                    <li><a href="#">Блоги</a></li>
+                                    <li><a href="#">Фото</a></li>
+                                    <li><a href="#">Друзья</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="uk-width-large@m">
+                                <div class="uk-padding-small uk-padding-remove-horizontal">
+                                    <div class="uk-text-truncate uk-text-muted uk-text-little"><span class="uk-text-uppercase">Aдрес страницы</span> http://tourweek.ru/user/2/</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="uk-child-width-expand@m" uk-grid>
+
+                        <div>
+                            <div class="tm-personal-area-info uk-text-little">
+                                <div class="uk-child-width-expand@s uk-grid-medium" uk-grid>
+                                    <div class="uk-width-auto@s uk-text-center">
+                                        <div class="uk-margin">
+                                            <img src="images/avatar_pa_big.jpg" alt="" class="uk-border-circle">
+                                        </div>
+
+                                        <div class="uk-margin-xsmall-bottom">
+                                            <a href="#" class="tm-button-text-default uk-button uk-button-small uk-button-blue">Написать сообщение</a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="tm-button-text-default uk-button uk-button-small uk-button-orange">Добавить в Друзья</a>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-padding-small uk-padding-remove-horizontal uk-margin-small">
+                                            <h2 class="uk-margin-small-bottom">Сергей Смирнов</h2>
+
+                                            <div class="uk-grid-medium uk-margin-small-bottom" uk-grid>
+                                                <div>
+                                                    <img src="images/icon-flag-ru.jpg" alt="" class="tm-flag uk-margin-small-right">
+                                                    <span>Москва (Россия)</span>
+                                                </div>
+                                                <div>30 лет</div>
+                                            </div>
+
+                                            <div class="tm-reply-item">Да, совершенно неожиданно, 8 марта мы оказались
+                                                в Арсенале, новом музее Пушкина.
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-padding-small uk-padding-remove-horizontal">
+                                            <a href="#" class="uk-button uk-button-small uk-button-simple-orange">
+                                                Смотреть анкету
+                                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="tm-articles-list uk-list" uk-margin="margin: uk-margin-top">
+                                <li>
+                                    <article class="uk-article">
+                                        <div class="uk-child-width-expand@s" uk-grid>
+                                            <div class="uk-width-auto@s">
+                                                <div class="uk-text-center">
+                                                    <img src="images/avatar_137x137_1.png" alt=""
+                                                         class="uk-border-circle">
+                                                    <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                    <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <div class="uk-child-width-expand@s uk-flex-between uk-margin-bottom" uk-grid>
+                                                    <div>
+                                                        <h4>
+                                                            <a href="#">Индия (Дели), c 2 января 2018 по 24 января 2018, на 20-40 ночей</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div class="uk-width-auto@s">
+                                                        <div class="uk-flex uk-flex-middle uk-text-medium">
+                                                            <div>
+                                                                <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="uk-text-small uk-margin-small-right uk-margin-small-left">
+                                                                <i class="fa fa-arrow-right uk-text-muted" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div>
+                                                                <i class="fa fa-male uk-text-primary" aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-child-width-1-3@s" uk-grid>
+                                                    <div>
+                                                        <div class="uk-text-little uk-text-muted uk-text-uppercase">Ищу:</div>
+                                                        <div>Мужчину</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-little uk-text-muted uk-text-uppercase">В возрасте:</div>
+                                                        <div>от 18 до 70 лет</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-little uk-text-muted uk-text-uppercase">Едем из:</div>
+                                                        <div>Москва</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-child-width-expand@l" uk-grid>
+                                                    <div>
+                                                        <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Цели поездки:</div>
+                                                        <ul class="tm-purpose-list uk-padding-remove uk-flex uk-flex-wrap" uk-margin>
+                                                            <li>Море и пляж</li>
+                                                            <li>Автобусные туры</li>
+                                                            <li>Мотоциклы</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="uk-width-1-3@l">
+                                                        <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Мои страницы</div>
+                                                        <ul class="tm-social uk-iconnav uk-flex-middle">
+                                                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-padding-small uk-margin-small-top uk-margin-bottom uk-background-muted uk-text-little">
+                                                    <div>Собираю людей в зимнее путешествие по Индии с продолжением в
+                                                        Тайланде январь, февраль 2019.
+                                                        Первый маршрут по Индии с 2 - 26 января 2019 по югу Индии из
+                                                        Тамил Наду в Кералу, по маршруту Дели – Ченнаи - Малопурам –
+                                                        Пудучерри - Чидамбарам – Каньякумари – Рамешварам – Мадурай –
+                                                        Варкала – Тривандрум – Дели. Смотрим шиваитские храмы, в Варкале
+                                                        отдыхаем у океана.
+                                                    </div>
+                                                    <div>
+                                                        Второй маршрут по Тайланду из Северного Тайланда к Сиамскому
+                                                        заливу с 28 января - 14 февраля. Бангкок – Чиандмай – Чиандрай –
+                                                        Бангкок – остров Ко Самет – Бангкок. ссылки на отчёты о прошлых
+                                                        путешествиях вышлю в личном сообщении.
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="uk-child-width-expand@l uk-flex-bottom uk-text-little" uk-grid>
+                                                    <div>
+                                                        <div class="uk-text-muted">Ссылка на объявление:</div>
+                                                        <div class="uk-text-truncate">
+                                                            <a href="#" class="uk-link-text">http://tourweek.ru/companions/234775</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="uk-width-auto@l">
+                                                        <div class="uk-flex uk-flex-wrap uk-flex-middle" uk-margin>
+                                                            <a href="#"
+                                                               class="uk-button uk-button-small uk-button-blue uk-margin-small-right">Редактировать</a>
+                                                            <a href="#" class="uk-button uk-button-small uk-button-orange">Удалить</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+
+                            <div class="uk-child-width-expand@l tm-grid-search uk-margin" uk-grid>
+                                <div class="uk-width-auto@l">
+                                    <a href="#" class="tm-button-big uk-width-1-1 uk-button uk-button-blue">Все объявления от Сергей Сергеев</a>
+                                </div>
+                                <div>
+                                    <a href="#" class="tm-button-big uk-width-1-1 uk-button uk-button-orange">Хотите скорее найти попутчика?  <span class="uk-text-underline">Подать объявление</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Similar listings -->
+                            <div>
+                                <h4>Похожие объявления</h4>
+
+                                <!-- Layout items -->
+                                <ul class="tm-articles-list uk-list" uk-margin="margin: uk-margin-top">
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_2.png" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="uk-child-width-expand@s uk-flex-between uk-margin-bottom" uk-grid>
+                                                        <div>
+                                                            <h4>
+                                                                <a href="#">Индия (Дели), c 2 января 2018 по 24 января 2018, на 20-40 ночей</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="uk-width-auto@s">
+                                                            <div class="uk-flex uk-flex-middle uk-text-medium">
+                                                                <div>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="uk-text-small uk-margin-small-right uk-margin-small-left">
+                                                                    <i class="fa fa-arrow-right uk-text-muted" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-male uk-text-primary" aria-hidden="true"></i>
+                                                                    <i class="fa fa-male uk-text-primary" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-1-3@s" uk-grid>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Ищу:</div>
+                                                            <div>Мужчину</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">В возрасте:</div>
+                                                            <div>от 18 до 70 лет</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Едем из:</div>
+                                                            <div>Москва</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-expand@l" uk-grid>
+                                                        <div>
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Цели поездки:</div>
+                                                            <ul class="tm-purpose-list uk-padding-remove uk-flex uk-flex-wrap" uk-margin>
+                                                                <li>Море и пляж</li>
+                                                                <li>Автобусные туры</li>
+                                                                <li>Мотоциклы</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="uk-width-1-3@l">
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Мои страницы</div>
+                                                            <ul class="tm-social uk-iconnav uk-flex-middle">
+                                                                <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-padding-small uk-margin-small-top uk-background-muted uk-text-little">
+
+                                                        <div id="tm-toggle-text-2" class="uk-margin-small-bottom" hidden>Собираю людей в зимнее
+                                                            путешествие по Индии. с 2 - 24 января Дели - Варанаси -
+                                                            Каджурахо - Удайпур - Мумбаи - Арамболь( Гоа) и
+                                                            с 23 января - 11 февраля Дели - Эрнакулам( форт Кочин) -
+                                                            Мунар - Коттаям - Аллеппи - Варкала - Тривандрум - Дели.
+                                                            Путешествие активное, всё время перемещаемся по стране
+                                                            Отчёты о прошлых путешествиях
+                                                        </div>
+
+                                                        <div class="uk-flex uk-flex-middle uk-flex-between">
+                                                            <a href="#tm-toggle-text-2" class="uk-text-bold" uk-toggle>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_3.png" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="uk-child-width-expand@s uk-flex-between uk-margin-bottom" uk-grid>
+                                                        <div>
+                                                            <h4>
+                                                                <a href="#">Индия (Дели), c 2 января 2018 по 24 января 2018, на 20-40 ночей</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="uk-width-auto@s">
+                                                            <div class="uk-flex uk-flex-middle uk-text-medium">
+                                                                <div>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="uk-text-small uk-margin-small-right uk-margin-small-left">
+                                                                    <i class="fa fa-arrow-right uk-text-muted" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-1-3@s" uk-grid>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Ищу:</div>
+                                                            <div>Мужчину</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">В возрасте:</div>
+                                                            <div>от 18 до 70 лет</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Едем из:</div>
+                                                            <div>Москва</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-expand@l" uk-grid>
+                                                        <div>
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Цели поездки:</div>
+                                                            <ul class="tm-purpose-list uk-padding-remove uk-flex uk-flex-wrap" uk-margin>
+                                                                <li>Море и пляж</li>
+                                                                <li>Автобусные туры</li>
+                                                                <li>Мотоциклы</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="uk-width-1-3@l">
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Мои страницы</div>
+                                                            <ul class="tm-social uk-iconnav uk-flex-middle">
+                                                                <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-padding-small uk-margin-small-top uk-background-muted uk-text-little">
+
+                                                        <div id="tm-toggle-text-3" class="uk-margin-small-bottom" hidden>Собираю людей в зимнее
+                                                            путешествие по Индии. с 2 - 24 января Дели - Варанаси -
+                                                            Каджурахо - Удайпур - Мумбаи - Арамболь( Гоа) и
+                                                            с 23 января - 11 февраля Дели - Эрнакулам( форт Кочин) -
+                                                            Мунар - Коттаям - Аллеппи - Варкала - Тривандрум - Дели.
+                                                            Путешествие активное, всё время перемещаемся по стране
+                                                            Отчёты о прошлых путешествиях
+                                                        </div>
+
+                                                        <div class="uk-flex uk-flex-middle uk-flex-between">
+                                                            <a href="#tm-toggle-text-3" class="uk-text-bold" uk-toggle>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                    <li>
+                                        <article class="uk-article">
+                                            <div class="uk-child-width-expand@s" uk-grid>
+                                                <div class="uk-width-auto@s">
+                                                    <div class="uk-text-center">
+                                                        <img src="images/avatar_137x137_4.png" alt=""
+                                                             class="uk-border-circle">
+                                                        <h5 class="uk-margin-small-top uk-margin-remove-bottom">Мария</h5>
+                                                        <div class="uk-text-muted uk-text-small">25 лет / Россия, Омск</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="uk-child-width-expand@s uk-flex-between uk-margin-bottom" uk-grid>
+                                                        <div>
+                                                            <h4>
+                                                                <a href="#">Индия (Дели), c 2 января 2018 по 24 января 2018, на 20-40 ночей</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="uk-width-auto@s">
+                                                            <div class="uk-flex uk-flex-middle uk-text-medium">
+                                                                <div>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="uk-text-small uk-margin-small-right uk-margin-small-left">
+                                                                    <i class="fa fa-arrow-right uk-text-muted" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="fa fa-male uk-text-primary" aria-hidden="true"></i>
+                                                                    <i class="fa fa-female uk-text-danger" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-1-3@s" uk-grid>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Ищу:</div>
+                                                            <div>Мужчину</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">В возрасте:</div>
+                                                            <div>от 18 до 70 лет</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-text-little uk-text-muted uk-text-uppercase">Едем из:</div>
+                                                            <div>Москва</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-child-width-expand@l" uk-grid>
+                                                        <div>
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Цели поездки:</div>
+                                                            <ul class="tm-purpose-list uk-padding-remove uk-flex uk-flex-wrap" uk-margin>
+                                                                <li>Море и пляж</li>
+                                                                <li>Автобусные туры</li>
+                                                                <li>Мотоциклы</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="uk-width-1-3@l">
+                                                            <div class="uk-margin-small-bottom uk-text-little uk-text-muted uk-text-uppercase">Мои страницы</div>
+                                                            <ul class="tm-social uk-iconnav uk-flex-middle">
+                                                                <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="uk-padding-small uk-margin-small-top uk-background-muted uk-text-little">
+
+                                                        <div id="tm-toggle-text-4" class="uk-margin-small-bottom" hidden>Собираю людей в зимнее
+                                                            путешествие по Индии. с 2 - 24 января Дели - Варанаси -
+                                                            Каджурахо - Удайпур - Мумбаи - Арамболь( Гоа) и
+                                                            с 23 января - 11 февраля Дели - Эрнакулам( форт Кочин) -
+                                                            Мунар - Коттаям - Аллеппи - Варкала - Тривандрум - Дели.
+                                                            Путешествие активное, всё время перемещаемся по стране
+                                                            Отчёты о прошлых путешествиях
+                                                        </div>
+
+                                                        <div class="uk-flex uk-flex-middle uk-flex-between">
+                                                            <a href="#tm-toggle-text-4" class="uk-text-bold" uk-toggle>
+                                                                <span opened-toggle>Свернуть</span><span closed-toggle>Развернуть</span> <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a href="#" class="uk-button uk-button-small uk-button-blue uk-text-uppercase">Ответить</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+
+                                <div class="uk-text-center">
+                                    <a href="#" class="tm-button-text-small uk-button uk-button-simple-orange">Показать еще</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Aside right -->
+                        <aside class="uk-width-medium@m">
+                            <div class="uk-child-width-1-1" uk-grid>
+                                <div>
+                                    <div class="uk-child-width-1-3@s uk-child-width-1-1@m uk-grid-medium uk-margin" uk-grid>
+                                        <div>
+                                            <a href="#" class="tm-album-item">
+                                                <div class="uk-inline">
+                                                    <img src="images/pa_album_7.png" alt="" class="uk-width-1-1">
+
+                                                    <div class="tm-overlay-dark tm-padding-10 uk-position-bottom uk-light">
+                                                        <div class="uk-text-truncate uk-text-medium">Название альбома</div>
+                                                        <div class="uk-text-truncate uk-text-little">18.09.2017</div>
+                                                    </div>
+
+                                                    <div class="tm-album-counter">45</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="tm-album-item">
+                                                <div class="uk-inline">
+                                                    <img src="images/pa_album_8.png" alt="" class="uk-width-1-1">
+
+                                                    <div class="tm-overlay-dark tm-padding-10 uk-position-bottom uk-light">
+                                                        <div class="uk-text-truncate uk-text-medium">Название альбома</div>
+                                                        <div class="uk-text-truncate uk-text-little">18.09.2017</div>
+                                                    </div>
+
+                                                    <div class="tm-album-counter">45</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#" class="tm-album-item">
+                                                <div class="uk-inline">
+                                                    <img src="images/pa_album_9.png" alt="" class="uk-width-1-1">
+
+                                                    <div class="tm-overlay-dark tm-padding-10 uk-position-bottom uk-light">
+                                                        <div class="uk-text-truncate uk-text-medium">Название альбома</div>
+                                                        <div class="uk-text-truncate uk-text-little">18.09.2017</div>
+                                                    </div>
+
+                                                    <div class="tm-album-counter">45</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="uk-text-center uk-text-right@s">
+                                        <a href="#" class="uk-button uk-button-small uk-button-simple-orange">Смотреть все фото</a>
+                                    </div>
+                                </div>
+
+                                <div class="uk-flex uk-flex-center">
+
+                                    <!--Banner-->
+                                    <a href="#" class="uk-card">
+                                        <img src="images/banner.jpg" alt="">
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </aside>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <footer class="uk-section">
+            <div class="uk-container">
+                <div class="uk-child-width-auto@s uk-grid-large uk-flex-between" uk-grid>
+                    <div class="uk-width-1-1 uk-width-expand@l uk-visible@s">
+                        <div class="uk-flex-between" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">О проекте</a></li>
+                                    <li><a href="#">Реклама</a></li>
+                                    <li><a href="#">Напишите нам</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Попутчики</a></li>
+                                    <li><a href="#">Блоги</a></li>
+                                    <li><a href="#">Страны</a></li>
+                                    <li><a href="#">Города</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Интересные места</a></li>
+                                    <li><a href="#">Фото</a></li>
+                                    <li><a href="#">Статьи</a></li>
+                                    <li><a href="#">Новости</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-nav-default">
+                                    <li><a href="#">Справочник туриста</a></li>
+                                    <li><a href="#">Табло аэропортов</a></li>
+                                    <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                                    <li><a href="#">Архив блогов</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-flex-first@l uk-text-center">
+                        <a href="/" class="uk-logo">
+                            <img src="images/logo_tourweek_footer.png" alt="">
+                        </a>
+                    </div>
+
+                    <div>
+                        <ul class="tm-social uk-iconnav uk-flex-center uk-flex-middle">
+                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-flex uk-flex-center">
+                <ul class="uk-nav">
+                    <li><a href="#">Попутчики</a></li>
+                    <li><a href="#">Блоги</a></li>
+                    <li><a href="#">Страны</a></li>
+                    <li><a href="#">Города</a></li>
+                    <li><a href="#">Интересные места</a></li>
+                    <li><a href="#">Визы</a></li>
+                    <li><a href="#">Фото</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Авиакомпании</a></li>
+                    <li><a href="#">Турфирмы</a></li>
+                    <li><a href="#">Отзывы об авиакомпаниях</a></li>
+                    <li><a href="#">Табло аэропортов</a></li>
+                    <li><a href="#">Справочник туриста</a></li>
+                    <li><a href="#">Блогосфера</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/js/uikit-icons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://ulogin.ru/js/ulogin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
+<script src="scripts/jquery.datepicker.js"></script>
+<script src="scripts/datepicker.ru-RU.js"></script>
+<script src="scripts/scroller.js"></script>
+<script src="scripts/app.js"></script>
+
+</body>
+</html>

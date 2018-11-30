@@ -12201,11 +12201,14 @@ strong {
 .uk-text-average {
   font-family: 'LatoWebMedium';
 }
+.uk-text-default {
+  font-size: 16px;
+}
 .uk-text-untransformed {
   text-transform: none;
 }
-.uk-text-default {
-  font-size: 16px;
+.uk-text-underline {
+  text-decoration: underline;
 }
 .uk-text-orange {
   color: #ff983a;
@@ -12657,6 +12660,12 @@ header {
   padding: 0;
   font-size: 32px;
   border: none;
+}
+.tm-button-big {
+  padding: 16px 30px;
+  line-height: 26px;
+  font-family: 'LatoWebBold';
+  font-size: 18px;
 }
 .tm-social > * {
   padding-left: 5px;
