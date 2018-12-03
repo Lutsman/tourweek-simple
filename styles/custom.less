@@ -124,6 +124,18 @@ form {
   }
 }
 
+.tm-grid-10 {
+  margin-left: -10px;
+
+  > * {
+    padding-left: 10px;
+  }
+}
+
+.uk-grid + .tm-grid-10, .tm-grid-10 > .uk-grid-margin, * + .uk-grid-margin-small {
+  margin-top: 10px;
+}
+
 .tm-grid-small {
   margin-left: -4px;
 
@@ -1482,6 +1494,33 @@ header {
       text-decoration: none;
       background-color: @global-orange;
     }
+  }
+}
+
+.tm-scoreboard {
+  padding: 40px 30px;
+  background-color: #414141;
+
+  .uk-input, .uk-select:not([multiple]):not([size]) {
+    height: 42px;
+  }
+
+  .uk-input, .uk-select, .uk-textarea {
+    font-size: 20px;
+    color: #fff;
+    background-color: #323232;
+  }
+
+  .tm-abbreviation {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  table {
+
+    .uk-input, .uk-select, .uk-textarea {
+      font-size: 18px;
+    }
+
   }
 }
 

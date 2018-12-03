@@ -12363,6 +12363,17 @@ form hr,
 form .uk-hr {
   border-top: 1px solid #d8d8d8;
 }
+.tm-grid-10 {
+  margin-left: -10px;
+}
+.tm-grid-10 > * {
+  padding-left: 10px;
+}
+.uk-grid + .tm-grid-10,
+.tm-grid-10 > .uk-grid-margin,
+* + .uk-grid-margin-small {
+  margin-top: 10px;
+}
 .tm-grid-small {
   margin-left: -4px;
 }
@@ -13420,6 +13431,29 @@ header {
   color: #000;
   text-decoration: none;
   background-color: #ff983a;
+}
+.tm-scoreboard {
+  padding: 40px 30px;
+  background-color: #414141;
+}
+.tm-scoreboard .uk-input,
+.tm-scoreboard .uk-select:not([multiple]):not([size]) {
+  height: 42px;
+}
+.tm-scoreboard .uk-input,
+.tm-scoreboard .uk-select,
+.tm-scoreboard .uk-textarea {
+  font-size: 20px;
+  color: #fff;
+  background-color: #323232;
+}
+.tm-scoreboard .tm-abbreviation {
+  color: rgba(255, 255, 255, 0.5);
+}
+.tm-scoreboard table .uk-input,
+.tm-scoreboard table .uk-select,
+.tm-scoreboard table .uk-textarea {
+  font-size: 18px;
 }
 .tm-photo {
   background-color: #e9eef3;
