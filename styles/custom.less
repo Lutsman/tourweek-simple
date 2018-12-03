@@ -895,6 +895,31 @@ header {
   }
 }
 
+.tm-list-question {
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  li {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      content: "\f059";
+      font-family: FontAwesome;
+      color: @global-orange;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
 .tm-list-count {
   counter-reset: item;
 
@@ -1434,6 +1459,29 @@ header {
 
   .uk-radio:checked {
     background-color: #cf1616;
+  }
+}
+
+.tm-directory-title {
+  line-height: 1;
+  font-family: @font-lato-bold;
+  font-size: 34px;
+}
+
+.tm-dictionary-links {
+  padding: 0 5px;
+  border: 1px solid @global-orange;
+
+  a {
+    display: inline-block;
+    line-height: 28px;
+    color: #000;
+
+    &:hover {
+      color: #000;
+      text-decoration: none;
+      background-color: @global-orange;
+    }
   }
 }
 
