@@ -1541,10 +1541,19 @@ header {
     color: rgba(255, 255, 255, 0.5);
   }
 
+  form .uk-button {
+    width: 130px;
+    font-family: @font-lato-medium;
+    font-size: 20px;
+  }
+
   table {
     color: #fff;
     border-collapse: separate;
     border-spacing: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
 
     th {
       padding: 0 12px;
@@ -1556,6 +1565,7 @@ header {
       position: relative;
       font-size: 17px;
       background-color: #323232;
+      box-sizing: border-box;
 
       &::before {
         content: '';
@@ -1575,20 +1585,23 @@ header {
   }
 }
 
-.tm-scoreboard-airport {
+.tm-scoreboard-airport, .tm-scoreboard-country {
   width: 384px;
 }
 
 .tm-scoreboard-departure, .tm-scoreboard-arrival {
   font-family: @font-lato-medium;
   font-size: 18px;
+  text-align: center;
 }
 
 .tm-scoreboard-departure {
+  width: 120px;
   color: #f16c15;
 }
 
 .tm-scoreboard-arrival {
+  width: 130px;
   color: #57b544;
 }
 
