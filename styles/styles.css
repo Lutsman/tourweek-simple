@@ -13453,24 +13453,6 @@ header {
   padding: 40px 30px;
   background-color: #414141;
 }
-.tm-scoreboard .uk-input,
-.tm-scoreboard .uk-select:not([multiple]):not([size]) {
-  height: 42px;
-}
-.tm-scoreboard .uk-input,
-.tm-scoreboard .uk-select {
-  font-family: 'LatoWebMedium';
-  font-size: 20px;
-  color: #fff;
-  background-color: #323232;
-  border: none;
-}
-.tm-scoreboard .uk-form-icon {
-  color: #fff;
-}
-.tm-scoreboard .tm-abbreviation {
-  color: rgba(255, 255, 255, 0.5);
-}
 .tm-scoreboard form .uk-button {
   width: 130px;
   font-family: 'LatoWebMedium';
@@ -13480,9 +13462,6 @@ header {
   color: #fff;
   border-collapse: separate;
   border-spacing: 10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  width: calc(100% + 20px);
 }
 .tm-scoreboard table th {
   padding: 0 12px;
@@ -13507,6 +13486,29 @@ header {
 .tm-scoreboard table td > * {
   position: relative;
   z-index: 1;
+}
+.tm-scoreboard .uk-input,
+.tm-scoreboard .uk-select:not([multiple]):not([size]) {
+  height: 42px;
+}
+.tm-scoreboard .uk-input,
+.tm-scoreboard .uk-select {
+  font-family: 'LatoWebMedium';
+  font-size: 20px;
+  color: #fff;
+  background-color: #323232;
+  border: none;
+}
+.tm-scoreboard .uk-form-icon {
+  color: #fff;
+}
+.tm-scoreboard .tm-abbreviation {
+  color: rgba(255, 255, 255, 0.5);
+}
+.tm-scoreboard .tm-table-wrap {
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
 }
 .tm-scoreboard-airport,
 .tm-scoreboard-country {
