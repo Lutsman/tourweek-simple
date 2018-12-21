@@ -12401,6 +12401,10 @@ form .uk-hr {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.tm-section-scoreboard {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .uk-grid + .tm-grid-best-photo,
 .tm-grid-best-photo > .uk-grid-margin,
 * + .uk-grid-margin-small {
@@ -13558,7 +13562,7 @@ header {
 .tm-scoreboard table td {
   position: relative;
   font-size: 17px;
-  background-color: #323232;
+  background-color: #151515;
   box-sizing: border-box;
 }
 .tm-scoreboard table td::before {
@@ -13585,6 +13589,7 @@ header {
   color: #fff;
   background-color: #323232;
   border: none;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.13), inset 0 1px 0 0 rgba(0, 0, 0, 0.4);
 }
 .tm-scoreboard .uk-form-icon {
   color: #fff;
