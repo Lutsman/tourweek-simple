@@ -246,15 +246,15 @@
                 </div>
             </div>
 
-            <div class="uk-section">
+            <div class="tm-section-medium uk-section">
                 <div class="uk-container">
                     <div class="uk-child-width-expand@m" uk-grid>
 
                         <!-- Questions and answers -->
                         <div>
-                            <div class="uk-child-width-expand@s uk-flex-between" uk-grid>
+                            <div class="uk-child-width-expand@s uk-flex-middle uk-flex-between" uk-grid>
                                 <div>
-                                    <h4>Всего вопросов: <span>345</span></h4>
+                                    <h4 class="tm-h4-control-height">Всего вопросов: <span>345</span></h4>
                                 </div>
                                 
                                 <div class="uk-width-auto@s">
@@ -282,7 +282,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="uk-padding uk-padding-remove-vertical uk-background-muted">
+                                    <div class="tm-question-control uk-background-muted">
                                         <div class="uk-child-width-expand@s uk-flex-middle" uk-grid>
                                             <div>
                                                 <div class="tm-question-avatar">
@@ -297,14 +297,14 @@
                                             </div>
 
                                             <div>
-                                                <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
+                                                <div class="uk-link-muted">
                                                     <a href="#">#Общественный транспорт</a>, <a href="#">#Россия</a>
                                                 </div>
                                             </div>
                                             
                                             <div class="uk-width-auto@s">
                                                 <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
-                                                    <a href="#">
+                                                    <a href="#tm-comment-list-1" uk-toggle>
                                                         <i class="fa fa-comment" aria-hidden="true"></i> Ответов: <span>21</span>
                                                     </a>
                                                 </div>
@@ -312,159 +312,161 @@
                                         </div>
                                     </div>
 
-                                    <div class="uk-padding uk-background-secondary" hidden>
-                                        <ul class="tm-reply-list uk-comment-list uk-text-little">
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
-                                                        </div>
+                                    <div id="tm-comment-list-1" hidden>
+                                        <div class="uk-padding uk-background-secondary">
+                                            <ul class="tm-reply-list uk-comment-list uk-text-little">
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
+                                                            </div>
 
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Катерина</div>
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Катерина</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
                                                                     </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
                                                                     <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
                                                                     </div>
-                                                                </div>
-
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
-
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
+                                                    </article>
 
-                                                <ul>
-                                                    <li>
-                                                        <article class="uk-comment">
-                                                            <div class="uk-child-width-expand" uk-grid>
-                                                                <div class="uk-width-auto">
-                                                                    <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
-                                                                </div>
-
-                                                                <div>
-                                                                    <div class="uk-comment-body">
-                                                                        <div class="uk-flex-between" uk-grid>
-                                                                            <div>
-                                                                                <div class="uk-comment-title">Наташа</div>
-                                                                            </div>
-                                                                            <div>
-                                                                                <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                            авиакомпанией. Они животных не признают, они для них как
-                                                                            чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                            полета неделю приходила в себя, на всех б...
-                                                                        </p>
-
-                                                                        <div>
-                                                                            <a href="#" class="uk-text-bold">Ответить</a>
-                                                                        </div>
+                                                    <ul>
+                                                        <li>
+                                                            <article class="uk-comment">
+                                                                <div class="uk-child-width-expand" uk-grid>
+                                                                    <div class="uk-width-auto">
+                                                                        <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
 
-                                                        <ul>
-                                                            <li>
-                                                                <article class="uk-comment">
-                                                                    <div class="uk-child-width-expand" uk-grid>
-                                                                        <div class="uk-width-auto">
-                                                                            <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <div class="uk-comment-body">
-                                                                                <div class="uk-flex-between" uk-grid>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-title">Марго</div>
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                                    полета неделю приходила в себя, на всех б...
-                                                                                </p>
-
+                                                                    <div>
+                                                                        <div class="uk-comment-body">
+                                                                            <div class="uk-flex-between" uk-grid>
                                                                                 <div>
-                                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    <div class="uk-comment-title">Наташа</div>
                                                                                 </div>
+                                                                                <div>
+                                                                                    <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                авиакомпанией. Они животных не признают, они для них как
+                                                                                чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                полета неделю приходила в себя, на всех б...
+                                                                            </p>
+
+                                                                            <div>
+                                                                                <a href="#" class="uk-text-bold">Ответить</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Всеволод</div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                    </div>
                                                                 </div>
+                                                            </article>
 
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <article class="uk-comment">
+                                                                        <div class="uk-child-width-expand" uk-grid>
+                                                                            <div class="uk-width-auto">
+                                                                                <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
+                                                                            </div>
 
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                            <div>
+                                                                                <div class="uk-comment-body">
+                                                                                    <div class="uk-flex-between" uk-grid>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-title">Марго</div>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                        полета неделю приходила в себя, на всех б...
+                                                                                    </p>
+
+                                                                                    <div>
+                                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </article>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
+                                                            </div>
+
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Всеволод</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
+                                                                    <div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="uk-padding uk-background-muted" hidden>
-                                        <div class="uk-child-width-expand uk-margin" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
-                                            </div>
-
-                                            <div>
-                                                <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
-                                            </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
                                         </div>
 
-                                        <div class="uk-flex uk-flex-right">
-                                            <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                        <div class="uk-padding uk-background-muted">
+                                            <div class="uk-child-width-expand uk-margin" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
+                                                </div>
+
+                                                <div>
+                                                    <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-flex uk-flex-right">
+                                                <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                            </div>
                                         </div>
                                     </div>
                                     
@@ -501,14 +503,14 @@
                                             </div>
 
                                             <div>
-                                                <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
+                                                <div class="uk-link-muted">
                                                     <a href="#">#Общественный транспорт</a>, <a href="#">#Россия</a>
                                                 </div>
                                             </div>
 
                                             <div class="uk-width-auto@s">
                                                 <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
-                                                    <a href="#">
+                                                    <a href="#tm-comment-list-2" uk-toggle>
                                                         <i class="fa fa-comment" aria-hidden="true"></i> Ответов: <span>21</span>
                                                     </a>
                                                 </div>
@@ -516,159 +518,161 @@
                                         </div>
                                     </div>
 
-                                    <div class="uk-padding uk-background-secondary" hidden>
-                                        <ul class="tm-reply-list uk-comment-list uk-text-little">
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
-                                                        </div>
+                                    <div id="tm-comment-list-2" hidden>
+                                        <div class="uk-padding uk-background-secondary">
+                                            <ul class="tm-reply-list uk-comment-list uk-text-little">
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
+                                                            </div>
 
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Катерина</div>
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Катерина</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
                                                                     </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
                                                                     <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
                                                                     </div>
-                                                                </div>
-
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
-
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
+                                                    </article>
 
-                                                <ul>
-                                                    <li>
-                                                        <article class="uk-comment">
-                                                            <div class="uk-child-width-expand" uk-grid>
-                                                                <div class="uk-width-auto">
-                                                                    <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
-                                                                </div>
-
-                                                                <div>
-                                                                    <div class="uk-comment-body">
-                                                                        <div class="uk-flex-between" uk-grid>
-                                                                            <div>
-                                                                                <div class="uk-comment-title">Наташа</div>
-                                                                            </div>
-                                                                            <div>
-                                                                                <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                            авиакомпанией. Они животных не признают, они для них как
-                                                                            чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                            полета неделю приходила в себя, на всех б...
-                                                                        </p>
-
-                                                                        <div>
-                                                                            <a href="#" class="uk-text-bold">Ответить</a>
-                                                                        </div>
+                                                    <ul>
+                                                        <li>
+                                                            <article class="uk-comment">
+                                                                <div class="uk-child-width-expand" uk-grid>
+                                                                    <div class="uk-width-auto">
+                                                                        <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
 
-                                                        <ul>
-                                                            <li>
-                                                                <article class="uk-comment">
-                                                                    <div class="uk-child-width-expand" uk-grid>
-                                                                        <div class="uk-width-auto">
-                                                                            <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <div class="uk-comment-body">
-                                                                                <div class="uk-flex-between" uk-grid>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-title">Марго</div>
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                                    полета неделю приходила в себя, на всех б...
-                                                                                </p>
-
+                                                                    <div>
+                                                                        <div class="uk-comment-body">
+                                                                            <div class="uk-flex-between" uk-grid>
                                                                                 <div>
-                                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    <div class="uk-comment-title">Наташа</div>
                                                                                 </div>
+                                                                                <div>
+                                                                                    <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                авиакомпанией. Они животных не признают, они для них как
+                                                                                чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                полета неделю приходила в себя, на всех б...
+                                                                            </p>
+
+                                                                            <div>
+                                                                                <a href="#" class="uk-text-bold">Ответить</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Всеволод</div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                    </div>
                                                                 </div>
+                                                            </article>
 
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <article class="uk-comment">
+                                                                        <div class="uk-child-width-expand" uk-grid>
+                                                                            <div class="uk-width-auto">
+                                                                                <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
+                                                                            </div>
 
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                            <div>
+                                                                                <div class="uk-comment-body">
+                                                                                    <div class="uk-flex-between" uk-grid>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-title">Марго</div>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                        полета неделю приходила в себя, на всех б...
+                                                                                    </p>
+
+                                                                                    <div>
+                                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </article>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
+                                                            </div>
+
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Всеволод</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
+                                                                    <div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="uk-padding uk-background-muted" hidden>
-                                        <div class="uk-child-width-expand uk-margin" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
-                                            </div>
-
-                                            <div>
-                                                <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
-                                            </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
                                         </div>
 
-                                        <div class="uk-flex uk-flex-right">
-                                            <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                        <div class="uk-padding uk-background-muted">
+                                            <div class="uk-child-width-expand uk-margin" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
+                                                </div>
+
+                                                <div>
+                                                    <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-flex uk-flex-right">
+                                                <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -705,14 +709,14 @@
                                             </div>
 
                                             <div>
-                                                <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
+                                                <div class="uk-link-muted">
                                                     <a href="#">#Общественный транспорт</a>, <a href="#">#Россия</a>
                                                 </div>
                                             </div>
 
                                             <div class="uk-width-auto@s">
                                                 <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
-                                                    <a href="#">
+                                                    <a href="#tm-comment-list-3" uk-toggle>
                                                         <i class="fa fa-comment" aria-hidden="true"></i> Ответов: <span>21</span>
                                                     </a>
                                                 </div>
@@ -720,159 +724,161 @@
                                         </div>
                                     </div>
 
-                                    <div class="uk-padding uk-background-secondary" hidden>
-                                        <ul class="tm-reply-list uk-comment-list uk-text-little">
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
-                                                        </div>
+                                    <div id="tm-comment-list-3" hidden>
+                                        <div class="uk-padding uk-background-secondary">
+                                            <ul class="tm-reply-list uk-comment-list uk-text-little">
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
+                                                            </div>
 
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Катерина</div>
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Катерина</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
                                                                     </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
                                                                     <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
                                                                     </div>
-                                                                </div>
-
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
-
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
+                                                    </article>
 
-                                                <ul>
-                                                    <li>
-                                                        <article class="uk-comment">
-                                                            <div class="uk-child-width-expand" uk-grid>
-                                                                <div class="uk-width-auto">
-                                                                    <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
-                                                                </div>
-
-                                                                <div>
-                                                                    <div class="uk-comment-body">
-                                                                        <div class="uk-flex-between" uk-grid>
-                                                                            <div>
-                                                                                <div class="uk-comment-title">Наташа</div>
-                                                                            </div>
-                                                                            <div>
-                                                                                <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                            авиакомпанией. Они животных не признают, они для них как
-                                                                            чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                            полета неделю приходила в себя, на всех б...
-                                                                        </p>
-
-                                                                        <div>
-                                                                            <a href="#" class="uk-text-bold">Ответить</a>
-                                                                        </div>
+                                                    <ul>
+                                                        <li>
+                                                            <article class="uk-comment">
+                                                                <div class="uk-child-width-expand" uk-grid>
+                                                                    <div class="uk-width-auto">
+                                                                        <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
 
-                                                        <ul>
-                                                            <li>
-                                                                <article class="uk-comment">
-                                                                    <div class="uk-child-width-expand" uk-grid>
-                                                                        <div class="uk-width-auto">
-                                                                            <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <div class="uk-comment-body">
-                                                                                <div class="uk-flex-between" uk-grid>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-title">Марго</div>
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                                    полета неделю приходила в себя, на всех б...
-                                                                                </p>
-
+                                                                    <div>
+                                                                        <div class="uk-comment-body">
+                                                                            <div class="uk-flex-between" uk-grid>
                                                                                 <div>
-                                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    <div class="uk-comment-title">Наташа</div>
                                                                                 </div>
+                                                                                <div>
+                                                                                    <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                авиакомпанией. Они животных не признают, они для них как
+                                                                                чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                полета неделю приходила в себя, на всех б...
+                                                                            </p>
+
+                                                                            <div>
+                                                                                <a href="#" class="uk-text-bold">Ответить</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Всеволод</div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                    </div>
                                                                 </div>
+                                                            </article>
 
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <article class="uk-comment">
+                                                                        <div class="uk-child-width-expand" uk-grid>
+                                                                            <div class="uk-width-auto">
+                                                                                <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
+                                                                            </div>
 
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                            <div>
+                                                                                <div class="uk-comment-body">
+                                                                                    <div class="uk-flex-between" uk-grid>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-title">Марго</div>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                        полета неделю приходила в себя, на всех б...
+                                                                                    </p>
+
+                                                                                    <div>
+                                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </article>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
+                                                            </div>
+
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Всеволод</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
+                                                                    <div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="uk-padding uk-background-muted" hidden>
-                                        <div class="uk-child-width-expand uk-margin" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
-                                            </div>
-
-                                            <div>
-                                                <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
-                                            </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
                                         </div>
 
-                                        <div class="uk-flex uk-flex-right">
-                                            <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                        <div class="uk-padding uk-background-muted">
+                                            <div class="uk-child-width-expand uk-margin" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
+                                                </div>
+
+                                                <div>
+                                                    <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-flex uk-flex-right">
+                                                <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -909,14 +915,14 @@
                                             </div>
 
                                             <div>
-                                                <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
+                                                <div class="uk-link-muted">
                                                     <a href="#">#Общественный транспорт</a>, <a href="#">#Россия</a>
                                                 </div>
                                             </div>
 
                                             <div class="uk-width-auto@s">
                                                 <div class="uk-padding-small uk-padding-remove-horizontal uk-link-muted">
-                                                    <a href="#">
+                                                    <a href="#tm-comment-list-4" uk-toggle>
                                                         <i class="fa fa-comment" aria-hidden="true"></i> Ответов: <span>21</span>
                                                     </a>
                                                 </div>
@@ -924,159 +930,161 @@
                                         </div>
                                     </div>
 
-                                    <div class="uk-padding uk-background-secondary">
-                                        <ul class="tm-reply-list uk-comment-list uk-text-little">
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
-                                                        </div>
+                                    <div id="tm-comment-list-4" hidden>
+                                        <div class="uk-padding uk-background-secondary">
+                                            <ul class="tm-reply-list uk-comment-list uk-text-little">
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_4.png" alt="">
+                                                            </div>
 
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Катерина</div>
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Катерина</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
                                                                     </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
                                                                     <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
                                                                     </div>
-                                                                </div>
-
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
-
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
+                                                    </article>
 
-                                                <ul>
-                                                    <li>
-                                                        <article class="uk-comment">
-                                                            <div class="uk-child-width-expand" uk-grid>
-                                                                <div class="uk-width-auto">
-                                                                    <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
-                                                                </div>
-
-                                                                <div>
-                                                                    <div class="uk-comment-body">
-                                                                        <div class="uk-flex-between" uk-grid>
-                                                                            <div>
-                                                                                <div class="uk-comment-title">Наташа</div>
-                                                                            </div>
-                                                                            <div>
-                                                                                <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                            авиакомпанией. Они животных не признают, они для них как
-                                                                            чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                            полета неделю приходила в себя, на всех б...
-                                                                        </p>
-
-                                                                        <div>
-                                                                            <a href="#" class="uk-text-bold">Ответить</a>
-                                                                        </div>
+                                                    <ul>
+                                                        <li>
+                                                            <article class="uk-comment">
+                                                                <div class="uk-child-width-expand" uk-grid>
+                                                                    <div class="uk-width-auto">
+                                                                        <img class="uk-border-circle" src="images/avatar_40x40_5.png" alt="">
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
 
-                                                        <ul>
-                                                            <li>
-                                                                <article class="uk-comment">
-                                                                    <div class="uk-child-width-expand" uk-grid>
-                                                                        <div class="uk-width-auto">
-                                                                            <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <div class="uk-comment-body">
-                                                                                <div class="uk-flex-between" uk-grid>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-title">Марго</div>
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                                    полета неделю приходила в себя, на всех б...
-                                                                                </p>
-
+                                                                    <div>
+                                                                        <div class="uk-comment-body">
+                                                                            <div class="uk-flex-between" uk-grid>
                                                                                 <div>
-                                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    <div class="uk-comment-title">Наташа</div>
                                                                                 </div>
+                                                                                <div>
+                                                                                    <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                авиакомпанией. Они животных не признают, они для них как
+                                                                                чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                полета неделю приходила в себя, на всех б...
+                                                                            </p>
+
+                                                                            <div>
+                                                                                <a href="#" class="uk-text-bold">Ответить</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </article>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <article class="uk-comment">
-                                                    <div class="uk-child-width-expand" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
-                                                        </div>
-
-                                                        <div>
-                                                            <div class="uk-comment-body">
-                                                                <div class="uk-flex-between" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-comment-title">Всеволод</div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="uk-comment-meta"> 21.03.2017 11:01</div>
-                                                                    </div>
                                                                 </div>
+                                                            </article>
 
-                                                                <p>Живодеры»Люди, никогда не летайте с животными с этой
-                                                                    авиакомпанией. Они животных не признают, они для них как
-                                                                    чемоданы, в салон самолёта не пускают. У нас собака после
-                                                                    полета неделю приходила в себя, на всех б...
-                                                                </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <article class="uk-comment">
+                                                                        <div class="uk-child-width-expand" uk-grid>
+                                                                            <div class="uk-width-auto">
+                                                                                <img class="uk-border-circle" src="images/avatar_40x40_6.png" alt="">
+                                                                            </div>
 
-                                                                <div>
-                                                                    <a href="#" class="uk-text-bold">Ответить</a>
+                                                                            <div>
+                                                                                <div class="uk-comment-body">
+                                                                                    <div class="uk-flex-between" uk-grid>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-title">Марго</div>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                                        полета неделю приходила в себя, на всех б...
+                                                                                    </p>
+
+                                                                                    <div>
+                                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </article>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <article class="uk-comment">
+                                                        <div class="uk-child-width-expand" uk-grid>
+                                                            <div class="uk-width-auto">
+                                                                <img class="uk-border-circle" src="images/avatar_40x40_7.png" alt="">
+                                                            </div>
+
+                                                            <div>
+                                                                <div class="uk-comment-body">
+                                                                    <div class="uk-flex-between" uk-grid>
+                                                                        <div>
+                                                                            <div class="uk-comment-title">Всеволод</div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="uk-comment-meta"> 21.03.2017 11:01</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <p>Живодеры»Люди, никогда не летайте с животными с этой
+                                                                        авиакомпанией. Они животных не признают, они для них как
+                                                                        чемоданы, в салон самолёта не пускают. У нас собака после
+                                                                        полета неделю приходила в себя, на всех б...
+                                                                    </p>
+
+                                                                    <div>
+                                                                        <a href="#" class="uk-text-bold">Ответить</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="uk-padding uk-background-muted">
-                                        <div class="uk-child-width-expand uk-margin" uk-grid>
-                                            <div class="uk-width-auto">
-                                                <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
-                                            </div>
-
-                                            <div>
-                                                <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
-                                            </div>
+                                                    </article>
+                                                </li>
+                                            </ul>
                                         </div>
 
-                                        <div class="uk-flex uk-flex-right">
-                                            <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                        <div class="uk-padding uk-background-muted">
+                                            <div class="uk-child-width-expand uk-margin" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-border-circle" src="images/avatar_40x40_8.png" alt="">
+                                                </div>
+
+                                                <div>
+                                                    <textarea name="form-textarea" rows="3" class="uk-textarea" placeholder="Ваш ответ"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-flex uk-flex-right">
+                                                <a href="#" class="uk-button uk-button-small uk-button-blue">Отправить</a>
+                                            </div>
                                         </div>
                                     </div>
 

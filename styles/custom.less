@@ -237,7 +237,7 @@ form {
 }
 
 .tm-input-shadow {
-  border-color: #fff;
+  border: none;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.56), inset 0px 1px 2px 0 rgba(72, 114, 158, 0.61);
 }
 
@@ -290,7 +290,7 @@ form {
     display: block;
     position: relative;
     padding: 15px 15px 15px 50px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.3);
 
     &::before {
       content: '';
@@ -333,6 +333,10 @@ form {
 
   .uk-input, .uk-select:not([multiple]):not([size]) {
     height: 48px;
+  }
+
+  .uk-grid-collapse > .uk-grid-margin {
+    margin-top: 10px;
   }
 }
 
@@ -641,6 +645,11 @@ header {
 }
 
 // text
+
+.tm-h4-control-height {
+  line-height: 34px;
+}
+
 .tm-line-height-big {
   line-height: 2;
 }
@@ -1364,8 +1373,8 @@ header {
   box-sizing: border-box;
 }
 
-.tm-question-avatar {
-  padding: 7px 0;
+.tm-question-control {
+  padding: 7px 20px;
 }
 
 .tm-map-wrap {
@@ -1614,7 +1623,7 @@ header {
     line-height: 28px;
     color: #000;
 
-    &:hover {
+    &:hover, &.tm-active {
       color: #000;
       text-decoration: none;
       background-color: @global-orange;
