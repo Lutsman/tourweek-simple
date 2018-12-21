@@ -118,6 +118,10 @@ aside {
   h3 {
     line-height: 1;
   }
+
+  .uk-grid + .uk-grid, .uk-grid > .uk-grid-margin, * + .uk-grid-margin {
+    margin-top: 40px;
+  }
 }
 
 
@@ -158,6 +162,11 @@ form {
   > * {
     padding-left: 3px;
   }
+}
+
+.tm-section-medium {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .uk-grid + .tm-grid-best-photo, .tm-grid-best-photo > .uk-grid-margin, * + .uk-grid-margin-small {
@@ -900,6 +909,10 @@ header {
     a:hover i {
       border-color: @global-color;
     }
+  }
+
+  .tm-user-about {
+    padding-right: 30px;
   }
 }
 
@@ -1706,6 +1719,11 @@ header {
   }
 }
 
+.tm-divider-arrow {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
 
 
   // photo
@@ -1823,5 +1841,12 @@ header {
 
   .tm-authorization-footer {
     padding: 20px;
+  }
+
+  .tm-articles-list {
+
+    .tm-user-about {
+      padding-right: 0;
+    }
   }
 }

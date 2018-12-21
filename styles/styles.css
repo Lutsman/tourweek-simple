@@ -12358,6 +12358,11 @@ footer {
 aside h3 {
   line-height: 1;
 }
+aside .uk-grid + .uk-grid,
+aside .uk-grid > .uk-grid-margin,
+aside * + .uk-grid-margin {
+  margin-top: 40px;
+}
 input:checked + label.uk-button-simple-orange {
   background-color: #ff7d07;
   color: #fff;
@@ -12385,6 +12390,10 @@ form .uk-hr {
 }
 .tm-grid-best-photo > * {
   padding-left: 3px;
+}
+.tm-section-medium {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .uk-grid + .tm-grid-best-photo,
 .tm-grid-best-photo > .uk-grid-margin,
@@ -12941,6 +12950,9 @@ header {
 }
 .tm-articles-list .tm-social a:hover i {
   border-color: #333;
+}
+.tm-articles-list .tm-user-about {
+  padding-right: 30px;
 }
 .tm-last-materials {
   width: 183px;
@@ -13597,6 +13609,10 @@ header {
 .tm-aside-main .tm-news-small h3 {
   margin-bottom: 30px;
 }
+.tm-divider-arrow {
+  margin-right: 3px;
+  margin-left: 3px;
+}
 .tm-photo {
   background-color: #e9eef3;
   background-image: url("../images/pattern_bg.png");
@@ -13678,6 +13694,9 @@ header {
   }
   .tm-authorization-footer {
     padding: 20px;
+  }
+  .tm-articles-list .tm-user-about {
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
