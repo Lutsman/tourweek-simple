@@ -965,7 +965,7 @@ a.uk-link-reset:hover,
   left: 0;
   width: 1.4em;
   height: 1.4em;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23333%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%20%20%20%20%3Ccircle%20fill%3D%22%23333%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0D%0A%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   /* 1 */
@@ -12352,9 +12352,6 @@ header .uk-button-small {
 footer {
   background-color: #dadada;
 }
-aside h3 {
-  line-height: 1;
-}
 input:checked + label.uk-button-simple-orange {
   background-color: #ff7d07;
   color: #fff;
@@ -12816,15 +12813,22 @@ header {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;
 }
+.tm-new-blogs {
+  font-size: 14px;
+}
+.tm-new-blogs .uk-text-small {
+  font-size: 11px;
+}
 .tm-blog-title {
   display: block;
-  height: 52px;
+  height: 44px;
   overflow: hidden;
+  line-height: 22px;
   font-size: 20px;
   font-family: 'LatoWebBold';
 }
-.tm-blog-footer {
-  font-size: 14px;
+.tm-blog-footer .uk-text-small {
+  font-size: 12px;
 }
 .tm-pages-list a {
   display: inline-block;
@@ -12833,10 +12837,11 @@ header {
   font-size: 15px;
   line-height: 1.9;
 }
-.tm-pages-list a + a {
+.tm-pages-list a > span {
+  position: relative;
   padding-left: 28px;
 }
-.tm-pages-list a + a::before {
+.tm-pages-list a > span::before {
   content: '\f0a3';
   display: inline-block;
   position: absolute;

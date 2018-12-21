@@ -106,12 +106,6 @@ footer {
   background-color: #dadada;
 }
 
-aside {
-
-  h3 {
-    line-height: 1;
-  }
-}
 
 
 // form
@@ -730,16 +724,28 @@ header {
   }
 }
 
+.tm-new-blogs {
+  font-size: 14px;
+
+  .uk-text-small {
+    font-size: 11px;
+  }
+}
+
 .tm-blog-title {
   display: block;
-  height: 52px;
+  height: 44px;
   overflow: hidden;
+  line-height: 22px;
   font-size: 20px;
   font-family: @font-lato-bold;
 }
 
 .tm-blog-footer {
-  font-size: 14px;
+
+  .uk-text-small {
+    font-size: 12px;
+  }
 }
 
 .tm-pages-list {
@@ -751,7 +757,8 @@ header {
     font-size: 15px;
     line-height: 1.9;
 
-    + a {
+    > span {
+      position: relative;
       padding-left: 28px;
 
       &::before {
@@ -765,6 +772,7 @@ header {
         color: #aba4a4;
       }
     }
+
 
     &:last-of-type {
       margin-right: 0;
@@ -1614,6 +1622,8 @@ header {
 }
 
 
+
+
   // photo
 .tm-photo {
   background-color: #e9eef3;
@@ -1761,5 +1771,4 @@ header {
   .tm-authorization-footer {
     padding: 20px;
   }
-
 }
