@@ -12164,11 +12164,14 @@ strong {
   color: #fff;
 }
 .uk-button-white {
-  box-shadow: 0 0 5px 0 rgba(43, 2, 2, 0.13);
   background-color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(43, 2, 2, 0.13);
 }
 .uk-button-white:hover {
+  color: #333;
   background-color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
@@ -12777,7 +12780,12 @@ header {
 }
 .tm-article-footer .tm-button-more {
   position: relative;
-  top: -20px;
+  top: -16px;
+  line-height: 23px;
+  color: #666;
+}
+.tm-article-footer .tm-button-more:hover {
+  color: #666;
 }
 .tm-article-title {
   font-size: 20px;
