@@ -12692,6 +12692,11 @@ header {
 .tm-country-description-list > dt:nth-child(n+2) {
   border-top-color: rgba(255, 255, 255, 0.2);
 }
+.tm-visited-list .uk-grid + .uk-grid-medium,
+.tm-visited-list .uk-grid-medium > .uk-grid-margin,
+.tm-visited-list * + .uk-grid-margin-medium {
+  margin-top: 10px;
+}
 .tm-indicator {
   display: flex;
   margin-bottom: 4px;
@@ -12848,6 +12853,9 @@ header {
 }
 .tm-margin-bottom-15 {
   margin-bottom: 15px;
+}
+.tm-margin-bottom-45 {
+  margin-bottom: 45px;
 }
 .tm-background-grey {
   background-color: #d9d9d9;
@@ -13480,6 +13488,10 @@ header {
 .tm-album-item:hover {
   text-decoration: none;
 }
+.tm-album-item .tm-overlay-dark {
+  padding: 5px 15px;
+  line-height: 18px;
+}
 .tm-album-counter {
   position: absolute;
   top: 3px;
@@ -13499,6 +13511,9 @@ header {
   border: 2px solid transparent;
   border-top-color: #315a89;
   border-left-color: #315a89;
+}
+.tm-personal-feature {
+  line-height: 1.2;
 }
 .tm-feedback-item {
   padding: 20px 25px;
@@ -13658,9 +13673,11 @@ header {
 .tm-foto-add-step-2 .uk-thumbnav > * > :hover::after,
 .tm-foto-add-step-2 .uk-thumbnav > * > :focus::after {
   background-color: transparent;
+  border: 2px solid #ff983a;
 }
 .tm-foto-add-step-2 .uk-thumbnav > .uk-active > *::after {
   background-color: transparent;
+  border: 2px solid #ff983a;
 }
 [uk-toggle]:not(.uk-toggle-active) [opened-toggle] {
   display: none;
@@ -13674,13 +13691,27 @@ header {
     min-height: 0;
   }
   .tm-foto-add-step-1 {
-    padding: 50px 20px;
+    padding: 20px;
+  }
+  .tm-foto-add-step-1 h3 {
+    line-height: 26px;
+  }
+  .tm-foto-add-step-1 .uk-grid + .uk-grid,
+  .tm-foto-add-step-1 .uk-grid > .uk-grid-margin,
+  .tm-foto-add-step-1 * + .uk-grid-margin {
+    margin-top: 5px;
+  }
+  .tm-foto-add-step-1 .uk-list-divider > li:first-child {
+    padding-top: 5px;
   }
   .tm-foto-add-step-2 {
     padding: 20px 20px 30px;
   }
   .tm-last-materials {
     width: 100%;
+  }
+  .tm-step-image {
+    width: 50px;
   }
 }
 @media (max-width: 639px) {
@@ -13710,6 +13741,12 @@ header {
   }
   .tm-articles-list .tm-user-about {
     padding-right: 0;
+  }
+  .tm-articles-list .uk-article {
+    padding: 20px 15px;
+  }
+  .tm-personal-area-subnav > * > :first-child {
+    padding: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

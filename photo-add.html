@@ -232,9 +232,9 @@
 
                         <!-- Add foto step 1 -->
                         <div class="tm-foto-add-step-1 uk-background-muted uk-margin-medium-bottom">
-                            <div class="uk-child-width-expand@m" uk-grid>
-                                <div class="uk-width-auto@m">
-                                    <img src="images/icon-picture-add.png" alt="">
+                            <div class="uk-child-width-expand@s" uk-grid>
+                                <div class="uk-width-auto@s">
+                                    <img src="images/icon-picture-add.png" alt="" class="tm-step-image">
                                 </div>
 
                                 <div>
@@ -367,7 +367,9 @@
 
                         <!-- Add foto step 2 -->
                         <div class="tm-foto-add-step-2 uk-background-muted">
-                            <ul class="uk-thumbnav" uk-margin uk-switcher="connect: #tm-foto-switcher; animation: uk-animation-fade;">
+                            <ul class="uk-thumbnav uk-child-width-1-5 uk-child-width-auto@s"
+                                uk-margin
+                                uk-switcher="connect: #tm-foto-switcher; animation: uk-animation-fade;">
                                 <li class="uk-active"><a href="#"><img src="images/photo_add_1.png" alt=""></a></li>
                                 <li><a href="#"><img src="images/photo_add_2.png" alt=""></a></li>
                                 <li><a href="#"><img src="images/photo_add_3.png" alt=""></a></li>
@@ -381,6 +383,15 @@
                             </ul>
 
                             <hr>
+
+                            <!-- hidden@m -->
+                            <div class="uk-hidden@m">
+                                <div>
+                                    <img src="images/photo_add_big.png" alt="">
+                                </div>
+
+                                <hr>
+                            </div>
 
                             <ul id="tm-foto-switcher" class="uk-switcher">
                                 <li>
@@ -437,9 +448,12 @@
                                         
                                         <div class="uk-width-auto@m">
                                             <div class="uk-child-width-1-1 uk-height-1-1 uk-flex uk-flex-column uk-flex-between" uk-margin>
-                                                <div>
+
+                                                <!-- visible@m -->
+                                                <div class="uk-visible@m">
                                                     <img src="images/photo_add_big.png" alt="">
                                                 </div>
+
                                                 <div class="uk-text-right">
                                                     <a href="#" class="uk-button uk-button-blue">Сохранить</a>
                                                 </div>
