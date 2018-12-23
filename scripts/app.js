@@ -1,5 +1,5 @@
 $(function () {
-   // datepicker
+    // datepicker
     (function () {
         var $datepicker = $('[datepicker]');
         var options = {
@@ -17,7 +17,7 @@ $(function () {
         var $body = $('body');
         var $overlay = $('<div class="tm-navbar-overlay"></div>');
         var activeNavClassName = 'tm-navbar-active';
-        var activeTogglerClassName= 'uk-active';
+        var activeTogglerClassName = 'uk-active';
         var relativePosClassName = 'uk-position-relative';
 
         $navbar.on({
@@ -78,5 +78,65 @@ $(function () {
         };
 
         $wrappers.socialLikes(options);
+    })();
+
+    //tourist dictionary
+    (function () {
+        var $filterContainer = $('.tm-dictionary-links');
+        var $words = $filterContainer.nextAll();
+        var activeClass = 'tm-active';
+        var $activeFilter = null;
+
+        $filterContainer
+            .find('a.' + activeClass)
+            .removeClass(activeClass);
+
+        $filterContainer.on('click', 'a', function (e) {
+            e.preventDefault();
+            var $filter = $(this);
+            
+            if ($filter.is($activeFilter)) {
+                $activeFilter.removeClass(activeClass);
+                $activeFilter = null;
+                $words.show();
+            } else {
+                if ($activeFilter) {
+                    $activeFilter.removeClass(activeClass);
+                }
+
+                var filterLetter = getFirstLetter($filter);
+
+                $filter.addClass(activeClass);
+                $activeFilter = $filter;
+                $words.each(function () {
+                    var $wordContainer = $(this);
+                    var $word = $wordContainer.children().eq(0);
+                    var currLetter = getFirstLetter($word);
+
+                    if (filterLetter === currLetter) {
+                        $wordContainer.show();
+                    } else {
+                        $wordContainer.hide();
+                    }
+                });
+            }
+        });
+
+        function getFirstLetter($el) {
+            return $el.text()[0].toLowerCase();
+        }
+    })();
+
+    //add more files
+    (function () {
+        var $addFileBase = $('.js-add-file-base');
+        var $template = $($addFileBase[0].outerHTML);
+        var $addMoreFileBtn = $('.js-add-more-btn');
+
+        $addMoreFileBtn.on('click', function (e) {
+            e.preventDefault();
+
+            $addMoreFileBtn.before($template.clone());
+        });
     })();
 });
