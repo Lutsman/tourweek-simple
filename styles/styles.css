@@ -12957,6 +12957,7 @@ header {
   padding: 0 20px;
   line-height: 34px;
   border: 1px solid #e5e5e5;
+  white-space: nowrap;
 }
 .tm-articles-list .uk-article {
   padding: 30px;
@@ -13713,6 +13714,13 @@ header {
   .tm-step-image {
     width: 50px;
   }
+  .tm-sights-medium .tm-sight-title {
+    font-size: 20px;
+  }
+  .tm-sights-medium .fa-star,
+  .tm-sights-medium .fa-star-o {
+    font-size: 16px;
+  }
 }
 @media (max-width: 639px) {
   .uk-modal-body {
@@ -13747,6 +13755,15 @@ header {
   }
   .tm-personal-area-subnav > * > :first-child {
     padding: 10px;
+  }
+  .tm-foto-add-step-1 .tm-photo-add-list .uk-grid {
+    margin-left: -10px;
+  }
+  .tm-foto-add-step-1 .tm-photo-add-list .uk-grid > * {
+    padding-left: 10px;
+  }
+  .tm-foto-add-step-1 .tm-photo-add-list .uk-form-blank {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

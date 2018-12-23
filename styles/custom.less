@@ -913,6 +913,7 @@ header {
     padding: 0 20px;
     line-height: @global-control-small-height;
     border: 1px solid @global-border;
+    white-space: nowrap;
   }
 }
 
@@ -1778,7 +1779,6 @@ header {
   .tm-button-text-default {
     font-family: @font-lato-medium;
   }
-
 }
 
 .tm-foto-add-step-2 {
@@ -1859,6 +1859,17 @@ header {
   .tm-step-image {
     width: 50px;
   }
+
+  .tm-sights-medium {
+
+    .tm-sight-title {
+      font-size: 20px;
+    }
+
+    .fa-star, .fa-star-o {
+      font-size: 16px;
+    }
+  }
 }
 
 @media (max-width: 639px) {
@@ -1912,6 +1923,24 @@ header {
 
       > :first-child {
         padding: 10px;
+      }
+    }
+  }
+
+  .tm-foto-add-step-1 {
+
+    .tm-photo-add-list {
+
+      .uk-grid  {
+        margin-left: -10px;
+
+        > * {
+          padding-left: 10px;
+        }
+      }
+
+      .uk-form-blank {
+        padding: 0;
       }
     }
   }
