@@ -12584,6 +12584,10 @@ form .uk-hr {
 .tm-search-header .uk-button-small {
   font-size: 12px;
 }
+.tm-search-form-width {
+  width: 285.5px;
+  max-width: 100%;
+}
 header {
   z-index: 100;
 }

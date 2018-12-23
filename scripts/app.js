@@ -130,6 +130,9 @@ $(function () {
     //add more files
     (function () {
         var $addFileBase = $('.js-add-file-base');
+
+        if (!$addFileBase.length) return;
+
         var $template = $($addFileBase[0].outerHTML);
         var $addMoreFileBtn = $('.js-add-more-btn');
 
