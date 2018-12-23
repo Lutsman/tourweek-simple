@@ -1944,4 +1944,37 @@ header {
       }
     }
   }
+
+  .tm-scoreboard {
+
+    table, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    td + td {
+      margin-top: 5px;
+    }
+    tr + tr {
+      margin-top: 10px;
+    }
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      td {
+        width: 100% !important;
+      }
+    }
+
+    .tm-scoreboard-departure, .tm-scoreboard-arrival {
+      width: 49% !important;
+    }
+
+  }
 }

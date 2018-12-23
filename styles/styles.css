@@ -13765,5 +13765,33 @@ header {
   .tm-foto-add-step-1 .tm-photo-add-list .uk-form-blank {
     padding: 0;
   }
+  .tm-scoreboard table,
+  .tm-scoreboard tbody,
+  .tm-scoreboard th,
+  .tm-scoreboard td,
+  .tm-scoreboard tr {
+    display: block;
+  }
+  .tm-scoreboard thead {
+    display: none;
+  }
+  .tm-scoreboard td + td {
+    margin-top: 5px;
+  }
+  .tm-scoreboard tr + tr {
+    margin-top: 10px;
+  }
+  .tm-scoreboard tr {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .tm-scoreboard tr td {
+    width: 100% !important;
+  }
+  .tm-scoreboard .tm-scoreboard-departure,
+  .tm-scoreboard .tm-scoreboard-arrival {
+    width: 49% !important;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
