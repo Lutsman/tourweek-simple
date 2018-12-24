@@ -85,16 +85,15 @@ $(function () {
         var $filterContainer = $('.tm-dictionary-links');
         var $words = $filterContainer.nextAll();
         var activeClass = 'tm-active';
-        var $activeFilter = null;
+        var $activeFilter = getDefaultFilter($filterContainer, activeClass);
 
-        $filterContainer
-            .find('a.' + activeClass)
-            .removeClass(activeClass);
+        filterWords($words, $activeFilter);
+        $filterContainer.on('click', 'a', clickHandler);
 
-        $filterContainer.on('click', 'a', function (e) {
+        function clickHandler (e) {
             e.preventDefault();
             var $filter = $(this);
-            
+
             if ($filter.is($activeFilter)) {
                 $activeFilter.removeClass(activeClass);
                 $activeFilter = null;
@@ -104,26 +103,38 @@ $(function () {
                     $activeFilter.removeClass(activeClass);
                 }
 
-                var filterLetter = getFirstLetter($filter);
-
                 $filter.addClass(activeClass);
                 $activeFilter = $filter;
-                $words.each(function () {
-                    var $wordContainer = $(this);
-                    var $word = $wordContainer.children().eq(0);
-                    var currLetter = getFirstLetter($word);
-
-                    if (filterLetter === currLetter) {
-                        $wordContainer.show();
-                    } else {
-                        $wordContainer.hide();
-                    }
-                });
+                filterWords($words, $activeFilter);
             }
-        });
+        }
 
         function getFirstLetter($el) {
             return $el.text()[0].toLowerCase();
+        }
+
+        function getDefaultFilter($container, className) {
+            var $activeFilters = $container.find('.' + className);
+            var $currActiveFilter = $activeFilters.eq(0);
+
+            $activeFilters.not($currActiveFilter).removeClass(className);
+
+            return $currActiveFilter.length ? $currActiveFilter : null;
+        }
+
+        function filterWords($words, $activeFilter) {
+            $words.each(function () {
+                var $wordContainer = $(this);
+                var $word = $wordContainer.children().eq(0);
+                var activeLetter = getFirstLetter($activeFilter);
+                var currLetter = getFirstLetter($word);
+
+                if (activeLetter === currLetter) {
+                    $wordContainer.show();
+                } else {
+                    $wordContainer.hide();
+                }
+            });
         }
     })();
 
