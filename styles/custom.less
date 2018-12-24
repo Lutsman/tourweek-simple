@@ -1783,9 +1783,18 @@ header {
 
 .tm-vote-big {
   justify-content: space-around;
+  color: @global-light-blue;
 
   i + i {
     margin-right: 4px;
+  }
+
+  .fa-star-o:hover {
+    color: @global-orange;
+
+    ~ i {
+      color: @global-orange;
+    }
   }
 }
 
