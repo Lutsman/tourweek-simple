@@ -13646,6 +13646,32 @@ header {
   margin-right: 3px;
   margin-left: 3px;
 }
+.tm-vote {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.tm-vote i + i {
+  margin-right: 4px;
+}
+.tm-vote .fa-star-o:hover::before {
+  content: "\f005";
+}
+.tm-vote .fa-star-o:hover ~ i::before {
+  content: "\f005";
+}
+.tm-vote-big {
+  justify-content: space-around;
+  color: #83a6ca;
+}
+.tm-vote-big i + i {
+  margin-right: 4px;
+}
+.tm-vote-big .fa-star-o:hover {
+  color: #ff983a;
+}
+.tm-vote-big .fa-star-o:hover ~ i {
+  color: #ff983a;
+}
 .tm-photo {
   background-color: #e9eef3;
   background-image: url("../images/pattern_bg.png");
