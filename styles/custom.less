@@ -1761,6 +1761,34 @@ header {
   margin-left: 3px;
 }
 
+.tm-vote {
+  display: flex;
+  flex-direction: row-reverse;
+
+  i + i {
+    margin-right: 4px;
+  }
+
+  .fa-star-o:hover {
+
+    &::before {
+      content: "\f005";
+    }
+
+    ~ i::before {
+      content: "\f005";
+    }
+  }
+}
+
+.tm-vote-big {
+  justify-content: space-around;
+
+  i + i {
+    margin-right: 4px;
+  }
+}
+
 
 
   // photo
