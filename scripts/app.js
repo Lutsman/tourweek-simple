@@ -1,10 +1,11 @@
 $(function () {
+    "use strict";
     // datepicker
     (function () {
         var $datepicker = $('[datepicker]');
         var options = {
             placeholder: '',
-            lang: 'ru-RU',
+            lang: 'ru-RU'
         };
 
         $datepicker.datepicker(options);
@@ -34,19 +35,21 @@ $(function () {
                 var $toggler = $(e.target).parent();
                 $toggler.removeClass(activeTogglerClassName);
                 $navContainer.removeClass(activeNavClassName);
-                $overlay.fadeOut(200, () => {
+                $overlay.fadeOut(200, function () {
                     $overlay.remove();
                     $body.removeClass(relativePosClassName);
                 });
-            },
+            }
         });
     })();
 
     // scroller
     (function () {
+        /* jshint ignore:start*/
         new ScrollToAnchor({
-            listenedBlock: '.js-search-start',
+            listenedBlock: '.js-search-start'
         });
+        /* jshint ignore:end */
     })();
 
     // toggler
@@ -64,7 +67,7 @@ $(function () {
                 },
                 'hidden': function () {
                     $toggler.removeClass(activeClassName);
-                },
+                }
             });
         });
 
@@ -74,7 +77,7 @@ $(function () {
     (function () {
         var $wrappers = $('.social-likes-wrapper');
         var options = {
-            zeroes: 'yes',
+            zeroes: 'yes'
         };
 
         $wrappers.socialLikes(options);
@@ -92,7 +95,7 @@ $(function () {
 
         function clickHandler(e) {
             e.preventDefault();
-            var $filter = $(this);
+            var $filter = $(e.target);
 
             if ($filter.is($activeFilter)) {
                 $activeFilter.removeClass(activeClass);
@@ -142,7 +145,9 @@ $(function () {
     (function () {
         var $addFileBase = $('.js-add-file-base');
 
-        if (!$addFileBase.length) return;
+        if (!$addFileBase.length) {
+            return;
+        }
 
         var $template = $($addFileBase[0].outerHTML);
         var $addMoreFileBtn = $('.js-add-more-btn');
@@ -168,7 +173,9 @@ $(function () {
             function maxCheckedHandler(e) {
                 var $checkboxChecked = $container.find('input[type="checkbox"]:checked');
 
-                if ($checkboxChecked.length <= maxChecked) return;
+                if ($checkboxChecked.length <= maxChecked) {
+                    return;
+                }
                 if ($checkboxChecked.length + 1 > maxChecked) {
                     $checkboxChecked.attr('checked', false);
                 }
