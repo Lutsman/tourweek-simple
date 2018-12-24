@@ -90,7 +90,7 @@ $(function () {
         filterWords($words, $activeFilter);
         $filterContainer.on('click', 'a', clickHandler);
 
-        function clickHandler (e) {
+        function clickHandler(e) {
             e.preventDefault();
             var $filter = $(this);
 
@@ -151,6 +151,27 @@ $(function () {
             e.preventDefault();
 
             $addMoreFileBtn.before($template.clone());
+        });
+    })();
+
+    //max checked
+    (function () {
+        var attribute = 'max-checked';
+        var $containers = $('[' + attribute + ']');
+
+        $containers.each(function () {
+            var $container = $(this);
+            var maxChecked = parseInt($container.attr(attribute));
+
+            $container.on('click', 'input[type="checkbox"]', maxCheckedHandler);
+
+            function maxCheckedHandler(e) {
+                var $checkboxChecked = $container.find('input[type="checkbox"]:checked');
+
+                if ($checkboxChecked.length < maxChecked) return;
+
+                e.preventDefault();
+            }
         });
     })();
 });
