@@ -168,7 +168,10 @@ $(function () {
             function maxCheckedHandler(e) {
                 var $checkboxChecked = $container.find('input[type="checkbox"]:checked');
 
-                if ($checkboxChecked.length < maxChecked) return;
+                if ($checkboxChecked.length <= maxChecked) return;
+                if ($checkboxChecked.length + 1 > maxChecked) {
+                    $checkboxChecked.attr('checked', false);
+                }
 
                 e.preventDefault();
             }
