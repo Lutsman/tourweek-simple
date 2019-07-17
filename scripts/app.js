@@ -1,88 +1,16 @@
+const path = "scripts/smartgallery.js";
+
+document.write("<" + "script src=\"" + path + "\"></" + "script>");
+
 $(function () {
 
     //photo-placer
     (function () {
 
-        function markRows() {
-            let lastTop = -1;
-            let currentTop = 0;
-            photoCollection.each(function () {
-                currentTop = $(this).position().top;
-                if(currentTop !== lastTop) {
-                    $(this).addClass('tm-row-start');
-                    lastTop = currentTop;
-                }
-            })
-        }
 
-        const photoHolder = $('.tm-grid-best-photo');
-        const photoCollection = photoHolder.find('.tm-photo-img-cover');
+        const smartgallery = new SmartGallery();
 
-        let holderWidth = photoHolder.width();
-        let indexRows = [];
-        let rowWidths = [];
-        let photoWidths = [];
-
-        markRows();
-
-        const photoRowStart = photoHolder.find('.tm-photo-img-cover.tm-row-start');
-
-        photoRowStart.each(function() {
-            indexRows.push($(this).index());
-        });
-
-        for(let j = 0; j < indexRows.length; j++) {
-
-            let firstPhoto = indexRows[j];
-            let lastPhoto = indexRows[j+1] || photoCollection.length;
-
-            let lengthsPhoto = 0;
-            const countPhoto = lastPhoto - firstPhoto;
-            const marginsWidth = countPhoto*3; //if margin 3px;
-
-            for(let i = firstPhoto; i < lastPhoto; i++ ) {
-                lengthsPhoto += $(photoCollection[i]).width();
-            }
-
-            rowWidths.push(lengthsPhoto);
-
-            const widthCoefficient = (holderWidth - marginsWidth)/ lengthsPhoto;
-
-
-            for(let i = firstPhoto; i < lastPhoto; i++ ) {
-                photoWidths.push($(photoCollection[i]).width());
-                const newWidth = photoWidths[i] * widthCoefficient;
-                $(photoCollection[i]).removeClass('tm-photo-img-cover');
-                $(photoCollection[i]).addClass('tm-photo-img-wrap');
-                $(photoCollection[i]).width(newWidth);
-            }
-
-        }
-
-        $(window).on('resize', ()=> {
-            let holderWidth = photoHolder.width();
-
-            for(let j = 0; j < indexRows.length; j++) {
-
-                let firstPhoto = indexRows[j];
-                let lastPhoto = indexRows[j+1] || photoCollection.length;
-
-                const countPhoto = lastPhoto - firstPhoto;
-                const marginsWidth = countPhoto*3; //if margin 3px;
-
-                const widthCoefficient = (holderWidth - marginsWidth)/ rowWidths[j];
-
-
-                for(let i = firstPhoto; i < lastPhoto; i++ ) {
-                    const newWidth = photoWidths[i] * widthCoefficient;
-                    $(photoCollection[i]).width(newWidth);
-
-                }
-
-            }
-        });
-
-    })();
+        })();
 
     /* --- Select2 --- */
     /*$('body').on('initSelect2', '.select2', function(){
