@@ -1,16 +1,12 @@
-const path = "scripts/smartgallery.js";
-
-document.write("<" + "script src=\"" + path + "\"></" + "script>");
-
 $(function () {
 
     //photo-placer
     (function () {
+        if (typeof(SmartGallery) !== 'undefined') {
+            const smartgallery = new SmartGallery();
+        }
 
-
-        const smartgallery = new SmartGallery();
-
-        })();
+    })();
 
     /* --- Select2 --- */
     /*$('body').on('initSelect2', '.select2', function(){
@@ -31,57 +27,61 @@ $(function () {
 
     (function () {
         $('body')
-        .on('click', '.js-tm-link', function(){
-            var $this = $(this),
-                $href = $this.data('href'),
-                $target = $this.data('target');
+            .on('click', '.js-tm-link', function () {
+                var $this = $(this),
+                    $href = $this.data('href'),
+                    $target = $this.data('target');
 
-            if ($href) {
-                if ($target === '_blank') {
-                    window.open($href, '_blank');
+                if ($href) {
+                    if ($target === '_blank') {
+                        window.open($href, '_blank');
+                    }
+                    else {
+                        window.location.href = $href;
+                    }
                 }
-                else {
-                    window.location.href = $href;
-                }
-            }
-        })
-        .on('click', 'a[data-tm-confirm]', function(){//alert('');return false;
-            var $this = $(this),
-                $method = $this.data('tm-method'),
-                $csrfParam = $('meta[name=csrf-param]').attr('content'),
-                $csrfToken = $('meta[name=csrf-token]').attr('content'),
-                $href = $this.prop('href'),
-                $message = $this.data('tm-confirm'),
-                $target = $this.data('target');
+            })
+            .on('click', 'a[data-tm-confirm]', function () {//alert('');return false;
+                var $this = $(this),
+                    $method = $this.data('tm-method'),
+                    $csrfParam = $('meta[name=csrf-param]').attr('content'),
+                    $csrfToken = $('meta[name=csrf-token]').attr('content'),
+                    $href = $this.prop('href'),
+                    $message = $this.data('tm-confirm'),
+                    $target = $this.data('target');
 
-            var $modal = $('#modal-confirm'),
-                modal = UIkit.modal($modal, {'bg-close': false});
+                var $modal = $('#modal-confirm'),
+                    modal = UIkit.modal($modal, {'bg-close': false});
 
-            $modal.find('.uk-modal-body').html($message);
-            $modal.on('click', 'button[action="yes"]', function(){
-                var $form = $('<form action="'+$href+'" method="'+$method+'"></form>');
-                if ($csrfParam) {
-                    $form.append($('<input/>', {name: $csrfParam, value: $csrfToken, type: 'hidden'}));
-                }
+                $modal.find('.uk-modal-body').html($message);
+                $modal.on('click', 'button[action="yes"]', function () {
+                    var $form = $('<form action="' + $href + '" method="' + $method + '"></form>');
+                    if ($csrfParam) {
+                        $form.append($('<input/>', {name: $csrfParam, value: $csrfToken, type: 'hidden'}));
+                    }
 
-                $this.after( $form );
-                $form.trigger('submit');
+                    $this.after($form);
+                    $form.trigger('submit');
+                });
+                $modal.on({
+                    'hide.uk.modal': function () {
+                        $modal.off('click', 'button[action="yes"]');
+                    }
+                });
+
+                modal.show();
+
+                return false;
             });
-            $modal.on({'hide.uk.modal': function(){ $modal.off('click', 'button[action="yes"]'); }});
-
-            modal.show();
-
-            return false;
-        });
 
     })();
     (function () {
         // Send Form AJAX
-        $('.js-form-ajax').on('beforeSubmit', 'form', function(e){
+        $('.js-form-ajax').on('beforeSubmit', 'form', function (e) {
             e.preventDefault();
 
             var $form = $(this),
-                $modalId =  $form.parents('.uk-modal').attr('id'),
+                $modalId = $form.parents('.uk-modal').attr('id'),
                 $modal = $modalId ? UIkit.modal($modalId) : null,
                 $data = new FormData($form[0]);
 
@@ -97,12 +97,14 @@ $(function () {
                 processData: false,
                 contentType: false,
                 success: function (response) {
-                    if (response.success){
+                    if (response.success) {
                         $form.find('.uk-alert').removeClass('uk-alert-danger uk-hidden').addClass('uk-alert-success').html(response.message);
                         $form.find('input[type="text"], textarea, select').val('');
 
                         if ($modal) {
-                            setTimeout(function () { $modal.hide(); }, 3000);
+                            setTimeout(function () {
+                                $modal.hide();
+                            }, 3000);
                         }
                     } else {
                         var msg = '';
@@ -124,10 +126,10 @@ $(function () {
     })();
 
     (function () {
-        $('.js-tm-form-password-eye').on('touchstart mousedown', function(e){
+        $('.js-tm-form-password-eye').on('touchstart mousedown', function (e) {
             $(this).removeClass('fa-eye').addClass('fa-eye-slash').next('input').prop('type', 'text');
         });
-        $('.js-tm-form-password-eye').on('touchend mouseup', function(e){
+        $('.js-tm-form-password-eye').on('touchend mouseup', function (e) {
             $(this).removeClass('fa-eye-slash').addClass('fa-eye').next('input').prop('type', 'password');
         });
         /*
@@ -140,107 +142,76 @@ $(function () {
     })();
 
     (function () {
-        $('.js-tm-form-birth_date_month, .js-tm-form-birth_date_year').on('change', function(e){
+        $('.js-tm-form-birth_date_month, .js-tm-form-birth_date_year').on('change', function (e) {
             $('.js-tm-form-birth_date_day').trigger('blur').trigger('change');
-        }).on('blur', function(e){
+        }).on('blur', function (e) {
             $('.js-tm-form-birth_date_day').trigger('blur').trigger('change');
         });
     })();
 
     (function () {
         $('.js-tm-form-country_id, .js-tm-form-region_id')
-        .on('change', function(e){//console.log('change');
-            $(this).trigger('change-data');
-        })
-        .on('change-data', function(e){//console.log('change-data');
-            var $this = $(this),
-                $action = $this.hasClass('js-tm-form-country_id') ? 'get-regions' : 'get-cities',
-                $id = $this.val(),
-                $selected_value,
-                $onChangeId,
-                $select_region = $('.js-tm-form-region_id'),
-                $select_city = $('.js-tm-form-city_id');
+            .on('change', function (e) {//console.log('change');
+                $(this).trigger('change-data');
+            })
+            .on('change-data', function (e) {//console.log('change-data');
+                var $this = $(this),
+                    $action = $this.hasClass('js-tm-form-country_id') ? 'get-regions' : 'get-cities',
+                    $id = $this.val(),
+                    $selected_value,
+                    $onChangeId,
+                    $select_region = $('.js-tm-form-region_id'),
+                    $select_city = $('.js-tm-form-city_id');
 
-            if ($action === 'get-regions') {//console.log('change-data-regions');
-                var select_region = $select_region;//.val('');
-                if ($select_region.hasClass('select2')) {
-                    select_region = select_region.trigger('initSelect2').next();
-                }
-                select_region.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
-
-                var select_city = $select_city;//.val('');
-                if ($select_city.hasClass('select2')) {
-                    select_city = select_city.trigger('initSelect2').next();
-                }
-                select_city.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
-
-                if ($select_region.data('init') === 'on') {
-                    $selected_value = $select_region.data('selected_value');
-                    if ($selected_value) {
-                        $onChangeId = 'js-tm-form-region_id';
+                if ($action === 'get-regions') {//console.log('change-data-regions');
+                    var select_region = $select_region;//.val('');
+                    if ($select_region.hasClass('select2')) {
+                        select_region = select_region.trigger('initSelect2').next();
                     }
-                    $select_region.data('init', 'off');
-                }
-            }
-            else {//console.log('change-data-cities');
-                var select_city = $select_city;//.val('');
-                if ($select_city.hasClass('select2')) {
-                    select_city = select_city.trigger('initSelect2').next();
-                }
-                select_city.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
+                    select_region.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
 
-                if ($select_city.data('init') === 'on') {
-                    $selected_value = $select_city.data('selected_value');
-                    $select_city.data('init', 'off');
-                }
-            }
+                    var select_city = $select_city;//.val('');
+                    if ($select_city.hasClass('select2')) {
+                        select_city = select_city.trigger('initSelect2').next();
+                    }
+                    select_city.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
 
-            $.ajax({
-                type: 'POST',
-                url: '/country/get-city-list',
-                data: {'action': $action, 'id': $id, 'selected_value': $selected_value},
-                success: function (response) {
-                    if (response.success) {
-                        var $select = $('.js-'+response.select_id);
-                        $select.html(response.html).trigger('initSelect2');
-                        if ($id) {
-                            $select.parents('.form-group').removeClass('uk-hidden').next('hr').removeClass('uk-hidden');//.removeClass('has-success').removeClass('has-error')
-
-                            if ($onChangeId) {
-                                $('.'+$onChangeId).trigger('change-data');
-                            }
+                    if ($select_region.data('init') === 'on') {
+                        $selected_value = $select_region.data('selected_value');
+                        if ($selected_value) {
+                            $onChangeId = 'js-tm-form-region_id';
                         }
-                    } else {
-                        alert('ERROR');
+                        $select_region.data('init', 'off');
                     }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert('ERROR');
                 }
-            });
-        });
-        if ($('.js-tm-form-country_id').data('init') === 'on') {
-            $('.js-tm-form-country_id').trigger('change-data');
-            $('.js-tm-form-country_id').data('init', 'off');
-        }
+                else {//console.log('change-data-cities');
+                    var select_city = $select_city;//.val('');
+                    if ($select_city.hasClass('select2')) {
+                        select_city = select_city.trigger('initSelect2').next();
+                    }
+                    select_city.next('.help-block').html('').parents('.form-group').removeClass('has-success').removeClass('has-error').addClass('uk-hidden').next('hr').addClass('uk-hidden');
 
+                    if ($select_city.data('init') === 'on') {
+                        $selected_value = $select_city.data('selected_value');
+                        $select_city.data('init', 'off');
+                    }
+                }
 
-        $('.js-tm-filter-country_id')
-        .on('change', function(e) {//console.log('change-data');
-            var $this = $(this),
-                $action = $this.data('action'),
-                $country_id = $this.val(),
-                $select_city = $('.js-tm-filter-city_id'),
-                $selected_value = $select_city.data('selected_value');
-
-            if ($action) {
                 $.ajax({
                     type: 'POST',
-                    url: '/country/'+$action,//get-city-list-with-airport-scoreboard',
-                    data: {'country_id': $country_id, 'selected_value': $selected_value},
+                    url: '/country/get-city-list',
+                    data: {'action': $action, 'id': $id, 'selected_value': $selected_value},
                     success: function (response) {
                         if (response.success) {
-                            $select_city.html(response.html).trigger('initSelect2');
+                            var $select = $('.js-' + response.select_id);
+                            $select.html(response.html).trigger('initSelect2');
+                            if ($id) {
+                                $select.parents('.form-group').removeClass('uk-hidden').next('hr').removeClass('uk-hidden');//.removeClass('has-success').removeClass('has-error')
+
+                                if ($onChangeId) {
+                                    $('.' + $onChangeId).trigger('change-data');
+                                }
+                            }
                         } else {
                             alert('ERROR');
                         }
@@ -249,10 +220,41 @@ $(function () {
                         alert('ERROR');
                     }
                 });
-            }
-        });
+            });
+        if ($('.js-tm-form-country_id').data('init') === 'on') {
+            $('.js-tm-form-country_id').trigger('change-data');
+            $('.js-tm-form-country_id').data('init', 'off');
+        }
 
-        $('.js-tm-filter-form-city').on('submit', function(e){
+
+        $('.js-tm-filter-country_id')
+            .on('change', function (e) {//console.log('change-data');
+                var $this = $(this),
+                    $action = $this.data('action'),
+                    $country_id = $this.val(),
+                    $select_city = $('.js-tm-filter-city_id'),
+                    $selected_value = $select_city.data('selected_value');
+
+                if ($action) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/country/' + $action,//get-city-list-with-airport-scoreboard',
+                        data: {'country_id': $country_id, 'selected_value': $selected_value},
+                        success: function (response) {
+                            if (response.success) {
+                                $select_city.html(response.html).trigger('initSelect2');
+                            } else {
+                                alert('ERROR');
+                            }
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert('ERROR');
+                        }
+                    });
+                }
+            });
+
+        $('.js-tm-filter-form-city').on('submit', function (e) {
             var $this = $(this),
                 $action = $this.prop('action'),
                 $country = $this.find('[name="country"]'),
@@ -261,7 +263,7 @@ $(function () {
                 $arr = [$action, $country.val(), 'regions'];
 
             var arr = [];
-            for(var i in $arr) {
+            for (var i in $arr) {
                 if ($arr[i]) {
                     arr.push($arr[i]);
                 }
@@ -273,14 +275,14 @@ $(function () {
         });
 
 
-        $('.js-country-view_map-button').on('click', function(e){
+        $('.js-country-view_map-button').on('click', function (e) {
             if ($('.js-country-view_map-container').is(':empty')) {
                 mapCreate();
             }
             UIkit.modal('#modal-country-view_map').show();
         });
 
-        $('.js-city-view_map-button').on('click', function(e){
+        $('.js-city-view_map-button').on('click', function (e) {
             if ($('.js-city-view_map-container').is(':empty')) {
                 mapCreate();
             }
@@ -289,7 +291,7 @@ $(function () {
     })();
 
     (function () {
-        $('.js-tm-filter-form-sight').on('submit', function(e){
+        $('.js-tm-filter-form-sight').on('submit', function (e) {
             var $this = $(this),
                 $action = $this.prop('action'),
                 $country = $this.find('[name="country_id"]'),
@@ -298,7 +300,7 @@ $(function () {
                 $arr = [$action, $country.val(), $city.val(), $category];
 
             var arr = [];
-            for(var i in $arr) {
+            for (var i in $arr) {
                 if ($arr[i]) {
                     arr.push($arr[i]);
                 }
@@ -310,7 +312,7 @@ $(function () {
             $this.prop('action', arr.join('/'));
         });
 
-        $('.js-sight-view_map-button').on('click', function(e){
+        $('.js-sight-view_map-button').on('click', function (e) {
             if ($('.js-sight-view_map-container').is(':empty')) {
                 mapCreate();
             }
@@ -319,11 +321,11 @@ $(function () {
     })();
 
     (function () {
-        $('body').on('submit', 'form[data-tm-form-clear]', function(e){
+        $('body').on('submit', 'form[data-tm-form-clear]', function (e) {
             var form = $(this),
                 besides = [];
 
-            if ( form.data('tm-form-clear-besides') ){
+            if (form.data('tm-form-clear-besides')) {
                 besides = form.data('tm-form-clear-besides').split(',');
             }
 
@@ -332,7 +334,7 @@ $(function () {
     })();
 
     (function () {
-        $('.js-article-list-countries_button').on('click', function(e){
+        $('.js-article-list-countries_button').on('click', function (e) {
             var $category_id = $(this).data('category_id');
 
             $.ajax({
@@ -355,17 +357,17 @@ $(function () {
     })();
 
     (function () {
-        $('.js-tm-blogs_tab').on('click', 'li > a', function(e){
+        $('.js-tm-blogs_tab').on('click', 'li > a', function (e) {
             var $this = $(this),
                 $tabs = $('.js-tm-blogs_tab'),
                 $rel = $this.data('tm-blogs_tab'),
                 $container = $('.js-tm-blogs_tab-container'),
-                $containerTab = $container.find('[data-tm-blogs_tab-container="'+$rel+'"]'),
-                changeTab = function($this_) {
+                $containerTab = $container.find('[data-tm-blogs_tab-container="' + $rel + '"]'),
+                changeTab = function ($this_) {
                     $tabs.find('> li').removeClass('uk-active');
                     $this_.parent('li').addClass('uk-active');
                 },
-                changeContainerTab = function($this_) {
+                changeContainerTab = function ($this_) {
                     $container.find('> div').addClass('uk-hidden');
                     $this_.removeClass('uk-hidden');
                 };
@@ -376,7 +378,7 @@ $(function () {
                     changeContainerTab($containerTab);
                 }
                 else {
-                    $containerTab = $('<div class="uk-hidden" data-tm-blogs_tab-container="'+$rel+'"></div>');
+                    $containerTab = $('<div class="uk-hidden" data-tm-blogs_tab-container="' + $rel + '"></div>');
                     $container.append($containerTab);
 
                     var $action = ($rel === 'countries') ? '/country/get-country-list-with-blog-count' : '/blog/get-category-list-with-blog-count';
@@ -403,11 +405,11 @@ $(function () {
             }
         });
         if (typeof tmBlogsTabActive !== typeof undefined && tmBlogsTabActive) {
-            $('.js-tm-blogs_tab [data-tm-blogs_tab="'+tmBlogsTabActive+'"]').trigger('click');
+            $('.js-tm-blogs_tab [data-tm-blogs_tab="' + tmBlogsTabActive + '"]').trigger('click');
         }
 
 
-        $('.js-tm-form-blogs_type select').on('change', function(e){
+        $('.js-tm-form-blogs_type select').on('change', function (e) {
             var $this = $(this),
                 $text = $('.js-tm-form-blogs_text'),
                 $photo = $('.js-tm-form-blogs_photo'),
@@ -430,7 +432,7 @@ $(function () {
     })();
 
     (function () {
-        $('.js-input-video_youtube').on('blur', 'input', function(e){
+        $('.js-input-video_youtube').on('blur', 'input', function (e) {
             e.preventDefault();
 
             var $this = $(this),
@@ -438,11 +440,11 @@ $(function () {
                 $url = $this.val(),
                 $m = $url.match(/(?:https?:)?\/\/(?:www\.youtube\.com\/embed\/|youtu.be\/|www\.youtube\.com\/watch\?v=)([a-z0-9\-]+)/i),
                 $iframe = $parent.next('.form-group').children('iframe'),
-                iframeSrc = function(key) {
+                iframeSrc = function (key) {
                     return 'https://www.youtube.com/embed/' + key;
                 },
-                iframeHtml = function(key) {
-                    return '<div class="form-group"><iframe style="width: 100%; height: 360px" src="'+iframeSrc(key)+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+                iframeHtml = function (key) {
+                    return '<div class="form-group"><iframe style="width: 100%; height: 360px" src="' + iframeSrc(key) + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
                 };//console.log($m);
 
             if ($m && $m[1]) {
@@ -457,11 +459,11 @@ $(function () {
                 $iframe.remove();
             }
         })
-        .children('input').trigger('blur');
+            .children('input').trigger('blur');
     })();
 
     (function () {
-        $('.js-visa-list-countries_button').on('click', function(e){
+        $('.js-visa-list-countries_button').on('click', function (e) {
             $.ajax({
                 type: 'POST',
                 url: '/country/get-country-list-with-visa',
@@ -480,12 +482,12 @@ $(function () {
             });
         });
 
-        $('.js-form-visa').on('submit', function(e){
+        $('.js-form-visa').on('submit', function (e) {
             var $this = $(this),
                 $slug = $this.find('select').val();
 
             if ($slug) {
-                $this.prop('action', '/'+$this.data('slug')+'/'+$slug);
+                $this.prop('action', '/' + $this.data('slug') + '/' + $slug);
             }
             else {
                 e.preventDefault();
@@ -494,7 +496,7 @@ $(function () {
     })();
 
     (function () {
-        $('.js-airline-list-countries_button').on('click', function(e){
+        $('.js-airline-list-countries_button').on('click', function (e) {
             $.ajax({
                 type: 'POST',
                 url: '/country/get-country-list-with-airline',
@@ -515,17 +517,17 @@ $(function () {
     })();
 
     (function () {
-        $('.js-tm-companions_tab').on('click', function(e){
+        $('.js-tm-companions_tab').on('click', function (e) {
             var $this = $(this),
                 $tabs = $('.js-tm-companions_tab'),
                 $rel = $this.data('tm-companions_tab'),
                 $container = $('.js-tm-companions_tab-container'),
-                $containerTab = $container.find('[data-tm-companions_tab-container="'+$rel+'"]'),
-                changeTab = function($this_) {
+                $containerTab = $container.find('[data-tm-companions_tab-container="' + $rel + '"]'),
+                changeTab = function ($this_) {
                     $tabs.removeClass('uk-button-orange').addClass('uk-button-simple-orange');
                     $this_.removeClass('uk-button-simple-orange').addClass('uk-button-orange');
                 },
-                changeContainerTab = function($this_) {
+                changeContainerTab = function ($this_) {
                     $container.find('> div').addClass('uk-hidden');
                     $this_.removeClass('uk-hidden');
                 };
@@ -538,7 +540,7 @@ $(function () {
                     changeContainerTab($containerTab);
                 }
                 else {
-                    $containerTab = $('<div class="uk-hidden" data-tm-companions_tab-container="'+$rel+'"></div>');
+                    $containerTab = $('<div class="uk-hidden" data-tm-companions_tab-container="' + $rel + '"></div>');
                     $container.append($containerTab);
 
                     var $action = ($rel === 'countries') ? '/country/get-country-list-with-companion-count' : (($rel === 'cities') ? '/country/get-city-list-with-companion-count' : '/companion/get-purpose-trip-list-with-companion-count');
@@ -570,22 +572,22 @@ $(function () {
     })();
 
     (function () {
-        $('.js-form-companion').on('submit', function(e){
+        $('.js-form-companion').on('submit', function (e) {
             var $this = $(this),
                 $country = $this.find('select[name="country"]'),
                 $slug = $country.val();
 
             if ($slug) {
-                $this.prop('action', '/'+$this.data('slug')+'/country/'+$slug);
+                $this.prop('action', '/' + $this.data('slug') + '/country/' + $slug);
                 $country.prop('disabled', true);
             }
             else {
-                $this.prop('action', '/'+$this.data('slug'));
+                $this.prop('action', '/' + $this.data('slug'));
                 //e.preventDefault();
             }
         });
 
-        $('.js-data-companions_period_no').on('change', function(e){
+        $('.js-data-companions_period_no').on('change', function (e) {
             var $this = $(this).find('input'),
                 $period_start = $('.js-data-companions_period_start').find('input'),
                 $period_end = $('.js-data-companions_period_end').find('input');
@@ -600,7 +602,7 @@ $(function () {
             }
         }).trigger('change');
 
-        $('.js-data-companions_text').on('input', 'textarea', function(e){
+        $('.js-data-companions_text').on('input', 'textarea', function (e) {
             e.preventDefault();
 
             var $this = $(this),
@@ -611,47 +613,47 @@ $(function () {
         }).find('textarea').trigger('input');
 
         $('.tm-vote-interactive')
-        .on('init', function(e){
-            var $this = $(this);
+            .on('init', function (e) {
+                var $this = $(this);
 
-            $this.find('input:checked').parent().trigger('click');
-        })
-        .on('mouseover', '.fa', function(e){
-            var $this = $(this),
-                $parent = $this.parents('.tm-vote-interactive'),
-                $index = $this.index() + 1;//console.log($index);
+                $this.find('input:checked').parent().trigger('click');
+            })
+            .on('mouseover', '.fa', function (e) {
+                var $this = $(this),
+                    $parent = $this.parents('.tm-vote-interactive'),
+                    $index = $this.index() + 1;//console.log($index);
 
-            $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
-            if ($index) {
-                $parent.addClass('tm-vote_'+$index);
-            }
-        })
-        .on('mouseout', '.fa', function(e){
-            var $this = $(this),
-                $parent = $this.parents('.tm-vote-interactive'),
-                $index = $parent.data('index');//console.log($index);
+                $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
+                if ($index) {
+                    $parent.addClass('tm-vote_' + $index);
+                }
+            })
+            .on('mouseout', '.fa', function (e) {
+                var $this = $(this),
+                    $parent = $this.parents('.tm-vote-interactive'),
+                    $index = $parent.data('index');//console.log($index);
 
-            $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
-            if ($index) {
-                $parent.addClass('tm-vote_' + $index);
-            }
-        })
-        .on('click', '.fa', function(e){
-            var $this = $(this),
-                $parent = $this.parents('.tm-vote-interactive'),
-                $index = $this.index() + 1;//console.log($index);
+                $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
+                if ($index) {
+                    $parent.addClass('tm-vote_' + $index);
+                }
+            })
+            .on('click', '.fa', function (e) {
+                var $this = $(this),
+                    $parent = $this.parents('.tm-vote-interactive'),
+                    $index = $this.index() + 1;//console.log($index);
 
-            $parent.data('index', $index);
-            $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
-            if ($index) {
-                $parent.addClass('tm-vote_' + $index);
-            }
-        })
-        .trigger('init');
+                $parent.data('index', $index);
+                $parent.removeClass('tm-vote_1 tm-vote_2 tm-vote_3 tm-vote_4 tm-vote_5');
+                if ($index) {
+                    $parent.addClass('tm-vote_' + $index);
+                }
+            })
+            .trigger('init');
     })();
 
     (function () {
-        $('.js-form-question').on('submit', function(e){
+        $('.js-form-question').on('submit', function (e) {
             var $this = $(this),
                 $country = $this.find('select[name="country"]'),
                 $category = $this.find('select[name="category"]'),
@@ -667,7 +669,7 @@ $(function () {
             }
 
             if ($slug) {
-                $this.prop('action', '/'+$paths.join('/'));
+                $this.prop('action', '/' + $paths.join('/'));
                 $country.prop('disabled', true);
                 $category.prop('disabled', true);
             }
@@ -677,221 +679,225 @@ $(function () {
         });
 
         $('.js-questions-list-item')
-        .on('submit', '> form', function(e){
-            e.preventDefault();
+            .on('submit', '> form', function (e) {
+                e.preventDefault();
 
-            /*var $this = $(this),
-                $count = $this.parents('.js-questions-list-item').find('.js-questions-list-item_count'),
-                $item = $this.parents('.js-questions-list-item').find('.js-answers-list');*/
+                /*var $this = $(this),
+                    $count = $this.parents('.js-questions-list-item').find('.js-questions-list-item_count'),
+                    $item = $this.parents('.js-questions-list-item').find('.js-answers-list');*/
 
-            var $this = $(this),
-                $itemQuestion = $this.parents('.js-questions-list-item'),
-                $count = $itemQuestion.find('.js-questions-list-item_count'),
-                $controlQuestion = $itemQuestion.find('.js-questions-list-item_control'),
-                $item = $this.parents('.js-questions-list-item').find('.js-answers-list');
-
-            if (!$.trim($this.find('textarea').val())) {
-                return false;
-            }
-
-            $.ajax({
-                type: 'POST',
-                url: '/faq/answer-create',
-                data: $this.serializeArray(),//{category_id: $this.data('category_id')},
-                success: function (response) {
-                    if (response.success) {
-                        if ($item.children('ul').length) {
-                            $item.children('ul').append(response.html)
-                        }
-                        else {
-                            $item.html('<ul>' + response.html + '</ul>');
-                        }
-                        $this.find('textarea').val('');
-                        $this.attr('hidden', '');
-
-                        $count.find('a span').text(response.count);
-                        $controlQuestion.html('');
-                        $item.parent().removeAttr('hidden');
-                    } else if (response.success === false) {
-
-                    } else {
-                        alert('ERROR');
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert('ERROR');
-                }
-            });
-        })
-        .on('submit', '.js-answers-list-item form', function(e){
-            e.preventDefault();
-
-            /*var $this = $(this),
-                $count = $this.parents('.js-questions-list-item').find('.js-questions-list-item_count'),
-                $item = $this.parents('.js-answers-list-item');*/
-
-            var $this = $(this),
-                $itemQuestion = $this.parents('.js-questions-list-item'),
-                $count = $itemQuestion.find('.js-questions-list-item_count'),
-                $controlQuestion = $itemQuestion.find('.js-questions-list-item_control'),
-                $itemAnswer = $this.parents('.js-answers-list-item'),
-                $controlAnswer = $itemAnswer.find('.js-answers-list-item_control');
-
-            if (!$.trim($this.find('textarea').val())) {
-                return false;
-            }
-
-            $.ajax({
-                type: 'POST',
-                url: '/faq/answer-create',
-                data: $this.serializeArray(),//{category_id: $this.data('category_id')},
-                success: function (response) {
-                    if (response.success) {
-                        if ($itemAnswer.next('ul').length) {
-                            $itemAnswer.next('ul').append(response.html)
-                        }
-                        else {
-                            $itemAnswer.after('<ul>' + response.html + '</ul>');
-                        }
-                        $this.find('textarea').val('');
-                        $this.attr('hidden', '');
-
-                        $count.find('a span').text(response.count);
-                        $controlQuestion.html('');
-                        $controlAnswer.html('');
-                    } else if (response.success === false) {
-
-                    } else {
-                        alert('ERROR');
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert('ERROR');
-                }
-            });
-        })
-        .on('click', '.js-answers-list-item .js-answers-list-item_update', function(e){
-            e.preventDefault();
-
-            var $this = $(this),
-                $buttonComplete = $this.parent().parent().find('.js-answers-list-item_update-complete'),
-                $itemAnswer = $this.parents('.js-answers-list-item'),
-                $answer_id = $this.data('answer_id'),
-                $text = $itemAnswer.find('[contenteditable]');
-
-            if (!$answer_id) {
-                return false;
-            }
-
-            if ($text.data('has-changed')) {
-                $text.next('textarea').val($text.html().replace(/<br\s*\/?>/mg, "\n"));
-            }
-            else {
-                $text.data('has-changed', true);
-            }
-            $text.addClass('uk-hidden');
-            $text.next('textarea').removeClass('uk-hidden');
-            //console.log($text.html().replace(/<br\s*\/?>/mg, "\n"));
-
-            $this.parent().addClass('uk-hidden');
-            $buttonComplete.parent().removeClass('uk-hidden');
-        })
-        .on('click', '.js-answers-list-item .js-answers-list-item_update-complete', function(e){
-            e.preventDefault();
-
-            var $this = $(this),
-                $buttonUpdate = $this.parent().parent().find('.js-answers-list-item_update'),
-                $itemAnswer = $this.parents('.js-answers-list-item'),
-                $date = $itemAnswer.find('.js-answers-list-item_date'),
-                $answer_id = $this.data('answer_id'),
-                $text = $itemAnswer.find('[contenteditable]');
-
-            if (!$answer_id || !$text.next('textarea').val()) {
-                return false;
-            }
-
-            $text.html($text.next('textarea').val().replace(/\n/g, "<br>")).removeClass('uk-hidden');
-            $text.next('textarea').addClass('uk-hidden');
-            //console.log($text.next('textarea').val().replace(/\n/g, "<br>"));
-
-            $this.parent().addClass('uk-hidden');
-            $buttonUpdate.parent().removeClass('uk-hidden');
-
-            $.ajax({
-                type: 'POST',
-                url: '/faq/answer-update',
-                data: {answer_id: $answer_id, text: $text.next('textarea').val()},
-                success: function (response) {
-                    if (response.success) {
-                        $date.text(response.updated_at);
-                    } else if (response.success === false) {
-
-                    } else {
-                        alert('ERROR');
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert('ERROR');
-                }
-            });
-        })
-        .on('click', '.js-answers-list-item .js-answers-list-item_delete', function(e){
-            e.preventDefault();
-
-            /*if (!confirm('Вы уверены, что хотите удалить этот элемент?')) {
-                return false;
-            }*/
-
-            var $this = $(this),
-                $modal = $('#modal-confirm'),
-                modal = UIkit.modal($modal, {'bg-close': false});
-
-            $modal.find('.uk-modal-body').html('Вы уверены, что хотите удалить этот элемент?');
-            $modal.on('click', 'button[action="yes"]', function(){
-                var $itemQuestion = $this.parents('.js-questions-list-item'),
+                var $this = $(this),
+                    $itemQuestion = $this.parents('.js-questions-list-item'),
                     $count = $itemQuestion.find('.js-questions-list-item_count'),
                     $controlQuestion = $itemQuestion.find('.js-questions-list-item_control'),
-                    $itemAnswer = $this.parents('.js-answers-list-item'),
-                    $itemParent = $itemAnswer.parent('li').parent('ul').prev('.js-answers-list-item'),
-                    $controlParent = $itemParent.find('.js-answers-list-item_control'),
-                    $answer_id = $this.data('answer_id');
+                    $item = $this.parents('.js-questions-list-item').find('.js-answers-list');
 
-                if (!$answer_id) {
+                if (!$.trim($this.find('textarea').val())) {
                     return false;
                 }
 
                 $.ajax({
                     type: 'POST',
-                    url: '/faq/answer-delete',
-                    data: {answer_id: $answer_id},
+                    url: '/faq/answer-create',
+                    data: $this.serializeArray(),//{category_id: $this.data('category_id')},
                     success: function (response) {
                         if (response.success) {
-                            $itemAnswer.remove();
+                            if ($item.children('ul').length) {
+                                $item.children('ul').append(response.html)
+                            }
+                            else {
+                                $item.html('<ul>' + response.html + '</ul>');
+                            }
+                            $this.find('textarea').val('');
+                            $this.attr('hidden', '');
 
                             $count.find('a span').text(response.count);
-                            $controlQuestion.html(response.controlQuestion);
-                            $controlParent.html(response.controlParent);
+                            $controlQuestion.html('');
+                            $item.parent().removeAttr('hidden');
                         } else if (response.success === false) {
 
                         } else {
                             alert('ERROR');
                         }
-
-                        modal.hide();
                     },
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                         alert('ERROR');
-
-                        modal.hide();
                     }
                 });
+            })
+            .on('submit', '.js-answers-list-item form', function (e) {
+                e.preventDefault();
+
+                /*var $this = $(this),
+                    $count = $this.parents('.js-questions-list-item').find('.js-questions-list-item_count'),
+                    $item = $this.parents('.js-answers-list-item');*/
+
+                var $this = $(this),
+                    $itemQuestion = $this.parents('.js-questions-list-item'),
+                    $count = $itemQuestion.find('.js-questions-list-item_count'),
+                    $controlQuestion = $itemQuestion.find('.js-questions-list-item_control'),
+                    $itemAnswer = $this.parents('.js-answers-list-item'),
+                    $controlAnswer = $itemAnswer.find('.js-answers-list-item_control');
+
+                if (!$.trim($this.find('textarea').val())) {
+                    return false;
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/faq/answer-create',
+                    data: $this.serializeArray(),//{category_id: $this.data('category_id')},
+                    success: function (response) {
+                        if (response.success) {
+                            if ($itemAnswer.next('ul').length) {
+                                $itemAnswer.next('ul').append(response.html)
+                            }
+                            else {
+                                $itemAnswer.after('<ul>' + response.html + '</ul>');
+                            }
+                            $this.find('textarea').val('');
+                            $this.attr('hidden', '');
+
+                            $count.find('a span').text(response.count);
+                            $controlQuestion.html('');
+                            $controlAnswer.html('');
+                        } else if (response.success === false) {
+
+                        } else {
+                            alert('ERROR');
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert('ERROR');
+                    }
+                });
+            })
+            .on('click', '.js-answers-list-item .js-answers-list-item_update', function (e) {
+                e.preventDefault();
+
+                var $this = $(this),
+                    $buttonComplete = $this.parent().parent().find('.js-answers-list-item_update-complete'),
+                    $itemAnswer = $this.parents('.js-answers-list-item'),
+                    $answer_id = $this.data('answer_id'),
+                    $text = $itemAnswer.find('[contenteditable]');
+
+                if (!$answer_id) {
+                    return false;
+                }
+
+                if ($text.data('has-changed')) {
+                    $text.next('textarea').val($text.html().replace(/<br\s*\/?>/mg, "\n"));
+                }
+                else {
+                    $text.data('has-changed', true);
+                }
+                $text.addClass('uk-hidden');
+                $text.next('textarea').removeClass('uk-hidden');
+                //console.log($text.html().replace(/<br\s*\/?>/mg, "\n"));
+
+                $this.parent().addClass('uk-hidden');
+                $buttonComplete.parent().removeClass('uk-hidden');
+            })
+            .on('click', '.js-answers-list-item .js-answers-list-item_update-complete', function (e) {
+                e.preventDefault();
+
+                var $this = $(this),
+                    $buttonUpdate = $this.parent().parent().find('.js-answers-list-item_update'),
+                    $itemAnswer = $this.parents('.js-answers-list-item'),
+                    $date = $itemAnswer.find('.js-answers-list-item_date'),
+                    $answer_id = $this.data('answer_id'),
+                    $text = $itemAnswer.find('[contenteditable]');
+
+                if (!$answer_id || !$text.next('textarea').val()) {
+                    return false;
+                }
+
+                $text.html($text.next('textarea').val().replace(/\n/g, "<br>")).removeClass('uk-hidden');
+                $text.next('textarea').addClass('uk-hidden');
+                //console.log($text.next('textarea').val().replace(/\n/g, "<br>"));
+
+                $this.parent().addClass('uk-hidden');
+                $buttonUpdate.parent().removeClass('uk-hidden');
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/faq/answer-update',
+                    data: {answer_id: $answer_id, text: $text.next('textarea').val()},
+                    success: function (response) {
+                        if (response.success) {
+                            $date.text(response.updated_at);
+                        } else if (response.success === false) {
+
+                        } else {
+                            alert('ERROR');
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert('ERROR');
+                    }
+                });
+            })
+            .on('click', '.js-answers-list-item .js-answers-list-item_delete', function (e) {
+                e.preventDefault();
+
+                /*if (!confirm('Вы уверены, что хотите удалить этот элемент?')) {
+                    return false;
+                }*/
+
+                var $this = $(this),
+                    $modal = $('#modal-confirm'),
+                    modal = UIkit.modal($modal, {'bg-close': false});
+
+                $modal.find('.uk-modal-body').html('Вы уверены, что хотите удалить этот элемент?');
+                $modal.on('click', 'button[action="yes"]', function () {
+                    var $itemQuestion = $this.parents('.js-questions-list-item'),
+                        $count = $itemQuestion.find('.js-questions-list-item_count'),
+                        $controlQuestion = $itemQuestion.find('.js-questions-list-item_control'),
+                        $itemAnswer = $this.parents('.js-answers-list-item'),
+                        $itemParent = $itemAnswer.parent('li').parent('ul').prev('.js-answers-list-item'),
+                        $controlParent = $itemParent.find('.js-answers-list-item_control'),
+                        $answer_id = $this.data('answer_id');
+
+                    if (!$answer_id) {
+                        return false;
+                    }
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/faq/answer-delete',
+                        data: {answer_id: $answer_id},
+                        success: function (response) {
+                            if (response.success) {
+                                $itemAnswer.remove();
+
+                                $count.find('a span').text(response.count);
+                                $controlQuestion.html(response.controlQuestion);
+                                $controlParent.html(response.controlParent);
+                            } else if (response.success === false) {
+
+                            } else {
+                                alert('ERROR');
+                            }
+
+                            modal.hide();
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert('ERROR');
+
+                            modal.hide();
+                        }
+                    });
+                });
+                $modal.on({
+                    'hide.uk.modal': function () {
+                        $modal.off('click', 'button[action="yes"]');
+                    }
+                });
+
+                modal.show();
             });
-            $modal.on({'hide.uk.modal': function(){ $modal.off('click', 'button[action="yes"]'); }});
 
-            modal.show();
-        });
-
-        $('.js-question-list-countries_button').on('click', function(e){
+        $('.js-question-list-countries_button').on('click', function (e) {
             var $this = $(this);
 
             $.ajax({
@@ -912,7 +918,7 @@ $(function () {
             });
         });
 
-        $('.js-modal-site-login_button').on('click', function(e){
+        $('.js-modal-site-login_button').on('click', function (e) {
             e.preventDefault();
 
             var $this = $(this),
@@ -924,7 +930,7 @@ $(function () {
         });
 
         // Send Login Form AJAX
-        $('.js-form-site-login').on('beforeSubmit', 'form', function(e){//console.log(window.location.href);return false;
+        $('.js-form-site-login').on('beforeSubmit', 'form', function (e) {//console.log(window.location.href);return false;
             e.preventDefault();
 
             var $form = $(this),
@@ -950,13 +956,13 @@ $(function () {
                     $groups.removeClass('has-error').removeClass('has-success');
                     $groups.find('.help-block').html('');
 
-                    if (response.success){
+                    if (response.success) {
                         window.location.replace(response.redirect);
                         //window.location.href = response.redirect;
                         window.location.reload();
                     } else {
                         $.each(response.errors, function (key, errors) {
-                            var $item = $form.find('.field-loginform-'+key);
+                            var $item = $form.find('.field-loginform-' + key);
 
                             $item.addClass('has-error');
                             $.each(errors, function (index, error) {
@@ -981,24 +987,24 @@ $(function () {
             if ($id) {
                 //if ($id.indexOf("-inside-") !== -1) {
                 if ($id.indexOf("answer-") === 0) {
-                    var $parent_id = $('#'+$id).parents('[id^="question-"]')/*('[id^="tm-answers-list-"]')*/.attr('id');
+                    var $parent_id = $('#' + $id).parents('[id^="question-"]')/*('[id^="tm-answers-list-"]')*/.attr('id');
 
-                    UIkit.toggle($('#'+$id).prev().find('.js-modal-site-login_button, a[uk-toggle]'), {target: '#'+$id}).toggle();
+                    UIkit.toggle($('#' + $id).prev().find('.js-modal-site-login_button, a[uk-toggle]'), {target: '#' + $id}).toggle();
                     if ($('.js-questions-list').length) {
-                        UIkit.toggle($('#'+$parent_id).prev().find('.js-questions-list-item_count > a[uk-toggle]'), {target: '#'+$parent_id}).toggle();
+                        UIkit.toggle($('#' + $parent_id).prev().find('.js-questions-list-item_count > a[uk-toggle]'), {target: '#' + $parent_id}).toggle();
                     }
 
                     //UIkit.scroll('#'+$id);
                 }
                 else if ($id.indexOf("question-") === 0) {
-                    UIkit.toggle($('#'+$id).prev().prev().prev().find('.js-modal-site-login_button, a[uk-toggle]'), {target: '#'+$id}).toggle();
+                    UIkit.toggle($('#' + $id).prev().prev().prev().find('.js-modal-site-login_button, a[uk-toggle]'), {target: '#' + $id}).toggle();
                 }
             }
         }
     })();
 
-    (function(){
-        $('.js-filter-form-user_details').on('change', 'input', function(e){
+    (function () {
+        $('.js-filter-form-user_details').on('change', 'input', function (e) {
             e.preventDefault();
 
             if ($(this).is(':checked')) {
@@ -1010,7 +1016,7 @@ $(function () {
         });
     })();
 
-    $('a[js-tm-toggle]').on('click', function(e){
+    $('a[js-tm-toggle]').on('click', function (e) {
         e.preventDefault();
 
         var $this = $(this),
@@ -1039,6 +1045,7 @@ $(function () {
 
         $editable.next('textarea').html($editable.html());
     });*/
+
     /*$('div[contenteditable]').keydown(function(e) {
         // trap the return key being pressed
         if (e.keyCode === 13) {
@@ -1049,12 +1056,10 @@ $(function () {
         }
     });*/
 
-    function nl2br (str, is_xhtml) {
+    function nl2br(str, is_xhtml) {
         var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
-        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
+        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
     }
-
-
 
 
     // datepicker
@@ -1066,7 +1071,7 @@ $(function () {
                 format: 'dd.MM.yyyy',
             };
 
-        $datepicker.each(function(e){
+        $datepicker.each(function (e) {
             var val = $(this).val(),
                 options = Object.assign({}, $options);
 
@@ -1102,7 +1107,7 @@ $(function () {
                 var $toggler = $(e.target).parent();
                 $toggler.removeClass(activeTogglerClassName);
                 $navContainer.removeClass(activeNavClassName);
-                $overlay.fadeOut(200, function() {
+                $overlay.fadeOut(200, function () {
                     $overlay.remove();
                     $body.removeClass(relativePosClassName);
                 });
@@ -1250,9 +1255,8 @@ $(function () {
 
 function mapCreate() {
     ymaps.ready(function () {
-        if($('#map').length)
-        {
-            var map = new ymaps.Map ("map", {
+        if ($('#map').length) {
+            var map = new ymaps.Map("map", {
                 center: mapCenter,
                 zoom: mapZoom,
                 controls: []
@@ -1263,11 +1267,10 @@ function mapCreate() {
                 new ymaps.control.ZoomControl()
             );
 
-            var mapDraw = function(coordinates) {
-                if (coordinates.length)
-                {
+            var mapDraw = function (coordinates) {
+                if (coordinates.length) {
                     var icon = {};
-                    if (typeof mapIcon !== typeof undefined){
+                    if (typeof mapIcon !== typeof undefined) {
                         icon = {
                             iconLayout: 'default#image',
                             iconImageHref: mapIcon,
@@ -1276,12 +1279,12 @@ function mapCreate() {
                         };
                     }
 
-                    var myPlacemark = new ymaps.Placemark(coordinates, typeof mapTitle !== typeof undefined ? { balloonContentHeader: mapTitle } : {}, icon);
+                    var myPlacemark = new ymaps.Placemark(coordinates, typeof mapTitle !== typeof undefined ? {balloonContentHeader: mapTitle} : {}, icon);
 
                     map.geoObjects.add(myPlacemark);
                     map.setCenter(coordinates);
 
-                    if( typeof mapPolygon !== typeof undefined) {
+                    if (typeof mapPolygon !== typeof undefined) {
                         var polygon = new ymaps.Polygon(mapPolygon || [], {}, {
                             fillColor: '#FF0000',
                             strokeColor: '#0000FF',
@@ -1295,16 +1298,14 @@ function mapCreate() {
                 }
             };
 
-            if (typeof mapCoordinates !== typeof undefined && mapCoordinates.length)
-            {
+            if (typeof mapCoordinates !== typeof undefined && mapCoordinates.length) {
                 for (var i in mapCoordinates) {
                     mapDraw(mapCoordinates[i]);
                 }
             }
-            if (typeof mapAddresses !== typeof undefined && mapAddresses.length)
-            {
+            if (typeof mapAddresses !== typeof undefined && mapAddresses.length) {
                 for (var i in mapAddresses) {
-                    ymaps.geocode(mapAddresses[i]).then(function(result) {
+                    ymaps.geocode(mapAddresses[i]).then(function (result) {
                         var cordinates = result.geoObjects.get(0).geometry.getCoordinates();
                         mapDraw(cordinates);
                     });
@@ -1313,19 +1314,19 @@ function mapCreate() {
         }
     });
 }
-if($('#map').length && !$('#map').parents('.uk-modal').length) {
+
+if ($('#map').length && !$('#map').parents('.uk-modal').length) {
     mapCreate();
 }
 
-function preSubmitForm(form, besides)
-{
-    if (typeof besides === typeof undefined){
+function preSubmitForm(form, besides) {
+    if (typeof besides === typeof undefined) {
         besides = [];
     }
 
-    for(var i = 0; i < form.elements.length; i++) {
+    for (var i = 0; i < form.elements.length; i++) {
         var e = $(form.elements[i]);
-        if( (e.val() === '' || e.val() === '0') && besides.indexOf(e.attr('name')) === -1 ) {
+        if ((e.val() === '' || e.val() === '0') && besides.indexOf(e.attr('name')) === -1) {
             e.attr('disabled', 'true');
         }
     }

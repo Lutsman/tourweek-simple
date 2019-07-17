@@ -15157,9 +15157,27 @@ select.select2 + .select2.select2-container--default .select2-selection--single 
   width: 100%;
   height: auto;
 }
-.tm-photo-force-responsive {
-  width: 50%!important;
-  height: auto!important;
+.tm-photo-img-responsive {
+  margin-bottom: 5px;
+}
+.tm-photo-img-responsive img {
+  width: 100%;
+  height: auto;
+}
+.tm-photo-desctop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tm-photo-desctop > * {
+  margin-bottom: 5px;
+}
+.tm-photo-responsive {
+  display: flex;
+  justify-content: space-between;
+}
+.tm-photo-responsive > * {
+  width: 49%;
 }
 /*Media*/
 @media (max-width: 639px) {

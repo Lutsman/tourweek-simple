@@ -2038,9 +2038,32 @@ select.select2 {
   height: auto;
 }
 
-.tm-photo-force-responsive {
-  width: 50%!important;
-  height: auto!important;
+.tm-photo-img-responsive {
+  margin-bottom: 5px;
+}
+
+.tm-photo-img-responsive img {
+  width: 100%;
+  height: auto;
+}
+
+.tm-photo-desctop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  >* {
+    margin-bottom: 5px;
+  }
+}
+
+.tm-photo-responsive {
+  display: flex;
+  justify-content: space-between;
+
+  > * {
+    width: 49%;
+  }
 }
 
 /*Media*/

@@ -6,8 +6,6 @@ class SmartGallery {
         this.photoCollection = this.photoHolder.find('.tm-photo-img-cover');
         this.responsiveWidth = 640;
 
-
-
         this.init();
         //this.reInit();
     }
@@ -50,6 +48,27 @@ class SmartGallery {
         this.rowWidths = [];
         this.photoWidths = [];
 
+        this.desctopHolder = $(document.createElement('div'));
+        this.desctopHolder.addClass('tm-photo-desctop');
+        this.photoHolder.append(this.desctopHolder);
+
+        this.responsiveHolder = $(document.createElement('div'));
+        this.responsiveHolder.addClass('tm-photo-responsive');
+        this.photoHolder.append(this.responsiveHolder);
+
+        this.columnOne = $(document.createElement('div'));
+        this.columnTwo = $(document.createElement('div'));
+
+        this.photoCollection.filter(':even').clone().appendTo(this.columnOne);
+        this.photoCollection.filter(':odd').clone().appendTo(this.columnTwo);
+
+        this.responsiveHolder.append(this.columnOne);
+        this.responsiveHolder.append(this.columnTwo);
+
+        this.responsiveHolder.find('.tm-photo-img-cover').removeClass('tm-photo-img-cover').addClass('tm-photo-img-responsive');
+
+        this.photoCollection.appendTo(this.desctopHolder);
+
         this.markRows('tm-row-start');
 
         this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
@@ -89,7 +108,13 @@ class SmartGallery {
         }
 
         if (this.checkResponsive(this.responsiveWidth)) {
-            this.photoCollection.addClass('tm-photo-force-responsive');
+            // this.photoCollection.addClass('tm-photo-force-responsive');
+            this.desctopHolder.hide();
+            this.responsiveHolder.show();
+        }
+        else {
+            this.desctopHolder.show();
+            this.responsiveHolder.hide();
         }
 
         $(window).on('resize', this.reInit.bind(this));
@@ -133,11 +158,20 @@ class SmartGallery {
         }
 
         if (this.checkResponsive(this.responsiveWidth)) {
-            this.photoCollection.addClass('tm-photo-force-responsive');
+            this.desctopHolder.hide();
+            this.responsiveHolder.show();
         }
         else {
-            this.photoCollection.removeClass('tm-photo-force-responsive');
+            this.desctopHolder.show();
+            this.responsiveHolder.hide();
         }
+
+        // if (this.checkResponsive(this.responsiveWidth)) {
+        //     this.photoCollection.addClass('tm-photo-force-responsive');
+        // }
+        // else {
+        //     this.photoCollection.removeClass('tm-photo-force-responsive');
+        // }
     }
     //     this.holderWidth = this.photoHolder.width();
     //
