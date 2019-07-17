@@ -2,14 +2,30 @@ $(function () {
 
     //photo-placer
     (function () {
+
+        function markRows() {
+            let lastTop = -1;
+            let currentTop = 0;
+            photoCollection.each(function () {
+                currentTop = $(this).position().top;
+                if(currentTop !== lastTop) {
+                    $(this).addClass('tm-row-start');
+                    lastTop = currentTop;
+                }
+            })
+        }
+
         const photoHolder = $('.tm-grid-best-photo');
         const photoCollection = photoHolder.find('.tm-photo-img-cover');
-        const photoRowStart = photoHolder.find('.tm-photo-img-cover.uk-first-column');
 
         let holderWidth = photoHolder.width();
         let indexRows = [];
         let rowWidths = [];
         let photoWidths = [];
+
+        markRows();
+
+        const photoRowStart = photoHolder.find('.tm-photo-img-cover.tm-row-start');
 
         photoRowStart.each(function() {
             indexRows.push($(this).index());
@@ -59,8 +75,6 @@ $(function () {
 
                 for(let i = firstPhoto; i < lastPhoto; i++ ) {
                     const newWidth = photoWidths[i] * widthCoefficient;
-                    $(photoCollection[i]).removeClass('tm-photo-img-cover');
-                    $(photoCollection[i]).addClass('tm-photo-img-wrap');
                     $(photoCollection[i]).width(newWidth);
 
                 }
