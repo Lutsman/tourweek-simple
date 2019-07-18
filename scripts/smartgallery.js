@@ -15,6 +15,20 @@ class SmartGallery {
 
     init() {
 
+        this.render();
+
+        this.markRows('tm-row-start');
+
+        this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
+
+        this.resizePhoto();
+
+        this.makeResponsive();
+
+        $(window).on('resize', this.reInit.bind(this));
+    }
+
+    render() {
         this.desctopHolder = $('<div></div>');
         this.desctopHolder.addClass('tm-photo-desctop');
         this.photoHolder.append(this.desctopHolder);
@@ -35,19 +49,9 @@ class SmartGallery {
         this.responsiveHolder.find('.tm-photo-img-cover').removeClass('tm-photo-img-cover').addClass('tm-photo-img-responsive');
 
         this.photoCollection.appendTo(this.desctopHolder);
-
-        this.markRows('tm-row-start');
-
-        this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
-
-        this.render();
-
-        this.makeResponsive();
-
-        $(window).on('resize', this.reInit.bind(this));
     }
 
-    render() {
+    resizePhoto() {
         this.holderWidth = this.photoHolder.width();
 
         this.photoRowStart.each((index) => {
@@ -84,7 +88,7 @@ class SmartGallery {
     reInit() {
         this.resetAll();
 
-        this.render();
+        this.resizePhoto();
 
         this.makeResponsive();
     }
