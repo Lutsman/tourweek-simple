@@ -6,25 +6,25 @@ class SmartGallery {
         this.photoCollection = this.photoHolder.find('.tm-photo-img-cover');
         this.responsiveWidth = 640;
 
+        this.indexRows = [];
+        this.rowWidths = [];
+        this.photoWidths = [];
+
         this.init();
     }
 
     init() {
 
-        this.indexRows = [];
-        this.rowWidths = [];
-        this.photoWidths = [];
-
-        this.desctopHolder = $(document.createElement('div'));
+        this.desctopHolder = $('<div></div>');
         this.desctopHolder.addClass('tm-photo-desctop');
         this.photoHolder.append(this.desctopHolder);
 
-        this.responsiveHolder = $(document.createElement('div'));
+        this.responsiveHolder = $('<div></div>');
         this.responsiveHolder.addClass('tm-photo-responsive');
         this.photoHolder.append(this.responsiveHolder);
 
-        this.columnOne = $(document.createElement('div'));
-        this.columnTwo = $(document.createElement('div'));
+        this.columnOne = $('<div></div>');;
+        this.columnTwo = $('<div></div>');;
 
         this.photoCollection.filter(':even').clone().appendTo(this.columnOne);
         this.photoCollection.filter(':odd').clone().appendTo(this.columnTwo);
@@ -40,14 +40,14 @@ class SmartGallery {
 
         this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
 
-        this.main();
+        this.render();
 
         this.makeResponsive();
 
         $(window).on('resize', this.reInit.bind(this));
     }
 
-    main() {
+    render() {
         this.holderWidth = this.photoHolder.width();
 
         this.photoRowStart.each((index) => {
@@ -84,7 +84,7 @@ class SmartGallery {
     reInit() {
         this.resetAll();
 
-        this.main();
+        this.render();
 
         this.makeResponsive();
     }
