@@ -15164,12 +15164,12 @@ select.select2 + .select2.select2-container--default .select2-selection--single 
   width: 100%;
   height: auto;
 }
-.tm-photo-desctop {
+.tm-photo-desktop {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.tm-photo-desctop > * {
+.tm-photo-desktop > * {
   margin-bottom: 5px;
 }
 .tm-photo-responsive {

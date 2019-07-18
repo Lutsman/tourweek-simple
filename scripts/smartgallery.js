@@ -1,10 +1,19 @@
 class SmartGallery {
 
-    constructor(options) {
+    constructor(options = {}) {
 
-        this.photoHolder = $('.tm-grid-best-photo');
-        this.photoCollection = this.photoHolder.find('.tm-photo-img-cover');
-        this.responsiveWidth = 640;
+        //Options section
+        this.photoHolderSelector = options.gallery || '.tm-grid-best-photo';
+        this.photoCollectionClass = options.imageContainer || 'tm-photo-img-cover';
+        this.responsiveWidth = options.responsiveBreakpoint || 640;
+        this.horizontalMargin = options.horizontalMargin || 3;
+
+        //Inner classes, change only in case of conflicts
+        this.desktopModeWrapperClass = 'tm-photo-desktop';
+        this.photoCollectionActiveClass = 'tm-photo-img-wrap';
+        this.responsiveModeWrapperClass = 'tm-photo-responsive';
+        this.responsivePhotoCollectionActiveClass = 'tm-photo-img-responsive';
+        this.rowMarksClass = 'tm-row-start';
 
         this.indexRows = [];
         this.rowWidths = [];
@@ -15,30 +24,39 @@ class SmartGallery {
 
     init() {
 
+        this.photoHolder = $(this.photoHolderSelector);
+        this.photoCollectionSelector = '.' + this.photoCollectionClass;
+        this.photoCollection = this.photoHolder.find(this.photoCollectionSelector);
+
         this.render();
 
-        this.markRows('tm-row-start');
+        this.markRows(this.rowMarksClass);
 
-        this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
+        this.photoRowStart = this.photoHolder.find(this.photoCollectionSelector + '.'+ this.rowMarksClass);
 
         this.resizePhoto();
 
         this.makeResponsive();
 
-        $(window).on('resize', this.reInit.bind(this));
+        this.addGlobalListeners();
+    }
+
+    addGlobalListeners() {
+        this._reInit = this.reInit.bind(this);
+        $(window).on('resize', this._reInit);
     }
 
     render() {
         this.desctopHolder = $('<div></div>');
-        this.desctopHolder.addClass('tm-photo-desctop');
+        this.desctopHolder.addClass(this.desktopModeWrapperClass);
         this.photoHolder.append(this.desctopHolder);
 
         this.responsiveHolder = $('<div></div>');
-        this.responsiveHolder.addClass('tm-photo-responsive');
+        this.responsiveHolder.addClass(this.responsiveModeWrapperClass);
         this.photoHolder.append(this.responsiveHolder);
 
-        this.columnOne = $('<div></div>');;
-        this.columnTwo = $('<div></div>');;
+        this.columnOne = $('<div></div>');
+        this.columnTwo = $('<div></div>');
 
         this.photoCollection.filter(':even').clone().appendTo(this.columnOne);
         this.photoCollection.filter(':odd').clone().appendTo(this.columnTwo);
@@ -46,7 +64,7 @@ class SmartGallery {
         this.responsiveHolder.append(this.columnOne);
         this.responsiveHolder.append(this.columnTwo);
 
-        this.responsiveHolder.find('.tm-photo-img-cover').removeClass('tm-photo-img-cover').addClass('tm-photo-img-responsive');
+        this.responsiveHolder.find(this.photoCollectionSelector).removeClass(this.photoCollectionClass).addClass(this.responsivePhotoCollectionActiveClass);
 
         this.photoCollection.appendTo(this.desctopHolder);
     }
@@ -65,7 +83,7 @@ class SmartGallery {
 
             let lengthsPhoto = 0;
             const countPhoto = lastPhoto - firstPhoto;
-            const marginsWidth = countPhoto * 3; //if margin 3px;
+            const marginsWidth = countPhoto * this.horizontalMargin;
 
             for (let i = firstPhoto; i < lastPhoto; i++) {
                 lengthsPhoto += this.photoCollection.eq(i).width();
@@ -78,8 +96,8 @@ class SmartGallery {
             for (let i = firstPhoto; i < lastPhoto; i++) {
                 this.photoWidths.push(this.photoCollection.eq(i).width());
                 const newWidth = this.photoWidths[i] * widthCoefficient;
-                this.photoCollection.eq(i).removeClass('tm-photo-img-cover');
-                this.photoCollection.eq(i).addClass('tm-photo-img-wrap');
+                this.photoCollection.eq(i).removeClass(this.photoCollectionClass);
+                this.photoCollection.eq(i).addClass(this.photoCollectionActiveClass);
                 this.photoCollection.eq(i).width(newWidth);
             }
         }
@@ -127,12 +145,11 @@ class SmartGallery {
         this.photoWidths = [];
 
         this.photoCollection.attr('style','');
-        this.photoCollection.removeClass('tm-photo-img-wrap');
-        this.photoCollection.addClass('tm-photo-img-cover');
-        this.photoCollection.removeClass('tm-row-start');
+        this.photoCollection.removeClass(this.photoCollectionActiveClass);
+        this.photoCollection.addClass(this.photoCollectionClass);
+        this.photoCollection.removeClass(this.rowMarksClass);
 
-        this.markRows('tm-row-start');
-
-        this.photoRowStart = this.photoHolder.find('.tm-photo-img-cover.tm-row-start');
+        this.markRows(this.rowMarksClass);
+        this.photoRowStart = this.photoHolder.find(this.photoCollectionSelector + '.'+ this.rowMarksClass);
     }
 }
