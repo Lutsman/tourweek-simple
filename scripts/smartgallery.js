@@ -142,9 +142,9 @@ class SmartGallery {
     }
 
     reInit() {
-        this.resetAll();
-
         this.makeResponsive();
+
+        this.resetAll();
 
         this.resizePhoto();
 
