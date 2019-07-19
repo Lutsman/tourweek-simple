@@ -2,9 +2,12 @@ $(function () {
 
     //photo-placer
     (function () {
-        if (typeof(SmartGallery) !== 'undefined') {
-            const smartgallery = new SmartGallery();
+
+        if (!$.fn.smartGallery) {
+            return;
         }
+
+        $('.tm-grid-best-photo').smartGallery();
 
     })();
 
