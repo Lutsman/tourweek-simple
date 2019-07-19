@@ -1,6 +1,7 @@
 .tm-photo-img-cover img {
     height: 150px;
     width: auto;
+    visibility: hidden;
 }
 
 .tm-photo-img-wrap img {

@@ -19,6 +19,9 @@ class SmartGallery {
         this.rowWidths = [];
         this.photoWidths = [];
 
+        this.loadCounter = 0;
+        this.delayedPhotos = [];
+
         this.init();
     }
 
@@ -28,7 +31,20 @@ class SmartGallery {
         this.photoCollectionSelector = '.' + this.photoCollectionClass;
         this.photoCollection = this.photoHolder.find(this.photoCollectionSelector);
 
+        this.delayedPhotos = this.getDelayed();
+
+        this.loadCounter = this.delayedPhotos.length;
+
+        this._handleDelayedLoad = this.handleDelayedLoad.bind(this);
+
+        for(let i = 0; i < this.delayedPhotos.length; i++) {
+
+            $(this.delayedPhotos[i]).find('img').on('load', this._handleDelayedLoad);
+        }
+
         this.render();
+
+        this.makeResponsive();
 
         this.markRows(this.rowMarksClass);
 
@@ -36,9 +52,31 @@ class SmartGallery {
 
         this.resizePhoto();
 
-        this.makeResponsive();
-
         this.addGlobalListeners();
+
+        setTimeout(()=> {
+            if(this.loadCounter) this.reInit();
+        }, 10000);
+    }
+
+    handleDelayedLoad () {
+    this.loadCounter--;
+
+    if(this.loadCounter <= 0) this.reInit();
+}
+
+    getDelayed() {
+
+        let delayedPhotos = [];
+
+        this.photoCollection.each(function () {
+
+            if($(this).find('img').width() === 0) {
+                delayedPhotos.push($(this));
+            }
+        });
+
+        return delayedPhotos;
     }
 
     addGlobalListeners() {
@@ -106,9 +144,10 @@ class SmartGallery {
     reInit() {
         this.resetAll();
 
+        this.makeResponsive();
+
         this.resizePhoto();
 
-        this.makeResponsive();
     }
 
     makeResponsive() {
@@ -129,7 +168,9 @@ class SmartGallery {
     markRows(markClass) {
         let lastTop = -1;
         let currentTop = 0;
-        this.photoCollection.each(function () {
+        let length = this.photoCollection.length;
+        this.photoCollection.each(function (index) {
+            if(index === length - 1) return;
             currentTop = $(this).position().top;
             if (currentTop !== lastTop) {
                 $(this).addClass(markClass);
