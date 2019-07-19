@@ -153,3 +153,13 @@ class SmartGallery {
         this.photoRowStart = this.photoHolder.find(this.photoCollectionSelector + '.'+ this.rowMarksClass);
     }
 }
+
+$.fn.smartGallery = function(options = {}) {
+    $(this).each(function(){
+        const el = this;
+
+        options.gallery = el;
+
+        el.smartGallery = new SmartGallery(options);
+    });
+};
