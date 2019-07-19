@@ -9,6 +9,14 @@ $(function () {
 
         $('.tm-grid-best-photo').smartGallery();
 
+
+        setTimeout(function () {
+            $(window).trigger('resize');
+        }, 300);
+
+        setTimeout(function () {
+            $(window).trigger('resize');
+        }, 1000);
     })();
 
     /* --- Select2 --- */
