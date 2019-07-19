@@ -1,4 +1,5 @@
 @import "vendors/jquery.datepicker.css";
+@import "vendors/smartgallery.css";
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
@@ -15148,36 +15149,6 @@ select.select2 + .select2.select2-container--default .select2-selection--single 
 /* --------------------------- CKE Editor ------------------------- */
 .uk-slider-items {
   will-change: auto;
-}
-.tm-photo-img-cover img {
-  height: 150px;
-  width: auto;
-}
-.tm-photo-img-wrap img {
-  width: 100%;
-  height: auto;
-}
-.tm-photo-img-responsive {
-  margin-bottom: 5px;
-}
-.tm-photo-img-responsive img {
-  width: 100%;
-  height: auto;
-}
-.tm-photo-desktop {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.tm-photo-desktop > * {
-  margin-bottom: 5px;
-}
-.tm-photo-responsive {
-  display: flex;
-  justify-content: space-between;
-}
-.tm-photo-responsive > * {
-  width: 49%;
 }
 /*Media*/
 @media (max-width: 639px) {

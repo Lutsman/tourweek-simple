@@ -49,11 +49,11 @@ class SmartGallery {
     render() {
         this.desctopHolder = $('<div></div>');
         this.desctopHolder.addClass(this.desktopModeWrapperClass);
-        this.photoHolder.append(this.desctopHolder);
+        this.photoHolder.prepend(this.desctopHolder);
 
         this.responsiveHolder = $('<div></div>');
         this.responsiveHolder.addClass(this.responsiveModeWrapperClass);
-        this.photoHolder.append(this.responsiveHolder);
+        this.photoHolder.prepend(this.responsiveHolder);
 
         this.columnOne = $('<div></div>');
         this.columnTwo = $('<div></div>');
